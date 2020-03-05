@@ -5,7 +5,6 @@ const dev = process.env.NODE_ENV !== 'production';
 const __DEVELOP__ = true;
 const app = next({ dev: __DEVELOP__, dir: resolve(__dirname, '../next') });
 const handler = app.getRequestHandler();
-const router = express.Router();
 import routes from './routes';
 
 app.prepare()
