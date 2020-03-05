@@ -1,9 +1,15 @@
-import React from 'react';
+import React, { Component, Fragment } from 'react';
 
-export default function Index() {
-  return (
-	<div>
-		<h1>index</h1>
-	</div>
-  );
+import Link from 'next/link';
+import content from '../../content/treatments.md';
+
+export default class Home extends Component {
+  render() {
+    const { Treatments } = content;
+    return (
+      <Fragment>
+        <h1>Treatments</h1>
+      </Fragment>
+    );
+  }
 }
