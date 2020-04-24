@@ -21,12 +21,14 @@ const Spotlight = ({ brands }) => {
 	)
 };
 
-Spotlight.propTypes = {
-	brands: PropTypes.arrayOf(PropTypes.string),
-};
+// Spotlight.propTypes = {
+// 	brands: PropTypes.arrayOf(PropTypes.object(
 
-Spotlight.defaultProps = {
-	brands: null,
-};
+// 	)),
+// };
+
+// Spotlight.defaultProps = {
+// 	brands: null,
+// };
 
 export default Spotlight;

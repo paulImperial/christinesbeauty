@@ -20,8 +20,8 @@ export const SpotlightBox = styled.div`
 export const SpotlightImage = styled.div`
 	position: relative;
 	max-width: 100%;
-	width: 250px;
-	height:75px;
+	width: 180px;
+	height:60px;
 	margin: 1rem;
 	background: url('${props => props.image}') no-repeat center center;
 	background-size: contain;
