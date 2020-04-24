@@ -1,0 +1,42 @@
+import React from 'react';
+import { ThemeProvider } from 'styled-components';
+import { rgba } from 'polished';
+import media from './media';
+
+const boxShadow = color => `box-shadow: 0 10px 15px 4px ${rgba(color, 0.5)};`;
+
+const theme = {
+	...media,
+	boxShadow,
+  colours: {
+	baseWhite: '#ffffff',
+	baseBlack: '#000000',
+	baseDarkGrey: '#575755',
+	baseMediumGrey: '#ddd',
+	baseLightGrey: '#f7f7f7',
+	baseLinkBlue: '#0076dc',
+	baseLinkBlueAlt: '#0066dc',
+	basePanelBg: '#fcf5f8',
+	baseBackground: '#efefee',
+	baseBackgroundBlue: '#f5f8fb',
+	baseOutline: '#e1e1e1',
+	borderBlue: '#a8b6d1',
+	shadeLightestGrey: '#ededed',
+	shadeLighterGrey: '#e6e6e6',
+	shadeLightGrey: '#cccccc',
+	shadeGrey: '#b3b3b3',
+	shadeDarkGrey: '#999999',
+	shadeDarkerGrey: 'gray',
+	shadeDarkestGrey: '#0d0d0d',
+	pink: rgba(216, 91, 145, 1),
+  },
+  fontSizes: {
+    small: '1em',
+    medium: '2em',
+    large: '3em',
+	},
+};
+
+const Theme = ({ children }) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+
+export default Theme;

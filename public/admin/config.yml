@@ -1,20 +1,21 @@
 backend:
 	name: git-gateway
 	branch: master
-  media_folder: static/img
-  slug:
-	encoding: 'ascii'
-	clean_accents: true
-	sanitize_replacement: '_'
-  collections:
-	- name: 'treatments'
-	  label: 'Treatments'
-	  files:
-		  file: 'content/treatments.md'
-		  fields:
-			- { label: 'Treatment', name: 'treatment', widget: 'string' }
-			- { label: 'Blurb', name: 'blurb', widget: 'markdown' }
-			- { label: 'Price', name: 'price', widget: 'string' }
-			- { label: 'Publish Date', name: 'date', widget: 'datetime' }
-
-  
+media_folder: public/img
+public_folder: img
+collections:
+- name: "pages"
+	label: "Pages"
+	files:
+	- label: "Home"
+		file: "content/home.md"
+		fields:
+			- { label: "Title", name: "title", widget: "string"}
+			- { label: "Publish Date", name: "date", widget: "datetime" }
+			- { label: "Body", name: "body", widget: "markdown"}
+			- label: 'Cats'
+			name: "cats"
+			widget: list
+			fields:
+				- { label: "Name", name: "name", widget: "string"}
+				- { label: "Description", name: "description", widget: "text"}
