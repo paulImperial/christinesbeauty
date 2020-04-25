@@ -1,6 +1,13 @@
 import styled from 'styled-components';
 import { rem } from 'polished';
 
+export const CardContainer = styled.div`
+	display: flex;
+	width: 100%;
+	flex-wrap: wrap;
+	justify-content: space-evenly;
+`;
+
 export const CardLabel = styled.h2`
 	border: 1px solid #ccc;
 	background: ${props => `${props.theme.colours.baseWhite}`};
@@ -21,9 +28,7 @@ export const CardLabel = styled.h2`
 
 export const CardContent = styled.div`
 	padding: ${rem('20px')}
-	${props => props.hasOffset && `
-		padding-top: ${rem('16px')};
-	`}
+	padding-top: ${rem('16px')};
 
 	> article,
 	> p {
@@ -31,11 +36,10 @@ export const CardContent = styled.div`
 	}
 `;
 
-export const CardSection = styled.section`
+export const CardSection = styled.div`
+	padding: 1rem;
 	position: relative;
-	${props => props.hasOffset && `
-		margin-top: 3.75rem;
-	`}
+	margin-top: 3.75rem;
 	border-radius: ${rem('6px')};
 	margin: 20px;
 	border: 1px solid #ccc;

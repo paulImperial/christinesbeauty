@@ -5,11 +5,11 @@ export const treatments = [
 	},
 	{
 		label: 'Shellac',
-		image:'/images/shellac1.jpg.jpg',
+		image:'/images/shellac1.jpg',
 	},
 	{
 		label: 'Manicures & Pedicures',
-		image:'/images/hands.jpg',
+		image:'/images/hands1.jpg',
 	},
 	{
 		label: 'Eye Treatments',

@@ -1,12 +1,10 @@
-import React from 'react';
+import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import { Reset } from 'styled-reset';
-import Theme from '../../Theme';
+import { Theme } from '../../Theme';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
-import AppRoot from '../../Theme/Fonts/index';
-import { Fragment } from 'react';
+import { AppRoot } from '../../Theme/';
 
 const Main = styled.div`
   margin: 0 auto;

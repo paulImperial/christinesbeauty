@@ -1,17 +1,17 @@
 export const brands = [
   {
     name: 'shellac',
-    link: '#',
+    link: 'https://cnd.com/products/cnd-shellac',
     image: '/images/shellac.png',
   },
   {
     name: 'opi',
-    link: '#',
+    link: 'https://www.opiuk.com/',
     image: '/images/opi.png',
   },
   {
     name: 'kaeso',
-    link: '#',
+    link: 'https://www.kaeso.co.uk/',
     image: '/images/kaeso.png',
   },
   {

@@ -2,12 +2,13 @@ import React, { Fragment } from 'react';
 import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
-const StyledContainer = styled.div`;
+const StyledContainer = styled.section`;
   display: flex;
   flex-direction: row;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
+  width: 100%;
 `;
 
 const Heading = styled.h2`

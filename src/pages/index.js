@@ -48,13 +48,7 @@ const Home = () => {
         caring environment where you feel relaxed.
       </BodyText>
       <Container label="Treatments">
-        <Card label="Waxing" image="/images/hair-removal1.jpg"></Card>
-        <Card label="Shellac" image="/images/shellac1.jpg"></Card>
-        <Card label="Manicures & Pedicures" image="/images/hands1.jpg"></Card>
-        <Card label="Eye Treatments" image="/images/eye-treatments1.jpg"></Card>
-        <Card label="Facials" image="/images/facials1.jpg"></Card>
-        <Card label="Massage" image="/images/massage1.jpg"></Card>
-        <Card label="Make Up" image="/images/makeup.png"></Card>
+		<Card treatments={treatments}></Card>
       </Container>
       <BodyText>
         My main aim from the moment you enter Christine’s Beauty is for you to feel welcomed and comfortable. Throughout

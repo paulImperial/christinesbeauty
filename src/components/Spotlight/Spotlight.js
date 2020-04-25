@@ -11,7 +11,7 @@ const Spotlight = ({ brands }) => {
 	return (
 		<SpotlightContainer {...brands}>
 		{brands.map(brand => 
-			<a href={brand.link} target="_blank" rel="noreferrer noopener" >
+			<a href={brand.link} target="_blank" rel="noreferrer noopener" key={brand.link}>
 				<SpotlightBox>
 					<SpotlightImage image={brand.image}></SpotlightImage>
 				</SpotlightBox>
