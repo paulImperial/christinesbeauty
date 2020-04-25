@@ -56,6 +56,8 @@ export const CardSection = styled.div`
 			};
 			cursor: pointer;
 		}
+	
+	&
 
 `;
 
