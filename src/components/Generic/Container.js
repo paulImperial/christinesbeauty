@@ -1,10 +1,9 @@
 import React, { Fragment } from 'react';
-import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 const StyledContainer = styled.section`;
   display: flex;
-  flex-direction: row;
+  flex-direction: ${props => props.column ? 'column' : 'row'} ;
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
@@ -18,11 +17,11 @@ const Heading = styled.h2`
 	font-weight: 100;
 `;
 
-const Container = ({ children, label }) => {
+const Container = ({ children, label, column }) => {
   return (
     <Fragment>
       <Heading>{label}</Heading>
-      <StyledContainer>{children}</StyledContainer>
+      <StyledContainer column={column}>{children}</StyledContainer>
     </Fragment>
   );
 };

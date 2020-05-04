@@ -10,11 +10,6 @@ import { brands } from '../cms/brands';
 import { treatments } from '../cms/treatments';
 
 import Link from 'next/link';
-//import content from '../../content/treatments.md';
-
-const Heading = styled.h1`
-  color: ${({ theme: { colours } }) => colours.persianGreen};
-`;
 
 const BodyText = styled.p`
   margin: 10px 0;
@@ -67,15 +62,15 @@ const Home = () => {
       <Container label="Special Offers"></Container>
       <Container label="Reviews"></Container>
       <Container label="Finding Us">
-        <Bob>
-          <Map />
-        </Bob>
         <BodyText>
           The salon is easy to reach, with the bus stopping just a few steps away, and being just a couple of minutes’
           drive from the Ring Road. Based in a converted outbuilding of my family home, with separate access, the
           location provides both privacy and convenience, all at ground level, with free onsite parking usually
           available.
-        </BodyText>
+		</BodyText>
+		<Bob>
+		<Map />
+	  </Bob>
       </Container>
     </Layout>
   );
