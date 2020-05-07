@@ -5,6 +5,8 @@ import media from './media';
 import { createGlobalStyle } from "styled-components";
 
 export const AppRoot = createGlobalStyle`
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 html, body {
     margin: 0;
     padding: 0;
@@ -14,7 +16,6 @@ html, body {
   }
 
   body {
-    @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
     font-family: 'Roboto' !important;
     text-align: left;
 	cursor: default;
