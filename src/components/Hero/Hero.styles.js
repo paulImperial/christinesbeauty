@@ -12,7 +12,8 @@ export const HeroImage = styled.div`
 	max-width: 100%;
 	width: 100vw;
 	height: 100vh;
-	background: url('${props => props.image}') no-repeat 15% 42%;
+	background: url('${props => props.image}') no-repeat 100% 25%;
+	background-size: cover;
 	border-radius: ${rem('6px')};
 	box-shadow: 0 1px 15px 1px rgba(0,0,0,0.2);
 `;
