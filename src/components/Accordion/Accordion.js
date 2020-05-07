@@ -73,7 +73,7 @@ const StyleAccordion = styled(Accordion)`
   }
 `;
 
-const StyledAccordion = ({prices}, ...props) => {
+const StyledAccordion = ({prices}) => {
   return (
     <StyleAccordion>
 	{prices.map(price => (
@@ -83,6 +83,7 @@ const StyledAccordion = ({prices}, ...props) => {
 		  </AccordionItemHeading>
 		  <AccordionItemPanel>
 			<p>{price.blurb}</p>
+			
 			{price.services.map((service) => {
 			  return (
 				<Fragment>
