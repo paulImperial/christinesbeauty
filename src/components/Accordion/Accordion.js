@@ -7,7 +7,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-import AccordionItemPanel from '../Accordion/utils/AccordionPanel';
+// import AccordionItemPanel from '../Accordion/utils/AccordionPanel';
 
 const StyleAccordion = styled(Accordion)`
   .accordion {
