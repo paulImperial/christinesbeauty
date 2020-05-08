@@ -7,6 +7,7 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
+import AccordionItemPanel from '../Accordion/utils/AccordionPanel';
 
 const StyleAccordion = styled(Accordion)`
   .accordion {
@@ -73,28 +74,28 @@ const StyleAccordion = styled(Accordion)`
   }
 `;
 
-const StyledAccordion = ({prices}) => {
+const StyledAccordion = ({ prices }) => {
   return (
     <StyleAccordion>
-	{prices.map(price => (
-		<AccordionItem>
-		  <AccordionItemHeading>
-			<AccordionItemButton>{price.title}</AccordionItemButton>
-		  </AccordionItemHeading>
-		  <AccordionItemPanel>
-			<p>{price.blurb}</p>
-			
-			{price.services.map((service) => {
-			  return (
-				<Fragment>
-				  <p>{service.treatment}</p>
-				  <p>{service.price}</p>
-				</Fragment>
-			  );
-			})}
-		  </AccordionItemPanel>
-		</AccordionItem>
-	))}
+      {prices.map((price) => (
+        <AccordionItem>
+          <AccordionItemHeading>
+            <AccordionItemButton>{price.title}</AccordionItemButton>
+          </AccordionItemHeading>
+          <AccordionItemPanel>
+            <p>{price.blurb}</p>
+
+            {price.services.map((service) => {
+              return (
+                <AccordionItemPanel>
+                  <p>{service.treatment}</p>
+                  <p>{service.price}</p>
+                </AccordionItemPanel>
+              );
+            })}
+          </AccordionItemPanel>
+        </AccordionItem>
+      ))}
     </StyleAccordion>
   );
 };

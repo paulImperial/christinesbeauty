@@ -27,7 +27,8 @@ const Layout = ({ children, hero }) => {
 		<link rel="shortcut icon" href="/images/favicon.ico" />
           <title>Christine's Beauty</title>
         </Head>
-		<Header></Header>
+		<Header>
+		</Header>
 		<HeroBanner>{hero}</HeroBanner>
         <Main>{children}</Main>
         <Footer></Footer>

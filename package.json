@@ -51,6 +51,7 @@
   },
   "dependencies": {
     "@kentico/kontent-delivery": "^9.0.0",
+    "@opuscapita/react-responsive-navbar": "^3.4.0",
     "@storybook/addon-knobs": "^5.3.17",
     "del": "^2.2.2",
     "es6-promise": "^4.2.8",
@@ -74,6 +75,7 @@
     "react-head": "^3.1.1",
     "rxjs": "^6.5.4",
     "styled-components": "^4.4.1",
+    "styled-navbar-component": "^4.0.0",
     "styled-reset": "^4.1.2",
     "watch": "^1.0.2"
   }
