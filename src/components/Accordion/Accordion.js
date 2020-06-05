@@ -9,8 +9,13 @@ import {
 } from 'react-accessible-accordion';
 import AccordionPanel from '../Accordion/utils/AccordionPanel';
 import { StyledAccordionPanel, StyledImage, StyledTable, StyledBlurb } from '../Accordion/utils/AccordionPanel.styles';
+import currency from '../../helpers/currency';
 
 const StyleAccordion = styled(Accordion)`
+  max-width: 1140px;
+  display: flex;
+  flex-direction: column;
+
   .accordion {
     border: 1px solid rgba(0, 0, 0, 0.1);
     border-radius: 2px;
@@ -75,6 +80,19 @@ const StyleAccordion = styled(Accordion)`
   }
 `;
 
+const StyledInfo = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0 20px;
+  width: 100%;
+`;
+
+const Heading = styled.h2`
+	text-align: left;
+	font-size: 1.25rem;
+	font-weight: 100;
+`;
+
 const StyledAccordion = ({ prices }) => {
   return (
     <StyleAccordion>
@@ -83,21 +101,21 @@ const StyledAccordion = ({ prices }) => {
           <AccordionItemHeading>
             <AccordionItemButton>{price.title}</AccordionItemButton>
           </AccordionItemHeading>
-		  <AccordionItemPanel>
-			  <AccordionPanel>
-			  <StyledImage image={price.image} />
-			<StyledBlurb>{price.blurb}</StyledBlurb>
-			
-
-            {price.services.map((service) => {
-              return (
-                <AccordionItemPanel>
-                  <p>{service.treatment}</p>
-                  <p>{service.price}</p>
-                </AccordionItemPanel>
-              );
-			})}
-			</AccordionPanel>
+          <AccordionItemPanel>
+            <AccordionPanel>
+              <StyledImage image={price.image} />
+              <StyledInfo>
+				<StyledBlurb>{price.blurb}</StyledBlurb>
+				<Heading>Prices:</Heading>
+                {price.services.map((service) => {
+                  return (
+                    <StyledTable>
+                      <li>{service.treatment}:{'    '} {currency(service.price)}</li>
+                    </StyledTable>
+                  );
+                })}
+              </StyledInfo>
+            </AccordionPanel>
           </AccordionItemPanel>
         </AccordionItem>
       ))}
