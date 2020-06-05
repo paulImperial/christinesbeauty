@@ -32,10 +32,6 @@ const Layout = ({ children, hero }) => {
 	const menuId = "main-menu";
   
 	useOnClickOutside(node, () => setOpen(false));
-
-	const googleKey = process.env.GOOGLE_API;
-
-	console.log({googleKey});
 	
   return (
     <Fragment>

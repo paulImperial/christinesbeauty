@@ -7,6 +7,10 @@ const mapStyle = {
   minWidth: '100%!important',
 };
 
+const googleKey = process.env.NEXT_PUBLIC_GOOGLE_API;
+
+const googleMapSource = `https://www.google.com/maps/embed/v1/place?q=104%2C%20broad%20street%2C%20staple%20hill%2C%20bristol%2C%20bs16%205nj&key=${googleKey}`;
+
 const Map = () => {
 
   return (
@@ -23,7 +27,7 @@ const Map = () => {
       </StyledContact>
       <iframe
         style={mapStyle}
-        src="https://www.google.com/maps/embed/v1/place?q=104%2C%20broad%20street%2C%20staple%20hill%2C%20bristol%2C%20bs16%205nj&key=AIzaSyAB3MMqT3qque02waQxy0VjA7d5iqxIxN0"
+        src={googleMapSource}
       ></iframe>
     </StyledMap>
   );

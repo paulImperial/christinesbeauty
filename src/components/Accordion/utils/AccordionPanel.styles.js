@@ -15,6 +15,7 @@ export const StyledImage = styled.div`
 	box-shadow: 0 1px 15px 1px rgba(0,0,0,0.2);
 	max-width: 500px;
 	max-height: 500px;
+	filter: blur(10px);
 `;
 
 export const StyledTable = styled.ul`

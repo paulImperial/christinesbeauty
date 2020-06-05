@@ -105,16 +105,17 @@ const StyledAccordion = ({ prices }) => {
             <AccordionPanel>
               <StyledImage image={price.image} />
               <StyledInfo>
-				<StyledBlurb>{price.blurb}</StyledBlurb>
+				{price.blurb && <StyledBlurb>{price.blurb}</StyledBlurb>}
 				<Heading>Prices:</Heading>
                 {price.services.map((service) => {
                   return (
                     <StyledTable>
-                      <li>{service.treatment}:{'    '} {currency(service.price)}</li>
+                      <li>{service.treatment}:{' '}{currency(service.price)}{' '}{service.time && <Fragment>for {service.time}</Fragment>} </li>
                     </StyledTable>
                   );
-                })}
-              </StyledInfo>
+				})}
+				{price.disclaimer && price.disclaimer}
+			  </StyledInfo>
             </AccordionPanel>
           </AccordionItemPanel>
         </AccordionItem>

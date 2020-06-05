@@ -39,7 +39,6 @@
     "copy-webpack-plugin": "^6.0.1",
     "del": "^2.2.2",
     "del-cli": "^0.2.1",
-    "dotenv-webpack": "^1.7.0",
     "eslint": "^4.18.12",
     "eslint-config-google": "^0.9.1",
     "express": "^4.17.1",
@@ -53,7 +52,6 @@
     "webdav": "^1.6.1"
   },
   "dependencies": {
-    "@kentico/kontent-delivery": "^9.0.0",
     "@opuscapita/react-responsive-navbar": "^3.4.0",
     "@storybook/addon-knobs": "^5.3.17",
     "del": "^2.2.2",
@@ -67,7 +65,7 @@
     "isomorphic-fetch": "^2.2.1",
     "line-clamp": "^1.0.0",
     "netlify-cms": "^2.10.29",
-    "next": "^9.2.2",
+    "next": "^9.4.4",
     "next-compose-plugins": "^2.2.0",
     "next-images": "^1.4.0",
     "next-optimized-images": "^2.6.0",

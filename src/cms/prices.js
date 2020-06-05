@@ -142,7 +142,7 @@ const prices = [
   },
   {
     title: 'Facials',
-    image: '/images/massage1.jpg',
+    image: '/images/facials1.png',
 	blurb:'Our facial treatments are tailored to your personal skin type, whether that is dry, mature, oily, sensitive or combination. This allows us to use suitable products chosen especially for you, concentrating on creating an amazing glow, leaving you feeling refreshed, relaxed and revitalised.  High quality professional products (Kaeso) are used to give the best experience and result.  The Gold and Platinum treatments benefit from a personalised essential oil blend in the facial massage.',
 	disclaimer: '',
     services: [
@@ -174,7 +174,7 @@ const prices = [
   },
   {
     title: 'Shellac',
-    image: '/images/massage1.jpg',
+    image: '/images/shellac1.jpg',
 	blurb:'Shellac is a gel polish hybrid that launched a few years back resulting in a long-lasting super glossy manicure.  We use high quality brands (OPI and The Manicure Company) and a professional level LED lamp to ensure the polish sets well for a beautiful and long-lasting finish.',
 	disclaimer: '',
     services: [
@@ -200,7 +200,7 @@ const prices = [
   },
   {
     title: 'Hands',
-    image: '/images/massage1.jpg',
+    image: '/images/hands1.png',
 	blurb:'Using high quality polishes (OPI and The Manicure Company), we provide a range of options for your hands, whether you need a quick tidy up or an intensive treatments.  Gel polishes are optional, but have the advantages of drying straight away, and last for 2-3 weeks.  Unlike acrylic nails, there is no damage to the natural nail on removal.',
 	disclaimer: '',
     services: [
@@ -232,7 +232,7 @@ const prices = [
   },
   {
     title: 'Feet',
-    image: '/images/massage1.jpg',
+    image: '/images/hands1.png',
 	blurb:'We’re on our feet all day and a pedicure is a therapeutic treatment as well as making your feet look and feel beautiful, smooth and moisturised.  As with manicures, we offer a range of polish options, including Shellac. ',
 	disclaimer: '',
     services: [
@@ -273,8 +273,7 @@ const prices = [
   },
   {
     title: 'Make Up',
-    image: '/images/massage1.jpg',
-	blurb:'',
+    image: '/images/makeup.png',
 	disclaimer: '(Provide your own lashes, if required)',
     services: [
       {
