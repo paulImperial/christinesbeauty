@@ -54,7 +54,6 @@ const Home = () => {
         <Spotlight brands={brands}></Spotlight>
       </Container>
 	  <Container label="Gallery"></Container>
-	  <p><a class="twitter-timeline" data-lang="en" data-theme="light" href="https://twitter.com/home?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
       <Container label="Special Offers"></Container>
       <Container label="Reviews"></Container>
       <Container label="Finding Us" id="Find">

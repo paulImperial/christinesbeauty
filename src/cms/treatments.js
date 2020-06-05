@@ -1,11 +1,11 @@
 export const treatments = [
 	{
 		label: 'Waxing',
-		image:'/images/hair-removal1.jpg',
+		image:'/images/hair-removal1.webp',
 	},
 	{
 		label: 'Shellac',
-		image:'/images/shellac1.jpg',
+		image:'/images/shellac1.webp',
 	},
 	{
 		label: 'Manicures & Pedicures',
@@ -21,7 +21,7 @@ export const treatments = [
 	},
 	{
 		label: 'Massage',
-		image:'/images/massage1.jpg',
+		image:'/images/massage1.webp',
 	},
 	{
 		label: 'Make Up',

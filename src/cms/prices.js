@@ -1,7 +1,7 @@
 const prices = [
   {
     title: 'Hair Removal',
-	image: '/images/hair-removal1.jpg',
+	image: '/images/hair-removal1.webp',
 	disclaimer: '*All include underneath.',
     blurb:'Here at Christine’s Beauty we use hot and warm wax, suited for the part of the body being treated.  We try to minimise discomfort and ensure your skin is well looked after.  We take great care to provide a thorough treatment leaving you silky smooth.',
     services: [
@@ -109,7 +109,7 @@ const prices = [
   },
   {
     title: 'Massage',
-    image: '/images/massage1.jpg',
+    image: '/images/massage1.webp',
 	blurb:'Whether you are looking for targeted treatment on a problem area, or releasing tension and relaxing the whole body, we can provide a massage to suit your needs and concerns.  Trained in a range of massage therapies including a holistic approach, we can offer aromatherapy to suit your needs.',
 	disclaimer: '',
     services: [
@@ -174,7 +174,7 @@ const prices = [
   },
   {
     title: 'Shellac',
-    image: '/images/shellac1.jpg',
+    image: '/images/shellac1.webp',
 	blurb:'Shellac is a gel polish hybrid that launched a few years back resulting in a long-lasting super glossy manicure.  We use high quality brands (OPI and The Manicure Company) and a professional level LED lamp to ensure the polish sets well for a beautiful and long-lasting finish.',
 	disclaimer: '',
     services: [
@@ -232,7 +232,7 @@ const prices = [
   },
   {
     title: 'Feet',
-    image: '/images/hands1.png',
+    image: '/images/foot_picture1.webp',
 	blurb:'We’re on our feet all day and a pedicure is a therapeutic treatment as well as making your feet look and feel beautiful, smooth and moisturised.  As with manicures, we offer a range of polish options, including Shellac. ',
 	disclaimer: '',
     services: [
