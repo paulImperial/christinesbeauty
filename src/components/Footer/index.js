@@ -64,7 +64,7 @@ const StyledLink = styled.li`
 
 const StyledAnchor = styled.a`
   text-decoration: none;
-  color: ${(props) => props.theme.colours.baseWhite};
+  color: ${(props) => props.theme.colours.baseBlack};
   font-size: 1rem;
 `;
 
@@ -81,11 +81,8 @@ const OpeningHoursContainer = styled(StyledLinkContainer)`
 
 const Footer = ({ navItems, social }) => {
   return (
-    <FooterStyle>
-      <a href="/">
-        <Logo src="/images/lightlogo.png" alt="logo" />
-      </a>
-      <StyledLinkContainer>
+	<FooterStyle>
+	  <StyledLinkContainer>
         {navItems.map(({ title, link, logo = '' }) => {
           return (
             <StyledLink>

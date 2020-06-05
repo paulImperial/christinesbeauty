@@ -77,7 +77,7 @@ const prices = [
   },
   {
     title: 'Eye treatments',
-    image: '/images/eye-treatments1.png',
+    image: '/images/eye-treatments.webp',
 	blurb:'One of our signature treatments, Christine’s Beauty clients return again and again due to Christine’s skill in achieving a symmetrical and flattering look, to suit your face and following your instructions precisely, in this crucial area.',
 	disclaimer: '*Requires a patch test 24 hours before treatment',
     services: [
@@ -142,7 +142,7 @@ const prices = [
   },
   {
     title: 'Facials',
-    image: '/images/facials1.png',
+    image: '/images/facials1.webp',
 	blurb:'Our facial treatments are tailored to your personal skin type, whether that is dry, mature, oily, sensitive or combination. This allows us to use suitable products chosen especially for you, concentrating on creating an amazing glow, leaving you feeling refreshed, relaxed and revitalised.  High quality professional products (Kaeso) are used to give the best experience and result.  The Gold and Platinum treatments benefit from a personalised essential oil blend in the facial massage.',
 	disclaimer: '',
     services: [
@@ -200,7 +200,7 @@ const prices = [
   },
   {
     title: 'Hands',
-    image: '/images/hands1.png',
+    image: '/images/hands1.webp',
 	blurb:'Using high quality polishes (OPI and The Manicure Company), we provide a range of options for your hands, whether you need a quick tidy up or an intensive treatments.  Gel polishes are optional, but have the advantages of drying straight away, and last for 2-3 weeks.  Unlike acrylic nails, there is no damage to the natural nail on removal.',
 	disclaimer: '',
     services: [
@@ -273,7 +273,7 @@ const prices = [
   },
   {
     title: 'Make Up',
-    image: '/images/makeup.png',
+    image: '/images/makeup.webp',
 	disclaimer: '(Provide your own lashes, if required)',
     services: [
       {

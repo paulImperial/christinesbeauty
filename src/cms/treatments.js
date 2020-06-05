@@ -9,15 +9,15 @@ export const treatments = [
 	},
 	{
 		label: 'Manicures & Pedicures',
-		image:'/images/hands1.png',
+		image:'/images/hands1.webp',
 	},
 	{
 		label: 'Eye Treatments',
-		image:'/images/eye-treatments1.png',
+		image:'/images/eye-treatments.webp',
 	},
 	{
 		label: 'Facials',
-		image:'/images/facials1.png',
+		image:'/images/facials1.webp',
 	},
 	{
 		label: 'Massage',
@@ -25,6 +25,6 @@ export const treatments = [
 	},
 	{
 		label: 'Make Up',
-		image:'/images/makeup.png',
+		image:'/images/makeup.webp',
 	},
 ];
