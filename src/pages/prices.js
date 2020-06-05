@@ -18,7 +18,7 @@ const Prices = () => {
 	  <Layout>
 		<Container column={true}>
 			<Heading>Christine’s Beauty Treatment Menu</Heading>
-			<StyledAccordion prices={prices}/>
+			<StyledAccordion allowZeroExpanded prices={prices}/>
 		</Container>
 	  </Layout>
 	);

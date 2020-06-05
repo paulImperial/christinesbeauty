@@ -37,13 +37,12 @@ export const CardContent = styled.div`
 `;
 
 export const CardSection = styled.div`
-	padding: 1rem;
 	position: relative;
 	margin-top: 3.75rem;
 	border-radius: ${rem('6px')};
 	margin: 20px;
-	border: 1px solid #ccc;
-	box-shadow: 0 3px 10px 1px rgba(0,0,0,0.1);
+	transition: border-color .3s, box-shadow .5s, transform .3s;
+
 	max-width: 28%;
 	min-height: 300px;
 		&:hover,
@@ -55,9 +54,16 @@ export const CardSection = styled.div`
 				color: ${props => props.theme.colours.pink};
 			};
 			cursor: pointer;
+			box-shadow: 0 2px 10px 1px rgba(0,0,0,0.4);
+
+			box-shadow: 0 5px 10px rgba(0,0,0,.12), 0 20px 20px rgba(0,0,0,.08);
+			border-color: transparent;
+			transform: translate(0,-4px);
 		}
 	
-	&
+	@media (max-width: ${({ theme }) => theme.mobile}) {
+		max-width: 100%;
+		}
 
 `;
 

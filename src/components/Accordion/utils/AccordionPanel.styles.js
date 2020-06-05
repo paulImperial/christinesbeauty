@@ -1,14 +1,13 @@
 import styled from 'styled-components';
+import { rem } from 'polished';
 
-const StyledAccordionPanel = styled.div`
+export const StyledAccordionPanel = styled.div`
 	display: flex;
 	width: 80%;
-	border: 1px solid red;
 `;
 
-const StyledImage = styled.div`
+export const StyledImage = styled.div`
 	position: relative;
-	max-width: 100%;
 	width: 100vw;
 	height: 100vh;
 	background: url('${props => props.image}') no-repeat;
@@ -17,12 +16,17 @@ const StyledImage = styled.div`
 	box-shadow: 0 1px 15px 1px rgba(0,0,0,0.2);
 `;
 
-const StyledTable = styled.div`
+export const StyledTable = styled.div`
 	display: flex;
 	flex-direction: column;
 	flex-grow: 1;
 `;
 
-const StyledField = styled.div`
+export const StyledBlurb = styled.div`
 	display: inline-block;
+	margin: 20px;
+	padding: 20px;
+	margin-top: 0;
+	box-shadow: 0 0 15px 0 rgba(0,0,0,0.14);
+	height: max-content;
 `;

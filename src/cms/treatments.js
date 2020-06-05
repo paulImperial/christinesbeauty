@@ -16,7 +16,7 @@ export const treatments = [
 		image:'/images/eye-treatments1.png',
 	},
 	{
-		label: 'facials',
+		label: 'Facials',
 		image:'/images/facials1.png',
 	},
 	{

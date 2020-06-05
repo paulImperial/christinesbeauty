@@ -1,7 +1,7 @@
 const prices = [
   {
     title: 'Hair Removal',
-	image: '',
+	image: '/images/hair-removal1.jpg',
 	disclaimer: '',
     blurb:
       'Here at Christine’s Beauty we use hot and warm wax, suited for the part of the body being treated.  We try to minimise discomfort and ensure your skin is well looked after.  We take great care to provide a thorough treatment leaving you silky smooth.',
@@ -78,7 +78,7 @@ const prices = [
   },
   {
     title: 'Eye treatments',
-    image: '',
+    image: '/images/eye-treatments1.png',
 	blurb:'One of our signature treatments, Christine’s Beauty clients return again and again due to Christine’s skill in achieving a symmetrical and flattering look, to suit your face and following your instructions precisely, in this crucial area.',
 	disclaimer: '',
     services: [

@@ -25,7 +25,9 @@ html, body {
 	overflow-x: hidden;
 	font-size: 18px;
 	height: 100vh;
-    text-rendering: optimizeLegibility;
+	text-rendering: optimizeLegibility;
+	transition: all 0.5s ease;
+	line-height: 1.6rem;
   }
 `;
 
@@ -34,6 +36,10 @@ const boxShadow = color => `box-shadow: 0 10px 15px 4px ${rgba(color, 0.5)};`;
 const theme = {
 	...media,
 	boxShadow,
+	primaryDark: '#0D0C1D',
+	primaryLight: '#EFFFFA',
+	primaryHover: '#343078',
+	mobile: '576px',
   colours: {
 	baseWhite: '#ffffff',
 	baseBlack: '#000000',
@@ -55,6 +61,7 @@ const theme = {
 	shadeDarkerGrey: 'gray',
 	shadeDarkestGrey: '#0d0d0d',
 	pink: rgba(216, 91, 145, 1),
+	mildPink: rgba(216, 91, 145, 0.2),
   },
   fontSizes: {
     small: '1em',

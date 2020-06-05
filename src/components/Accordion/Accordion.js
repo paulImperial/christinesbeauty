@@ -7,7 +7,8 @@ import {
   AccordionItemButton,
   AccordionItemPanel,
 } from 'react-accessible-accordion';
-// import AccordionItemPanel from '../Accordion/utils/AccordionPanel';
+import AccordionPanel from '../Accordion/utils/AccordionPanel';
+import { StyledAccordionPanel, StyledImage, StyledTable, StyledBlurb } from '../Accordion/utils/AccordionPanel.styles';
 
 const StyleAccordion = styled(Accordion)`
   .accordion {
@@ -82,8 +83,11 @@ const StyledAccordion = ({ prices }) => {
           <AccordionItemHeading>
             <AccordionItemButton>{price.title}</AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel>
-            <p>{price.blurb}</p>
+		  <AccordionItemPanel>
+			  <AccordionPanel>
+			  <StyledImage image={price.image} />
+			<StyledBlurb>{price.blurb}</StyledBlurb>
+			
 
             {price.services.map((service) => {
               return (
@@ -92,7 +96,8 @@ const StyledAccordion = ({ prices }) => {
                   <p>{service.price}</p>
                 </AccordionItemPanel>
               );
-            })}
+			})}
+			</AccordionPanel>
           </AccordionItemPanel>
         </AccordionItem>
       ))}

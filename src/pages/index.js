@@ -9,24 +9,19 @@ import Spotlight from '../components/Spotlight/Spotlight';
 import { brands } from '../cms/brands';
 import { treatments } from '../cms/treatments';
 
-import Link from 'next/link';
-
 const BodyText = styled.p`
   margin: 10px 0;
   padding: 5px;
-`;
-
-const Bob = styled.div`
-	background: ${({ theme: { colours } }) => colours.shadeLightestGrey};
-	width: 85%;
-	border: 1px solid #ccc;
+  font-size: 1.25rem;
 `;
 
 const Home = () => {
   //const { Treatments } = content;
   return (
     <Layout>
-      <Hero image={'/images/christine.png'} />
+      <Container full={true}>
+        <Hero image={'/images/room.webp'} />
+      </Container>
       <BodyText>
         I would like to offer you a warm welcome to Christine’s Beauty, my own independent salon, tucked away in a
         peaceful corner of Staple Hill Bristol BS16, but less than a minute’s walk from the main road Broad Street.
@@ -42,8 +37,8 @@ const Home = () => {
         Here at Christine’s Beauty my aim is to provide high quality treatments at affordable prices in a calm and
         caring environment where you feel relaxed.
       </BodyText>
-      <Container label="Treatments">
-		<Card treatments={treatments}></Card>
+      <Container label="Treatments" id="Treatments">
+        <Card treatments={treatments}></Card>
       </Container>
       <BodyText>
         My main aim from the moment you enter Christine’s Beauty is for you to feel welcomed and comfortable. Throughout
@@ -55,22 +50,21 @@ const Home = () => {
         I also focus on personal customer care from when you first come to the salon to when you leave. You will feel
         pampered and spoiled here at Christine’s Beauty. I look forward to seeing you.
       </BodyText>
-	  <Container label="Products We Use">
-	  	<Spotlight brands={brands}></Spotlight>
-	  </Container>
-      <Container label="Gallery"></Container>
+      <Container label="Products We Use">
+        <Spotlight brands={brands}></Spotlight>
+      </Container>
+	  <Container label="Gallery"></Container>
+	  <p><a class="twitter-timeline" data-lang="en" data-theme="light" href="https://twitter.com/home?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></p>
       <Container label="Special Offers"></Container>
       <Container label="Reviews"></Container>
-      <Container label="Finding Us">
+      <Container label="Finding Us" id="Find">
+        <Map />
         <BodyText>
           The salon is easy to reach, with the bus stopping just a few steps away, and being just a couple of minutes’
           drive from the Ring Road. Based in a converted outbuilding of my family home, with separate access, the
           location provides both privacy and convenience, all at ground level, with free onsite parking usually
           available.
-		</BodyText>
-		<Bob>
-		<Map />
-	  </Bob>
+        </BodyText>
       </Container>
     </Layout>
   );
