@@ -66,7 +66,10 @@ const StyleAccordion = styled(Accordion)`
     padding: 20px;
     animation: fadein 0.35s ease-in;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
-    outline: none;
+	outline: none;
+	@media (max-width: 650px) {
+		padding: 0;
+	}
   }
 
   @keyframes fadein {

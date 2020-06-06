@@ -16,6 +16,9 @@ export const StyledImage = styled.div`
 	max-width: 500px;
 	max-height: 500px;
 	filter: blur(10px);
+	@media (max-width:850px){
+		display: none;
+	}
 `;
 
 export const StyledTable = styled.ul`
@@ -25,10 +28,12 @@ export const StyledTable = styled.ul`
 
 export const StyledBlurb = styled.div`
 	display: inline-block;
-	margin: 20px;
-	padding: 20px;
+	padding: 30px;
 	margin-top: 0;
 	box-shadow: 0 0 15px 0 rgba(0,0,0,0.14);
 	height: max-content;
 	width: 100%;
+	@media (max-width: 600px) {
+		padding: 20px 10px 20px 10px;
+	}
 `;
