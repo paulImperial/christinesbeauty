@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
-import styled from 'styled-components';
+import React, { Component } from "react";
+import { NavLink, Link } from "react-router-dom";
+
+// import { BurgerIcon } from './'
+import styled from "styled-components";
 
 const Navigation = styled.header`
   width: 100%;
@@ -8,8 +11,10 @@ const Navigation = styled.header`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
-  background-color: ${(props) => props.theme.colours.baseWhite};
+  padding: 0px 100px 0;
+  height: 140px;
+  margin-bottom: 60px;
+  background: #f8f8f8;
 
   .logo a {
     padding-top: 33px;
@@ -40,52 +45,54 @@ const Navigation = styled.header`
       }
     }
   }
+  .gray {
+    color: #ccc;
+  }
   a {
+    color: #222;
     opacity: 0.55;
     transition: all 0.6s;
-		color: ${(props) => props.theme.colours.baseBlack};
-		font-weight: 500;
-    font-size: 1.25em;
+    color: #222;
+    font-size: 1em;
   }
   a:hover {
     opacity: 1;
   }
   .fa-bars {
     display: none;
-    color: ${(props) => props.theme.colours.baseBlack};
+    color: #222;
     font-size: 2rem;
   }
   nav {
-		width: 100%;
-
-  //   ul {
-  //     display: flex;
-  //     justify-content: space-between;
-  //   }
-  //   li {
-  //     margin: 0 15px;
-  //     justify-content: space-between;
-  //     font-size: 1em;
-  //   }
-  //   a {
-  //     font-size: 1em;
-  //     text-decoration: none;
-  //     .active {
-  //       color: tomato;
-  //     }
-  //   }
-  //   a.active {
-  //     color: #222;
-  //   }
-   }
-
-  @media only screen and (max-width: 400px) {
-    padding: 0px;
-    .logo {
-			display: none;
+    ul {
+      display: flex;
+      justify-content: space-between;
+    }
+    li {
+      margin: 0 15px;
+      justify-content: space-between;
+      font-size: 1em;
+    }
+    a {
+      font-size: 1em;
+      text-decoration: none;
+      .active {
+        color: tomato;
+      }
+    }
+    a.active {
+      color: #222;
     }
   }
-  @media only screen and (max-width: 930px) {
+
+  @media only screen and (max-width: 800px) {
+    padding: 0px;
+    .logo {
+      padding-left: 15px;
+      padding-top: 0px !important;
+    }
+  }
+  @media only screen and (max-width: 600px) {
     height: auto;
     min-height: 50px;
     display: block;
@@ -146,58 +153,39 @@ const Navigation = styled.header`
   }
 `;
 
-const StyledLinkContainer = styled.ul`
-  list-style-type: none;
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-  width: 100%;
-  margin: 0 auto;
-`;
-
-const StyledLink = styled.li`
-  transition: border-bottom 0.5s;
-
-  padding-bottom: 5px;
-  margin: 0 10px;
-
-  border-bottom: 3px solid #fff;
-
-  &:hover {
-    border-bottom: 3px solid ${(props) => props.theme.colours.pink};
+class Nav extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      isExpanded: false
+    };
   }
-`;
-
-const StyledAnchor = styled.a`
-  text-decoration: none;
-  color: ${(props) => props.theme.colours.baseBlack};
-  font-size: 1.25rem;
-`;
-
-const Nav = ({ navItems }) => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const handleToggle = (e) => {
+  handleToggle(e) {
     e.preventDefault();
-    setIsExpanded(!isExpanded);
-  };
+    this.setState({
+      isExpanded: !this.state.isExpanded
+    });
+  }
+  render() {
+    const { isExpanded } = this.state;
 
-  return (
-    <Navigation>
-      <nav className="nav">
-        <i className="fa fa-bars" aria-hidden="true" onClick={(e) => handleToggle(e)} />
-        <StyledLinkContainer className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}>
-          {navItems.map(({ title, link, logo = '' }) => {
-            return (
-              <StyledLink>
-                <StyledAnchor href={link}>{title}</StyledAnchor>
-              </StyledLink>
-            );
-          })}
-        </StyledLinkContainer>
-      </nav>
-    </Navigation>
-  );
-};
+    return (
+      <Navigation>
+        <nav className="nav">
+          <i
+            className="fa fa-bars"
+            aria-hidden="true"
+            onClick={e => this.handleToggle(e)}
+          />
+          <ul className={`collapsed ${isExpanded ? "is-expanded" : ""}`}>
+              <li>home</li>
+              <li>about</li>
+              <li>contact</li>
+          </ul>
+        </nav>
+      </Navigation>
+    );
+  }
+}
 
 export default Nav;

@@ -7,6 +7,9 @@ const FooterStyle = styled.div`
   margin: 30px 0 0 0;
   padding: 10px;
   background: ${(props) => props.theme.colours.shadeDarkGrey};
+  @media(max-width: 650px) {
+	  flex-direction: column;
+  }
 `;
 
 const Logo = styled.img`
@@ -51,6 +54,10 @@ const StyledLinkContainer = styled.ul`
   align-items: center;
   justify-content: space-around;
   border-right: 1px solid ${(props) => props.theme.colours.baseWhite};
+  @media(max-width: 650px) {
+	border-right: none;
+}
+
 `;
 
 const StyledLink = styled.li`
@@ -68,6 +75,13 @@ const StyledAnchor = styled.a`
   font-size: 1rem;
 `;
 
+const LinkContainer = styled(StyledLinkContainer)`
+  @media (max-width:800px){
+	  display: none;
+  }
+`;
+
+
 const SocialContainer = styled(StyledLinkContainer)`
 	border-right: none;
 	flex-grow: 2;
@@ -82,7 +96,7 @@ const OpeningHoursContainer = styled(StyledLinkContainer)`
 const Footer = ({ navItems, social }) => {
   return (
 	<FooterStyle>
-	  <StyledLinkContainer>
+	  <LinkContainer>
         {navItems.map(({ title, link, logo = '' }) => {
           return (
             <StyledLink>
@@ -90,12 +104,12 @@ const Footer = ({ navItems, social }) => {
             </StyledLink>
           );
         })}
-			</StyledLinkContainer>
+		</LinkContainer>
 		<OpeningHoursContainer>
 				<li><strong>Opening Hours</strong></li>
 				<li>Monday 8am - 4pm</li>
 				<li>Tuesday 8am - 4pm</li>
-				<>Wednesday 8am - 4pm</>
+				<li>Wednesday 8am - 4pm</li>
 				<li>Thursday 8am - 4pm</li>
 				<li>Friday 8am - 4pm</li>
 				<li>Saturday 8am - 4pm</li>

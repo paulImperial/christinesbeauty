@@ -3,7 +3,8 @@ import styled from 'styled-components';
 
 const HeaderStyle = styled.div`
   margin: 0;
-  padding: 10px;
+  padding-top: 10px;
+  padding-left: 10px;
   background: ${(props) => props.theme.colours.white};
   display: flex;
   justify-content: center;
@@ -13,7 +14,7 @@ const HeaderStyle = styled.div`
 `;
 
 const HeaderContainer = styled.div`
-  width: 90%;
+  width: 100%;
   display: flex;
 `;
 
@@ -23,6 +24,9 @@ const HeaderTitle = styled.h1`
 
 const Logo = styled.img`
   width: 130px;
+  @media (max-width: 440px) {
+	  display: none;
+  }
 `;
 
 const TelephoneNumber = styled.div`
