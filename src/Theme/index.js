@@ -6,7 +6,7 @@ import { createGlobalStyle } from "styled-components";
 
 export const AppRoot = createGlobalStyle`
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
 
 html, body {

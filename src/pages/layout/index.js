@@ -39,7 +39,8 @@ const Layout = ({ children, hero }) => {
 		<HeroBanner>{hero}</HeroBanner>
         <Main>{children}</Main>
         <Footer navItems={navigation} social={social}></Footer>
-      </Theme>
+	  </Theme>
+	  <script> </script>
     </Fragment>
   );
 };
