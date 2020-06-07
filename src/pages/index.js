@@ -53,7 +53,9 @@ const Home = () => {
       <Container label="Products We Use">
         <Spotlight brands={brands}></Spotlight>
       </Container>
-	  <Container label="Gallery"></Container>
+	  <Container label="Gallery">
+	  <div id="curator-feed-default-feed-layout"></div>
+	  </Container>
       <Container label="Special Offers"></Container>
       <Container label="Reviews"></Container>
       <Container label="Finding Us" id="Find">
@@ -64,7 +66,7 @@ const Home = () => {
           location provides both privacy and convenience, all at ground level, with free onsite parking usually
           available.
         </BodyText>
-      </Container>
+	  </Container>
     </Layout>
   );
 };
