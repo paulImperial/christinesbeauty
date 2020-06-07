@@ -100,7 +100,7 @@ const StyledAccordion = ({ prices }) => {
   return (
     <StyleAccordion>
       {prices.map((price) => (
-        <AccordionItem>
+        <AccordionItem key={price.id} id={price.id}>
           <AccordionItemHeading>
             <AccordionItemButton>{price.title}</AccordionItemButton>
           </AccordionItemHeading>

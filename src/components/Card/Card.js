@@ -10,7 +10,7 @@ const Card = ({ treatments, ...props }) => {
         <CardSection {...props} key={treatment.label}>
           <CardLabel>{treatment.label}</CardLabel>
           <CardContent>
-            <CardImage image={treatment.image}></CardImage>
+            <a href={treatment.link}><CardImage image={treatment.image}></CardImage></a>
           </CardContent>
         </CardSection>
       ))}
