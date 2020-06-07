@@ -25,7 +25,7 @@ const HeaderTitle = styled.h1`
 const Logo = styled.img`
   width: 130px;
   @media (max-width: 440px) {
-	  display: none;
+	  width: 75px;
   }
 `;
 

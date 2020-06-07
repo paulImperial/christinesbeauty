@@ -56,6 +56,7 @@ const StyledLinkContainer = styled.ul`
   border-right: 1px solid ${(props) => props.theme.colours.baseWhite};
   @media(max-width: 650px) {
 	border-right: none;
+	padding-left: initial;
 }
 
 `;

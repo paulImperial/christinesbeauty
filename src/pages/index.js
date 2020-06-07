@@ -39,8 +39,11 @@ const Home = () => {
       </BodyText>
       <Container label="Treatments" id="Treatments">
         <Card treatments={treatments}></Card>
-      </Container>
-      <BodyText>
+	  </Container>
+	  <BodyText>
+	  	I offer these treatments to both men and women in a private and relaxing environment. 
+	  </BodyText>
+	  <BodyText>
         My main aim from the moment you enter Christine’s Beauty is for you to feel welcomed and comfortable. Throughout
         the treatment I aim for you to feel transported away from your everyday life with an opportunity to take a real
         break. Whether beauty treatments are part of your normal routine, or you’ve decided to treat yourself, it’s Your
@@ -54,7 +57,6 @@ const Home = () => {
         <Spotlight brands={brands}></Spotlight>
       </Container>
 	  <Container label="Gallery">
-	  <div id="curator-feed-default-feed-layout"></div>
 	  </Container>
       <Container label="Special Offers"></Container>
       <Container label="Reviews"></Container>

@@ -15,6 +15,8 @@ const Contact = () => {
 	  <Layout>
 		<Container column={true}>
 			<Heading>Contact Us</Heading>
+			<p>Please do get in touch to find out more about our services or to request an appointment. 
+			 Call us on 07895 132474 or complete a Free online enquiry and we will soon be in touch with you.</p>
 		</Container>
 	  </Layout>
 	);

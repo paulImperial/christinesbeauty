@@ -18,7 +18,7 @@ const Map = () => {
       <StyledContact>
         <StyledContactContainer>
           <StyledImage src="/images/icons/phone.svg" />
-          <StyledContactText>01222 2222222</StyledContactText>
+          <StyledContactText>07895 132474</StyledContactText>
         </StyledContactContainer>
         <StyledContactContainer>
           <StyledImage src="/images/icons/location2.svg" />

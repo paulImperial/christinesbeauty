@@ -11,6 +11,7 @@ const Heading = styled.h1`
 	text-align: left;
 	font-size: 2rem;
 	font-weight: 100;
+	line-height: 2rem;
 `;
 
 const Prices = () => {

@@ -15,4 +15,8 @@ export const HeroImage = styled.div`
 	background: url('${props => props.image}') no-repeat 100% 60%;
 	background-size: cover;
 	border-radius: ${rem('6px')};
+
+	@media (max-width: 800px) {
+		height: 50vh;
+	}
 `;
