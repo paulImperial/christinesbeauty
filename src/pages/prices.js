@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from './layout';
+import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
 import StyledAccordion from '../components/Accordion/Accordion';
 
@@ -16,7 +16,7 @@ const Heading = styled.h1`
 
 const Prices = () => {
 	return (
-	  <Layout>
+	  <Layout title={'Prices'}>
 		<Container column={true}>
 			<Heading>Christine’s Beauty Treatment Menu</Heading>
 			<StyledAccordion allowZeroExpanded prices={prices}/>

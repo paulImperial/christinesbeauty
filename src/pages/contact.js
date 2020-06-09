@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from './layout';
+import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
 
 const Heading = styled.h1`
@@ -12,7 +12,7 @@ const Heading = styled.h1`
 
 const Contact = () => {
 	return (
-	  <Layout>
+	  <Layout title={'Contact Page'}>
 		<Container column={true}>
 			<Heading>Contact Us</Heading>
 			<p>Please do get in touch to find out more about our services or to request an appointment. 

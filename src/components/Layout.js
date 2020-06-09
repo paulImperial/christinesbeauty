@@ -2,14 +2,11 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
-import { Theme } from '../../Theme';
-import Header from '../../components/Header';
-import Footer from '../../components/Footer';
-import { AppRoot } from '../../Theme/';
-import navigation from '../../cms/navigation';
-import Navigation from '../../components/Generic/Navigation';
-import social from '../../cms/social';
-import Nav from '../../components/Generic/Navigation';
+import Header from './Header';
+import Footer from './Footer';
+import navigation from '../cms/navigation';
+import social from '../cms/social';
+import Nav from './Generic/Navigation';
 
 const Main = styled.div`
   margin: 0 auto;
@@ -23,15 +20,13 @@ const HeroBanner = styled.div`
   width: 100%;
 `;
 
-const Layout = ({ children, hero }) => {
+const Layout = ({ children, hero, title }) => {
 	
   return (
     <Fragment>
-	  <Theme>
-	  <AppRoot />
 		<Head>
 		<link rel="shortcut icon" href="/images/favicon.ico" />
-          <title>Christine's Beauty</title>
+          <title>{title}</title>
         </Head>
 		<Header>
 			<Nav navItems={navigation} />
@@ -39,8 +34,6 @@ const Layout = ({ children, hero }) => {
 		<HeroBanner>{hero}</HeroBanner>
         <Main>{children}</Main>
         <Footer navItems={navigation} social={social}></Footer>
-	  </Theme>
-	  <script> </script>
     </Fragment>
   );
 };

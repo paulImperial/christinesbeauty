@@ -189,7 +189,7 @@ const Nav = ({ navItems }) => {
         <StyledLinkContainer className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}>
           {navItems.map(({ title, link, logo = '' }) => {
             return (
-              <StyledLink>
+              <StyledLink key={title}>
                 <StyledAnchor href={link}>{title}</StyledAnchor>
               </StyledLink>
             );

@@ -1,10 +1,9 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import { rgba } from 'polished';
 import media from './media';
 import { createGlobalStyle } from "styled-components";
 
-export const AppRoot = createGlobalStyle`
+export const GlobalStyle = createGlobalStyle`
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
 
@@ -73,4 +72,4 @@ const theme = {
 	},
 };
 
-export const Theme = ({ children }) => <ThemeProvider theme={theme}>{children}</ThemeProvider>;
+export default theme;

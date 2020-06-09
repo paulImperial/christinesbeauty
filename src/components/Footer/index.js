@@ -100,7 +100,7 @@ const Footer = ({ navItems, social }) => {
 	  <LinkContainer>
         {navItems.map(({ title, link, logo = '' }) => {
           return (
-            <StyledLink>
+            <StyledLink key={title}>
               <StyledAnchor href={link}>{title}</StyledAnchor>
             </StyledLink>
           );
@@ -119,7 +119,7 @@ const Footer = ({ navItems, social }) => {
       <SocialContainer>
         {social.map(({ title, image, link }) => {
           return (
-            <StyledSocialLink>
+            <StyledSocialLink key={title}>
               <a href={link}>
                 <SocialLogo src={image} />
               </a>

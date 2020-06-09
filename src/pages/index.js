@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import Layout from './layout';
+import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
 import Card from '../components/Card/Card';
 import Hero from '../components/Hero/Hero';
@@ -18,7 +18,7 @@ const BodyText = styled.p`
 const Home = () => {
   //const { Treatments } = content;
   return (
-    <Layout>
+    <Layout title={"main page"}>
       <Container full={true}>
         <Hero image={'/images/room.webp'} />
       </Container>
