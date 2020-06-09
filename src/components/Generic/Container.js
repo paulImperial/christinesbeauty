@@ -22,8 +22,8 @@ const Heading = styled.h2`
 const Container = ({ children, label, column, background, id, full=false }) => {
   return (
     <Fragment>
-      <Heading id={id}>{label}</Heading>
-      <StyledContainer column={column} background={background} full={full}>{children}</StyledContainer>
+      {label && <Heading>{label}</Heading>}
+      <StyledContainer column={column} background={background} full={full} id={id}>{children}</StyledContainer>
     </Fragment>
   );
 };

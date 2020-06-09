@@ -98,7 +98,7 @@ const Heading = styled.h2`
 
 const StyledAccordion = ({ prices }) => {
   return (
-    <StyleAccordion>
+    <StyleAccordion allowMultipleExpanded={true} allowZeroExpanded={true}>
       {prices.map((price) => (
         <AccordionItem key={price.id} id={price.id}>
           <AccordionItemHeading>
@@ -107,7 +107,7 @@ const StyledAccordion = ({ prices }) => {
           <AccordionItemPanel>
             <AccordionPanel>
               <StyledImage image={price.image} />
-              <StyledInfo>
+              <StyledInfo id={price.id}>
 				{price.blurb && <StyledBlurb>{price.blurb}</StyledBlurb>}
 				<Heading>Prices:</Heading>
                 {price.services.map((service) => {
@@ -117,7 +117,7 @@ const StyledAccordion = ({ prices }) => {
                     </StyledTable>
                   );
 				})}
-				{price.disclaimer && price.disclaimer}
+				{price.disclaimer}
 			  </StyledInfo>
             </AccordionPanel>
           </AccordionItemPanel>

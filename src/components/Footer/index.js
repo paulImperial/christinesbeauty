@@ -55,10 +55,10 @@ const StyledLinkContainer = styled.ul`
   justify-content: space-around;
   border-right: 1px solid ${(props) => props.theme.colours.baseWhite};
   @media(max-width: 650px) {
-	border-right: none;
-	padding-left: initial;
-}
-
+		border-right: none;
+		padding-left: 0;
+		padding-right: 0;
+	}
 `;
 
 const StyledLink = styled.li`
