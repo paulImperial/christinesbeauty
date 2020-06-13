@@ -6,6 +6,7 @@ import Card from '../components/Card/Card';
 import Hero from '../components/Hero/Hero';
 import Map from '../components/map/Map';
 import Spotlight from '../components/Spotlight/Spotlight';
+import Cameo from '../components/Cameo';
 import { brands } from '../cms/brands';
 import { treatments } from '../cms/treatments';
 
@@ -19,8 +20,9 @@ const Home = () => {
   //const { Treatments } = content;
   return (
     <Layout title={"main page"}>
-      <Container full={true}>
-        <Hero image={'/images/room.webp'} />
+			<Container full={true}>
+			<Cameo image={'/images/christineBW.jpg'} />
+        <Hero image={'/images/room.jpg'} />
       </Container>
       <BodyText>
         I would like to offer you a warm welcome to Christine’s Beauty, my own independent salon, tucked away in a

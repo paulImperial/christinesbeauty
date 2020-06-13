@@ -54,11 +54,9 @@ export const CardSection = styled.div`
 				color: ${props => props.theme.colours.pink};
 			};
 			cursor: pointer;
-			box-shadow: 0 2px 10px 1px rgba(0,0,0,0.4);
-
-			box-shadow: 0 5px 10px rgba(0,0,0,.12), 0 20px 20px rgba(0,0,0,.08);
-			border-color: transparent;
-			transform: translate(0,-4px);
+			transform: scale(1.01);
+			box-shadow: rgba(0, 0, 0, 0.2) 0px 9px 12px 10px;
+			transition: all 250ms ease 0s;
 		}
 	
 	@media (max-width: ${({ theme }) => theme.mobile}) {

@@ -2,7 +2,7 @@ const prices = [
   {
 	title: 'Hair Removal',
 	id: 'hairRemoval',
-	image: '/images/hair-removal1.webp',
+	image: '/images/hair-removal1.jpg',
 	disclaimer: '*All include underneath.',
     blurb:'Here at Christine’s Beauty we use hot and warm wax, suited for the part of the body being treated.  We try to minimise discomfort and ensure your skin is well looked after.  We take great care to provide a thorough treatment leaving you silky smooth.',
     services: [
@@ -112,7 +112,7 @@ const prices = [
   {
 	title: 'Massage',
 	id: 'massage',
-    image: '/images/massage1.webp',
+    image: '/images/massage1.jpg',
 	blurb:'Whether you are looking for targeted treatment on a problem area, or releasing tension and relaxing the whole body, we can provide a massage to suit your needs and concerns.  Trained in a range of massage therapies including a holistic approach, we can offer aromatherapy to suit your needs.',
 	disclaimer: '',
     services: [
@@ -146,7 +146,7 @@ const prices = [
   {
 	title: 'Facials',
 	id: 'facials',
-    image: '/images/facials1.webp',
+    image: '/images/facials1.jpg',
 	blurb:'Our facial treatments are tailored to your personal skin type, whether that is dry, mature, oily, sensitive or combination. This allows us to use suitable products chosen especially for you, concentrating on creating an amazing glow, leaving you feeling refreshed, relaxed and revitalised.  High quality professional products (Kaeso) are used to give the best experience and result.  The Gold and Platinum treatments benefit from a personalised essential oil blend in the facial massage.',
 	disclaimer: '',
     services: [
@@ -179,7 +179,7 @@ const prices = [
   {
 	title: 'Shellac',
 	id: 'shellac',
-    image: '/images/shellac1.webp',
+    image: '/images/shellac1.jpg',
 	blurb:'Shellac is a gel polish hybrid that launched a few years back resulting in a long-lasting super glossy manicure.  We use high quality brands (OPI and The Manicure Company) and a professional level LED lamp to ensure the polish sets well for a beautiful and long-lasting finish.',
 	disclaimer: '',
     services: [
@@ -206,7 +206,7 @@ const prices = [
   {
 	title: 'Hands',
 	id: 'hands',
-    image: '/images/hands1.webp',
+    image: '/images/hands1.jpg',
 	blurb:'Using high quality polishes (OPI and The Manicure Company), we provide a range of options for your hands, whether you need a quick tidy up or an intensive treatments.  Gel polishes are optional, but have the advantages of drying straight away, and last for 2-3 weeks.  Unlike acrylic nails, there is no damage to the natural nail on removal.',
 	disclaimer: '',
     services: [
@@ -239,7 +239,7 @@ const prices = [
   {
 	title: 'Feet',
 	id: 'feet',
-    image: '/images/foot_picture1.webp',
+    image: '/images/foot_picture1.jpg',
 	blurb:'We’re on our feet all day and a pedicure is a therapeutic treatment as well as making your feet look and feel beautiful, smooth and moisturised.  As with manicures, we offer a range of polish options, including Shellac. ',
 	disclaimer: '',
     services: [
@@ -281,7 +281,7 @@ const prices = [
   {
 	title: 'Make Up',
 	id: 'makeup',
-    image: '/images/makeup.webp',
+    image: '/images/makeup.jpg',
 	disclaimer: '(Provide your own lashes, if required)',
     services: [
       {

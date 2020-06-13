@@ -1,22 +1,22 @@
 export const treatments = [
 	{
 		label: 'Waxing',
-		image:'/images/hair-removal1.webp',
+		image:'/images/hair-removal1.jpg',
 		link: '/prices#hairRemoval'
 	},
 	{
 		label: 'Shellac',
-		image:'/images/shellac1.webp',
+		image:'/images/shellac1.jpg',
 		link: '/prices#shellac'
 	},
 	{
 		label: 'Manicures',
-		image:'/images/hands1.webp',
+		image:'/images/hands1.jpg',
 		link: '/prices#hands'
 	},
 	{
 		label: 'Pedicures',
-		image:'/images/foot_picture1.webp',
+		image:'/images/foot_picture1.jpg',
 		link: '/prices#feet'
 	},
 	{
@@ -26,17 +26,17 @@ export const treatments = [
 	},
 	{
 		label: 'Facials',
-		image:'/images/facials1.webp',
+		image:'/images/facials1.jpg',
 		link: '/prices#facials'
 	},
 	{
 		label: 'Massage',
-		image:'/images/massage1.webp',
+		image:'/images/massage1.jpg',
 		link: '/prices#massage'
 	},
 	{
 		label: 'Make Up',
-		image:'/images/makeup.webp',
+		image:'/images/makeup.jpg',
 		link: '/prices#makeup'
 	},
 ];
