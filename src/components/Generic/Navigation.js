@@ -160,7 +160,7 @@ const StyledLinkContainer = styled.ul`
 
 const StyledLink = styled.li`
   transition: border-bottom 0.5s;
-
+	cursor: pointer;
   padding-bottom: 5px;
   margin: 0 10px;
 

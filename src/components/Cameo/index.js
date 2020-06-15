@@ -5,8 +5,8 @@ import styled from 'styled-components';
 const CameoContainer = styled.div`
 	background-color: white;
 	box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
-	height: 130px;
-	width: 130px;
+	height: 200px;
+	width: 200px;
 	border-radius: 60%;
 	overflow: hidden;
 	border-width: 2px;
@@ -14,12 +14,14 @@ const CameoContainer = styled.div`
 	border-color: rgb(238, 238, 238);
 	border-image: initial;
 	position: absolute;
+	top: -50px;
+	right: 0;
 `;
 
 const Image = styled.div`
+height: 200px;
+width: 200px;
 	background-color: #fff;
-	height: 130px;
-	width: 130px;
 	z-index: 1;
 	color: rgb(37, 37, 37);
 	width: 100%;
@@ -34,15 +36,13 @@ const Image = styled.div`
 	overflow: hidden;
 	border: 5px solid #fff;
 	background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.53) 0px 19px 38px, rgba(0, 0, 0, 0.52) 0px 15px 12px;
-    height: 130px;
-    width: 130px;
-    border-radius: 60%;
-    overflow: hidden;
-    border-width: 5px;
-    border-style: solid;
-    border-color: rgb(238, 238, 238);
-    border-image: initial;
+  box-shadow: rgba(0, 0, 0, 0.53) 0px 0px 12px, rgba(0, 0, 0, 0.52) 0px 0px 12px;
+  border-radius: 60%;
+  overflow: hidden;
+  border-width: 5px;
+  border-style: solid;
+  border-color: rgb(238, 238, 238);
+  border-image: initial;
 `;
 
 const Cameo = ({ image }) => {
