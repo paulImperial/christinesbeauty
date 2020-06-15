@@ -23,11 +23,13 @@ export const HeroWording = styled.div`
 	font-size: 3rem;
 	width: 500px;
 	height: 300px;
-	background-color: ${props => props.theme.colours.baseWhite};
-	opacity: 0.5;
+	// background-color: ${props => props.theme.colours.baseWhite};
+	// opacity: 0.5;
 	align-self: flex-end;
 	justify-self: end;
-	padding: 1rem;
+	display: flex;
+	justify-items: center;
+	align-items: center;
 `;
 
 export const TitleText = styled.h1`
