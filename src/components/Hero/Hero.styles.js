@@ -14,7 +14,8 @@ export const HeroImage = styled.div`
 	background-size: cover;
 	@media (max-width: 800px) {
 		height: 50vh;
-		background: none;
+		background: url('/images/leaf.jpg') no-repeat 100% 25%;
+		background-size: cover;
 	}
 `;
 
@@ -30,6 +31,9 @@ export const HeroWording = styled.div`
 	width: min-content;
 	bottom: 0;
 	right: 0;
+	@media (max-width: 800px) {
+		font-size: 2.2rem;
+	}
 `;
 
 export const TitleText = styled.h1`

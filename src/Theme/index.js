@@ -29,7 +29,7 @@ html, body {
 	height: 100vh;
 	text-rendering: optimizeLegibility;
 	transition: all 0.5s ease;
-	line-height: 1.6rem;
+	line-height: 1.8rem;
   }
 `;
 
