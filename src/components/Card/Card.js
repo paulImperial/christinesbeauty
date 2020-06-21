@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import { CardContent, CardSection, CardLabel, CardImage, CardContainer } from './Card.styles';
 
 const Card = ({ treatments, ...props }) => {

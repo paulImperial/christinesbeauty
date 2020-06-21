@@ -14,6 +14,7 @@ export const HeroImage = styled.div`
 	background-size: cover;
 	@media (max-width: 800px) {
 		height: 50vh;
+		background: none;
 	}
 `;
 
@@ -21,15 +22,14 @@ export const HeroWording = styled.div`
 	position: absolute;
 	z-index: 2;
 	font-size: 3rem;
-	width: 500px;
-	height: 300px;
-	// background-color: ${props => props.theme.colours.baseWhite};
-	// opacity: 0.5;
-	align-self: flex-end;
-	justify-self: end;
+	align-self: end;
+	justify-self: center;
 	display: flex;
 	justify-items: center;
 	align-items: center;
+	width: min-content;
+	bottom: 0;
+	right: 0;
 `;
 
 export const TitleText = styled.h1`

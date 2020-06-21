@@ -1,5 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import moment from 'moment';
+import { times } from '../../cms/openingTimes';
 
 const FooterStyle = styled.div`
   display: flex;
@@ -7,8 +9,8 @@ const FooterStyle = styled.div`
   margin: 30px 0 0 0;
   padding: 10px;
   background: ${(props) => props.theme.colours.shadeDarkGrey};
-  @media(max-width: 650px) {
-	  flex-direction: column;
+  @media (max-width: 650px) {
+    flex-direction: column;
   }
 `;
 
@@ -54,11 +56,11 @@ const StyledLinkContainer = styled.ul`
   align-items: center;
   justify-content: space-around;
   border-right: 1px solid ${(props) => props.theme.colours.baseWhite};
-  @media(max-width: 650px) {
-		border-right: none;
-		padding-left: 0;
-		padding-right: 0;
-	}
+  @media (max-width: 650px) {
+    border-right: none;
+    padding-left: 0;
+    padding-right: 0;
+  }
 `;
 
 const StyledLink = styled.li`
@@ -77,27 +79,32 @@ const StyledAnchor = styled.a`
 `;
 
 const LinkContainer = styled(StyledLinkContainer)`
-  @media (max-width:800px){
-	  display: none;
+  @media (max-width: 800px) {
+    display: none;
   }
 `;
 
-
 const SocialContainer = styled(StyledLinkContainer)`
-	border-right: none;
-	flex-grow: 2;
+  border-right: none;
+  flex-grow: 2;
 `;
 
 const OpeningHoursContainer = styled(StyledLinkContainer)`
-	flex-direction: column;
-	padding-right: 40px;
-	line-height: 2rem;
+  flex-direction: column;
+  padding-right: 40px;
+  line-height: 2rem;
 `;
+
+const Today = styled.li`
+  color: ${(props) => props.theme.colours.pink};
+`;
+
+const today = moment().isoWeekday();
 
 const Footer = ({ navItems, social }) => {
   return (
-	<FooterStyle>
-	  <LinkContainer>
+    <FooterStyle>
+      <LinkContainer>
         {navItems.map(({ title, link, logo = '' }) => {
           return (
             <StyledLink key={title}>
@@ -105,17 +112,19 @@ const Footer = ({ navItems, social }) => {
             </StyledLink>
           );
         })}
-		</LinkContainer>
-		<OpeningHoursContainer>
-				<li><strong>Opening Hours</strong></li>
-				<li>Monday 8am - 4pm</li>
-				<li>Tuesday 8am - 4pm</li>
-				<li>Wednesday 8am - 4pm</li>
-				<li>Thursday 8am - 4pm</li>
-				<li>Friday 8am - 4pm</li>
-				<li>Saturday 8am - 4pm</li>
-				<li>Sunday Closed</li>
-		</OpeningHoursContainer>
+      </LinkContainer>
+      <OpeningHoursContainer>
+        <li>
+          <strong>Opening Hours</strong>
+        </li>
+        {times.map(({ day, open, close, closed }, index) => {
+          return (
+            <li>
+              {day} {!closed ? `${open} - ${close}` : 'CLOSED'}
+            </li>
+          );
+        })}
+      </OpeningHoursContainer>
       <SocialContainer>
         {social.map(({ title, image, link }) => {
           return (

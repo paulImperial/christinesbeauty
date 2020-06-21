@@ -12,7 +12,7 @@ const Hero = ({ label, image,  ...props }) => {
 	return (
 			<HeroContent {...props}>
 				<HeroWording>
-				<TitleText>Welcome to Christine's Beauty</TitleText></HeroWording>
+				<TitleText>Welcome&nbsp;to Christine's Beauty</TitleText></HeroWording>
 				<HeroImage image={image}></HeroImage>
 			</HeroContent>
 	);

@@ -9,6 +9,7 @@ import Spotlight from '../components/Spotlight/Spotlight';
 import Cameo from '../components/Cameo';
 import { brands } from '../cms/brands';
 import { treatments } from '../cms/treatments';
+import { Component } from 'react';
 
 const BodyText = styled.p`
   margin: 10px 0;
@@ -17,7 +18,8 @@ const BodyText = styled.p`
 `;
 
 const Home = () => {
-  //const { Treatments } = content;
+	//const { Treatments } = content;
+
   return (
     <Layout title={"main page"}>
 			<Container full={true}>
