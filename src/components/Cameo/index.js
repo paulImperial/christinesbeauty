@@ -16,6 +16,9 @@ const CameoContainer = styled.div`
 	position: absolute;
 	top: -50px;
 	right: 0;
+	@media (max-width: 800px){
+		display: none;
+	}
 `;
 
 const Image = styled.div`

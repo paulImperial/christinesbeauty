@@ -12,7 +12,7 @@ const social = [
 	{
 		title: 'Instagram',
 		image: '/images/icons/instagram.svg',
-		link: '#',
+		link: 'https://www.instagram.com/christinesbeautyx/',
 	},
 ];
 
