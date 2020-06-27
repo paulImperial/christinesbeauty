@@ -63,7 +63,7 @@ const StyledForm = styled.form`
 
 const Form = () => {
   return (
-    <StyledForm>
+    <StyledForm name="christinesbeauty" data-netlify="true">
       <input name="name" type="text" class="feedback-input" placeholder="Name" />
       <input name="email" type="email" class="feedback-input" placeholder="Email" />
       <input name="phone" type="telephone" class="feedback-input" placeholder="Your phone number" />
