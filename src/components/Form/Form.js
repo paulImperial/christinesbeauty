@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 
+
 const StyledForm = styled.form`
   body {
     background: rgb(30, 30, 40);
@@ -61,13 +62,18 @@ const StyledForm = styled.form`
   }
 `;
 
+const handleSubmit = (e) => {
+	e.preventDefault();
+	console.log('submitting');
+}
+
 const Form = () => {
   return (
-    <StyledForm name="christinesbeauty" data-netlify="true">
-      <input name="name" type="text" class="feedback-input" placeholder="Name" />
-      <input name="email" type="email" class="feedback-input" placeholder="Email" />
-      <input name="phone" type="telephone" class="feedback-input" placeholder="Your phone number" />
-      <select name="advert" type="text" class="feedback-input">
+    <StyledForm name="christinesbeauty" onSubmit={handleSubmit}>
+      <input name="name" type="text" className="feedback-input" placeholder="Name" />
+      <input name="email" type="email" className="feedback-input" placeholder="Email" />
+      <input name="phone" type="telephone" className="feedback-input" placeholder="Your phone number" />
+      <select name="advert" type="text" className="feedback-input">
         <option value="" disabled selected hidden>
           How did you hear about us?
         </option>
@@ -79,7 +85,7 @@ const Form = () => {
         <option value="recommendation">Recommendation</option>
         <option value="other">Other</option>
       </select>
-      <textarea name="text" class="feedback-input" placeholder="Message"></textarea>
+      <textarea name="text" className="feedback-input" placeholder="Message"></textarea>
       <input type="submit" value="SUBMIT" />
     </StyledForm>
   );

@@ -2,16 +2,17 @@ import styled from 'styled-components';
 
 export const HeroContent = styled.div`
 	display: flex;
-	justify-content: flex-end;;
+	justify-content: center;
 `;
 
 export const HeroImage = styled.div`
 	position: relative;
 	max-width: 100%;
 	width: 100vw;
-	height: 80vh;
+	height: 83vh;
 	background: url('${props => props.image}') no-repeat 100% 60%;
 	background-size: cover;
+	opacity: 0.65;
 	@media (max-width: 800px) {
 		height: 50vh;
 		background: url('/images/leaf.jpg') no-repeat 100% 25%;
@@ -22,17 +23,18 @@ export const HeroImage = styled.div`
 export const HeroWording = styled.div`
 	position: absolute;
 	z-index: 2;
-	font-size: 3rem;
-	align-self: end;
+	font-size: 2.5rem;
+	align-self: center;
 	justify-self: center;
 	display: flex;
 	justify-items: center;
 	align-items: center;
-	width: min-content;
-	bottom: 0;
-	right: 0;
+	width: max-content;
+	padding: 1rem;
+	border-radius: 3rem;
 	@media (max-width: 800px) {
 		font-size: 2.2rem;
+		width: min-content;
 	}
 `;
 

@@ -119,7 +119,7 @@ const Footer = ({ navItems, social }) => {
         </li>
         {times.map(({ day, open, close, closed }, index) => {
           return (
-            <li>
+            <li key={day}>
               {day} {!closed ? `${open} - ${close}` : 'CLOSED'}
             </li>
           );

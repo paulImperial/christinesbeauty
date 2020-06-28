@@ -96,11 +96,13 @@ const Heading = styled.h2`
 	font-weight: 100;
 `;
 
-const StyledAccordion = ({ prices }) => {
+const StyledAccordion = ({ prices }, itemToOpen) => {
+
+	console.log('preExpand', itemToOpen)
   return (
-    <StyleAccordion allowMultipleExpanded={true} allowZeroExpanded={true}>
+    <StyleAccordion allowMultipleExpanded={false} preExpanded={''} allowZeroExpanded={false}>
       {prices.map((price) => (
-        <AccordionItem key={price.id} id={price.id}>
+        <AccordionItem key={price.id} id={price.id} uuid={price.id}>
           <AccordionItemHeading>
             <AccordionItemButton>{price.title}</AccordionItemButton>
           </AccordionItemHeading>

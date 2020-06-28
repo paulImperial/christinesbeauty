@@ -7,9 +7,9 @@ import Hero from '../components/Hero/Hero';
 import Map from '../components/map/Map';
 import Spotlight from '../components/Spotlight/Spotlight';
 import Cameo from '../components/Cameo';
+import Social from '../components/Social/Social';
 import { brands } from '../cms/brands';
 import { treatments } from '../cms/treatments';
-import { Component } from 'react';
 
 const BodyText = styled.p`
   margin: 10px 0;
@@ -60,7 +60,8 @@ const Home = () => {
       <Container label="Products We Use">
         <Spotlight brands={brands}></Spotlight>
       </Container>
-	  <Container label="Gallery">
+		<Container label="Social" id="Social">
+			<Social></Social>
 	  </Container>
       <Container label="Special Offers"></Container>
       <Container label="Reviews"></Container>

@@ -16,8 +16,8 @@ const navigation = [
 		link: '#',
 	},
 	{
-		title: 'Gallery',
-		link: '#',
+		title: 'Social',
+		link: '/#Social',
 	},
 	{
 		title: 'Contact us',
