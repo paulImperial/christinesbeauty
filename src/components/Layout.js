@@ -1,4 +1,3 @@
-
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 import Head from 'next/head';
@@ -7,6 +6,7 @@ import Footer from './Footer';
 import navigation from '../cms/navigation';
 import social from '../cms/social';
 import Nav from './Generic/Navigation';
+import Facebook from '../cms/curator-facebook';
 
 const Main = styled.div`
   margin: 0 auto;
@@ -21,19 +21,19 @@ const HeroBanner = styled.div`
 `;
 
 const Layout = ({ children, hero, title }) => {
-	
   return (
     <Fragment>
-		<Head>
-		<link rel="shortcut icon" href="/images/favicon.ico" />
-          <title>{title}</title>
-        </Head>
-		<Header>
-			<Nav navItems={navigation} />
-		</Header>
-		<HeroBanner>{hero}</HeroBanner>
-        <Main>{children}</Main>
-        <Footer navItems={navigation} social={social}></Footer>
+      <Head>
+        <link rel="shortcut icon" href="/images/favicon.ico" />
+        <title>{title}</title>
+      </Head>
+      <Header>
+        <Nav navItems={navigation} />
+      </Header>
+      <HeroBanner>{hero}</HeroBanner>
+      <Main>{children}</Main>
+      <Footer navItems={navigation} social={social}></Footer>
+      <Facebook />
     </Fragment>
   );
 };
