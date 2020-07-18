@@ -6,7 +6,11 @@ import Footer from './Footer';
 import navigation from '../cms/navigation';
 import social from '../cms/social';
 import Nav from './Generic/Navigation';
-import Facebook from '../cms/curator-facebook';
+
+if (typeof window !== 'undefined') {
+  require('../cms/curator-facebook');
+  require('../cms/curator.instagram');
+}
 
 const Main = styled.div`
   margin: 0 auto;
@@ -24,6 +28,8 @@ const Layout = ({ children, hero, title }) => {
   return (
     <Fragment>
       <Head>
+        <script></script>
+        <script></script>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <title>{title}</title>
       </Head>
@@ -33,7 +39,6 @@ const Layout = ({ children, hero, title }) => {
       <HeroBanner>{hero}</HeroBanner>
       <Main>{children}</Main>
       <Footer navItems={navigation} social={social}></Footer>
-      <Facebook />
     </Fragment>
   );
 };

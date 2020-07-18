@@ -9,10 +9,10 @@ const mapStyle = {
 
 const googleKey = process.env.NEXT_PUBLIC_GOOGLE_API;
 
-const googleMapSource = `https://www.google.com/maps/embed/v1/place?q=104%2C%20broad%20street%2C%20staple%20hill%2C%20bristol%2C%20bs16%205nj&key=${googleKey}`;
+const googleMapSource = `https://www.google.com/maps/embed/v1/view?zoom=15&center=51.4809132,-2.5003898&key=${googleKey}`;
 
+51.4809132, -2.5003898;
 const Map = () => {
-
   return (
     <StyledMap>
       <StyledContact>
@@ -25,10 +25,7 @@ const Map = () => {
           <StyledContactText>104, Broad Street, Staple Hill, Bristol, BS16 5NJ</StyledContactText>
         </StyledContactContainer>
       </StyledContact>
-      <iframe
-        style={mapStyle}
-        src={googleMapSource}
-      ></iframe>
+      <iframe style={mapStyle} src={googleMapSource}></iframe>
     </StyledMap>
   );
 };

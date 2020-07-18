@@ -18,12 +18,12 @@ const BodyText = styled.p`
 `;
 
 const Home = () => {
-	//const { Treatments } = content;
+  //const { Treatments } = content;
 
   return (
-    <Layout title={"main page"}>
-			<Container full={true}>
-			<Cameo image={'/images/christineBW.jpg'} />
+    <Layout title={'main page'}>
+      <Container full={true}>
+        {/* <Cameo image={'/images/christineBW.jpg'} /> */}
         <Hero image={'/images/room.jpg'} />
       </Container>
       <BodyText>
@@ -43,11 +43,9 @@ const Home = () => {
       </BodyText>
       <Container label="Treatments" id="Treatments">
         <Card treatments={treatments}></Card>
-	  </Container>
-	  <BodyText>
-	  	I offer these treatments to both men and women in a private and relaxing environment. 
-	  </BodyText>
-	  <BodyText>
+      </Container>
+      <BodyText>I offer these treatments to both men and women in a private and relaxing environment.</BodyText>
+      <BodyText>
         My main aim from the moment you enter Christine’s Beauty is for you to feel welcomed and comfortable. Throughout
         the treatment I aim for you to feel transported away from your everyday life with an opportunity to take a real
         break. Whether beauty treatments are part of your normal routine, or you’ve decided to treat yourself, it’s Your
@@ -60,9 +58,9 @@ const Home = () => {
       <Container label="Products We Use">
         <Spotlight brands={brands}></Spotlight>
       </Container>
-		<Container label="Social" id="Social">
-			<Social></Social>
-	  </Container>
+      <Container label="Social" id="Social">
+        <Social></Social>
+      </Container>
       <Container label="Special Offers"></Container>
       <Container label="Reviews"></Container>
       <Container label="Finding Us" id="Find">
@@ -73,7 +71,7 @@ const Home = () => {
           location provides both privacy and convenience, all at ground level, with free onsite parking usually
           available.
         </BodyText>
-	  </Container>
+      </Container>
     </Layout>
   );
 };

@@ -1,4 +1,4 @@
-/* curator-feed-facebook-layout */
+/* curator-feed-instagram-layout */
 (function () {
   var i,
     e,
@@ -6,7 +6,7 @@
     s = 'script';
   i = d.createElement('script');
   i.async = 1;
-  i.src = 'https://cdn.curator.io/published/8da633df-06eb-40e2-96c3-7359d5a417f8.js';
+  i.src = 'https://cdn.curator.io/published/4c764d27-8968-4d8c-8066-2ca09fc65874.js';
   e = d.getElementsByTagName(s)[0];
   e.parentNode.insertBefore(i, e);
 })();
