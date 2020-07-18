@@ -61,7 +61,7 @@ const Home = () => {
       <Container label="Social" id="Social">
         <Social></Social>
       </Container>
-      <Container label="Special Offers"></Container>
+      <Container label="Special Offers" id="Special"></Container>
       <Container label="Reviews"></Container>
       <Container label="Finding Us" id="Find">
         <Map />

@@ -66,10 +66,10 @@ const StyleAccordion = styled(Accordion)`
     padding: 20px;
     animation: fadein 0.35s ease-in;
     box-shadow: 0 10px 10px 0 rgba(0, 0, 0, 0.1);
-	outline: none;
-	@media (max-width: 650px) {
-		padding: 0;
-	}
+    outline: none;
+    @media (max-width: 650px) {
+      padding: 0;
+    }
   }
 
   @keyframes fadein {
@@ -91,16 +91,15 @@ const StyledInfo = styled.div`
 `;
 
 const Heading = styled.h2`
-	text-align: left;
-	font-size: 1.25rem;
-	font-weight: 100;
+  text-align: left;
+  font-size: 1.25rem;
+  font-weight: 100;
 `;
 
 const StyledAccordion = ({ prices }, itemToOpen) => {
-
-	console.log('preExpand', itemToOpen)
+  console.log('preExpand', itemToOpen);
   return (
-    <StyleAccordion allowMultipleExpanded={false} preExpanded={''} allowZeroExpanded={false}>
+    <StyleAccordion allowMultipleExpanded={false} preExpanded={''} allowZeroExpanded={true}>
       {prices.map((price) => (
         <AccordionItem key={price.id} id={price.id} uuid={price.id}>
           <AccordionItemHeading>
@@ -110,17 +109,20 @@ const StyledAccordion = ({ prices }, itemToOpen) => {
             <AccordionPanel>
               <StyledImage image={price.image} />
               <StyledInfo id={price.id}>
-				{price.blurb && <StyledBlurb>{price.blurb}</StyledBlurb>}
-				<Heading>Prices:</Heading>
+                {price.blurb && <StyledBlurb>{price.blurb}</StyledBlurb>}
+                <Heading>Prices:</Heading>
                 {price.services.map((service) => {
                   return (
                     <StyledTable>
-                      <li>{service.treatment}:{' '}{currency(service.price)}{' '}{service.time && <Fragment>for {service.time}</Fragment>} </li>
+                      <li>
+                        {service.treatment}: {currency(service.price)}{' '}
+                        {service.time && <Fragment>for {service.time}</Fragment>}{' '}
+                      </li>
                     </StyledTable>
                   );
-				})}
-				{price.disclaimer}
-			  </StyledInfo>
+                })}
+                {price.disclaimer}
+              </StyledInfo>
             </AccordionPanel>
           </AccordionItemPanel>
         </AccordionItem>

@@ -13,7 +13,7 @@ const navigation = [
   },
   {
     title: 'Reviews',
-    link: '#',
+    link: '/reviews',
   },
   {
     title: 'Social',
@@ -21,7 +21,7 @@ const navigation = [
   },
   {
     title: 'Special Offers',
-    link: '#',
+    link: '/#Special',
   },
   {
     title: 'Contact us',
