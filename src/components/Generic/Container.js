@@ -1,29 +1,32 @@
 import React, { Fragment } from 'react';
 import styled from 'styled-components';
 
-const StyledContainer = styled.section`;
+const StyledContainer = styled.section`
   display: flex;
-  flex-direction: ${props => props.column ? 'column' : 'row'} ;
+  flex-direction: ${(props) => (props.column ? 'column' : 'row')};
   justify-content: center;
   flex-wrap: wrap;
   position: relative;
   width: 100%;
-  background-color: ${props => props.background};
-  max-width: ${props => props.full ? '90rem' : '72.5rem'};
+  background-color: ${(props) => props.background};
+  max-width: ${(props) => (props.full ? '90rem' : '72.5rem')};
 `;
 
 const Heading = styled.h2`
-	margin-top: 2rem;
-	text-align: left;
-	font-size: 2.25rem;
-	font-weight: 100;
+  margin-top: 2rem;
+  text-align: left;
+  font-size: 2.25rem;
+  font-weight: 100;
+  padding-top: 0.5rem;
 `;
 
-const Container = ({ children, label, column, background, id, full=false }) => {
+const Container = ({ children, label, column, background, id, full = false }) => {
   return (
     <Fragment>
-      {label && <Heading>{label}</Heading>}
-      <StyledContainer column={column} background={background} full={full} id={id}>{children}</StyledContainer>
+      {label && <Heading id={id}>{label}</Heading>}
+      <StyledContainer column={column} background={background} full={full}>
+        {children}
+      </StyledContainer>
     </Fragment>
   );
 };

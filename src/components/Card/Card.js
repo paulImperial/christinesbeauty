@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Link from 'next/link';
 import { CardContent, CardSection, CardLabel, CardImage, CardContainer } from './Card.styles';
 
 const Card = ({ treatments, ...props }) => {
@@ -9,7 +10,9 @@ const Card = ({ treatments, ...props }) => {
         <CardSection {...props} key={treatment.label}>
           <CardLabel>{treatment.label}</CardLabel>
           <CardContent>
-            <a href={treatment.link}><CardImage image={treatment.image}></CardImage></a>
+            <Link href={treatment.link}>
+              <CardImage image={treatment.image}></CardImage>
+            </Link>
           </CardContent>
         </CardSection>
       ))}
