@@ -1,18 +1,21 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { CardContent, CardSection, CardLabel, CardImage, CardContainer } from './Card.styles';
 
 const Card = ({ treatments, ...props }) => {
+  const router = useRouter();
+
   return (
     <CardContainer>
       {treatments.map((treatment) => (
         <CardSection {...props} key={treatment.label}>
           <CardLabel>{treatment.label}</CardLabel>
           <CardContent>
-            <Link href={treatment.link}>
+            <a onClick={() => router.push({ pathname: treatment.link, query: { name: treatment.query } })}>
               <CardImage image={treatment.image}></CardImage>
-            </Link>
+            </a>
           </CardContent>
         </CardSection>
       ))}

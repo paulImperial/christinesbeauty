@@ -78,8 +78,8 @@ const prices = [
     ],
   },
   {
-    title: 'Eye treatments',
-    id: 'eyeTeatments',
+    title: 'Eye Treatments',
+    id: 'eyeTreatments',
     image: '/images/eye-treatments.webp',
     blurb:
       'One of our signature treatments, Christine’s Beauty clients return again and again due to Christine’s skill in achieving a symmetrical and flattering look, to suit your face and following your instructions precisely, in this crucial area.',

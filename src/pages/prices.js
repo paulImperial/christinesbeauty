@@ -15,25 +15,13 @@ const Heading = styled.h1`
 `;
 
 const Prices = () => {
-	const router = useRouter();
-	
-	let itemToOpen = '';
-
-  if (router.asPath.includes('#')) {
-
-		const index = router.asPath.indexOf('#') + 1;
-
-		 itemToOpen = router.asPath.substring(index);
-
-	}
-
-	console.log('prices value', itemToOpen)
+  const { query } = useRouter();
 
   return (
     <Layout title={'Prices'}>
       <Container column={true}>
         <Heading>Christine’s Beauty Treatment Menu</Heading>
-        <StyledAccordion prices={prices} itemToOpen={'shellac'} />
+        <StyledAccordion prices={prices} preExpand={query} />
       </Container>
     </Layout>
   );

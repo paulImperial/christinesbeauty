@@ -1,4 +1,6 @@
-import React, { Fragment } from 'react';
+import React, { Fragment, useRef, useEffect } from 'react';
+import { useRouter } from 'next/router';
+import Link from 'next/link';
 import styled from 'styled-components';
 import {
   Accordion,
@@ -96,16 +98,27 @@ const Heading = styled.h2`
   font-weight: 100;
 `;
 
-const StyledAccordion = ({ prices }, itemToOpen) => {
-  console.log('preExpand', itemToOpen);
+const StyledAccordion = ({ prices, ...props }) => {
+  const myRef = useRef(null);
+
+  const { name } = props.preExpand;
+
+  useEffect(
+    (myRef) => {
+      window.scrollTo(0, 0);
+      console.log('fired useEffect');
+    },
+    [myRef]
+  );
+
   return (
-    <StyleAccordion allowMultipleExpanded={false} preExpanded={''} allowZeroExpanded={true}>
+    <StyleAccordion allowMultipleExpanded={false} preExpanded={name} allowZeroExpanded={true}>
       {prices.map((price) => (
         <AccordionItem key={price.id} id={price.id} uuid={price.id}>
           <AccordionItemHeading>
             <AccordionItemButton>{price.title}</AccordionItemButton>
           </AccordionItemHeading>
-          <AccordionItemPanel>
+          <AccordionItemPanel ref={myRef}>
             <AccordionPanel>
               <StyledImage image={price.image} />
               <StyledInfo id={price.id}>
