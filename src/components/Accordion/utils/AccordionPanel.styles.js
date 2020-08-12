@@ -21,11 +21,55 @@ export const StyledImage = styled.div`
 	}
 `;
 
-export const StyledTable = styled.ul`
+export const StyledTable = styled.table`
   display: flex;
-  flex-direction: column;
-  li {
-    list-style-type: none;
+  flex-flow: column nowrap;
+  font-size: 1rem;
+  margin: 0.5rem;
+  line-height: 2;
+  border-bottom: 1px solid ${(props) => props.theme.colours.pink};
+  flex: 1 1 auto;
+
+  th {
+    font-weight: 700;
+    background-color: #f2f2f2;
+    font-size: 1.25rem;
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  th > td {
+    white-space: normal;
+    justify-content: center;
+  }
+
+  tr {
+    width: 100%;
+    display: flex;
+    flex-flow: row nowrap;
+  }
+
+  tr:nth-of-type(even) {
+    background-color: #f2f2f2;
+  }
+
+  tr:nth-of-type(odd) {
+    background-color: #ffffff;
+  }
+
+  td {
+    display: flex;
+    flex-flow: row nowrap;
+    flex-grow: 1;
+    flex-basis: 0;
+    padding: 0.5em;
+    word-break: break-word;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    min-width: 0px;
+    white-space: nowrap;
+    border-bottom: 1px solid #d0d0d0;
   }
 `;
 

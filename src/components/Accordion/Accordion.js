@@ -124,16 +124,22 @@ const StyledAccordion = ({ prices, ...props }) => {
               <StyledInfo id={price.id}>
                 {price.blurb && <StyledBlurb>{price.blurb}</StyledBlurb>}
                 <Heading>Prices:</Heading>
-                {price.services.map((service) => {
-                  return (
-                    <StyledTable>
-                      <li>
-                        {service.treatment}: {currency(service.price)}{' '}
-                        {service.time && <Fragment>for {service.time}</Fragment>}{' '}
-                      </li>
-                    </StyledTable>
-                  );
-                })}
+                <StyledTable>
+                  <tr>
+                    <th>Treatment</th>
+                    <th>Price</th>
+                  </tr>
+                  {price.services.map((service) => {
+                    return (
+                      <tr>
+                        <td>{service.treatment}</td>
+                        <td>
+                          {currency(service.price)} {service.time && <Fragment>for {service.time}</Fragment>}{' '}
+                        </td>
+                      </tr>
+                    );
+                  })}
+                </StyledTable>
                 {price.disclaimer}
               </StyledInfo>
             </AccordionPanel>
