@@ -27,15 +27,16 @@ export const StyledTable = styled.table`
   font-size: 1rem;
   margin: 0.5rem;
   line-height: 2;
-  border-bottom: 1px solid ${(props) => props.theme.colours.pink};
+  border: 1px solid ${(props) => props.theme.colours.pink};
   flex: 1 1 auto;
 
   th {
-    font-weight: 700;
-    background-color: #f2f2f2;
+    font-weight: 100;
+    background-color: ${(props) => props.theme.colours.pink};
     font-size: 1.25rem;
     width: 100%;
     display: flex;
+    justify-content: center;
     flex-flow: row nowrap;
   }
 
@@ -48,19 +49,20 @@ export const StyledTable = styled.table`
     width: 100%;
     display: flex;
     flex-flow: row nowrap;
+    border-bottom: 1px solid ${(props) => props.theme.colours.pink};
   }
 
-  tr:nth-of-type(even) {
+  /* tr:nth-of-type(even) {
     background-color: #f2f2f2;
   }
 
   tr:nth-of-type(odd) {
     background-color: #ffffff;
-  }
+  } */
 
   td {
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row;
     flex-grow: 1;
     flex-basis: 0;
     padding: 0.5em;
@@ -68,8 +70,10 @@ export const StyledTable = styled.table`
     overflow: hidden;
     text-overflow: ellipsis;
     min-width: 0px;
-    white-space: nowrap;
-    border-bottom: 1px solid #d0d0d0;
+    justify-content: center;
+    @media (max-width: 650px) {
+      justify-content: left;
+    }
   }
 `;
 

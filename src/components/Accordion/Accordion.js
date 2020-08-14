@@ -92,10 +92,10 @@ const StyledInfo = styled.div`
   width: 100%;
 `;
 
-const Heading = styled.h2`
+const SmallText = styled.p`
   text-align: left;
-  font-size: 1.25rem;
-  font-weight: 100;
+  font-size: 0.75rem;
+  font-weight: 300;
 `;
 
 const StyledAccordion = ({ prices, ...props }) => {
@@ -123,7 +123,6 @@ const StyledAccordion = ({ prices, ...props }) => {
               <StyledImage image={price.image} />
               <StyledInfo id={price.id}>
                 {price.blurb && <StyledBlurb>{price.blurb}</StyledBlurb>}
-                <Heading>Prices:</Heading>
                 <StyledTable>
                   <tr>
                     <th>Treatment</th>
@@ -132,7 +131,10 @@ const StyledAccordion = ({ prices, ...props }) => {
                   {price.services.map((service) => {
                     return (
                       <tr>
-                        <td>{service.treatment}</td>
+                        <td>
+                          {service.treatment} <br />
+                          {service.extraInfo}
+                        </td>
                         <td>
                           {currency(service.price)} {service.time && <Fragment>for {service.time}</Fragment>}{' '}
                         </td>
@@ -140,7 +142,7 @@ const StyledAccordion = ({ prices, ...props }) => {
                     );
                   })}
                 </StyledTable>
-                {price.disclaimer}
+                <SmallText>{price.disclaimer}</SmallText>
               </StyledInfo>
             </AccordionPanel>
           </AccordionItemPanel>

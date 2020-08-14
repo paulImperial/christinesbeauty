@@ -4,6 +4,7 @@ import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
 import StyledAccordion from '../components/Accordion/Accordion';
 import { useRouter } from 'next/router';
+import Map from '../components/map/Map';
 import prices from '../cms/prices';
 
 const Heading = styled.h1`
@@ -22,6 +23,9 @@ const Prices = () => {
       <Container column={true}>
         <Heading>Christine’s Beauty Treatment Menu</Heading>
         <StyledAccordion prices={prices} preExpand={query} />
+      </Container>
+      <Container label="Finding Us">
+        <Map />
       </Container>
     </Layout>
   );
