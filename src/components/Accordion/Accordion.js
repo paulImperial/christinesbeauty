@@ -1,4 +1,4 @@
-import React, { Fragment, useRef, useEffect } from 'react';
+import React, { Fragment, useRef, useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Link from 'next/link';
 import styled from 'styled-components';
@@ -99,54 +99,71 @@ const SmallText = styled.p`
 `;
 
 const StyledAccordion = ({ prices, ...props }) => {
-  const myRef = useRef(null);
-
   const { name } = props.preExpand;
 
-  useEffect(
-    (myRef) => {
-      window.scrollTo(0, 0);
-      console.log('fired useEffect');
-    },
-    [myRef]
-  );
+  const refs = prices.reduce((acc, price) => {
+    acc[price.id] = useRef();
+    return acc;
+  }, {});
+
+  const handleClick = (id) => {
+    console.log(refs[id]);
+    refs[id].current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  };
+
+  useEffect(() => {
+    console.log(refs[name]);
+    refs[name].current.scrollIntoView({
+      behavior: 'smooth',
+      block: 'start',
+    });
+  }, [name]);
 
   return (
     <StyleAccordion allowMultipleExpanded={false} preExpanded={name} allowZeroExpanded={true}>
       {prices.map((price) => (
-        <AccordionItem key={price.id} id={price.id} uuid={price.id}>
-          <AccordionItemHeading>
-            <AccordionItemButton>{price.title}</AccordionItemButton>
-          </AccordionItemHeading>
-          <AccordionItemPanel ref={myRef}>
-            <AccordionPanel>
-              <StyledImage image={price.image} />
-              <StyledInfo id={price.id}>
-                {price.blurb && <StyledBlurb>{price.blurb}</StyledBlurb>}
-                <StyledTable>
-                  <tr>
-                    <th>Treatment</th>
-                    <th>Price</th>
-                  </tr>
-                  {price.services.map((service) => {
-                    return (
+        <div key={price.id} id={price.id} uuid={price.id} ref={refs[price.id]}>
+          <AccordionItem onClick={() => handleClick(price.id)}>
+            <AccordionItemHeading>
+              <AccordionItemButton>{price.title}</AccordionItemButton>
+            </AccordionItemHeading>
+            <AccordionItemPanel>
+              <AccordionPanel>
+                <StyledImage image={price.image} />
+                <StyledInfo id={price.id}>
+                  {price.blurb && <StyledBlurb>{price.blurb}</StyledBlurb>}
+                  <StyledTable>
+                    <thead>
                       <tr>
-                        <td>
-                          {service.treatment} <br />
-                          {service.extraInfo}
-                        </td>
-                        <td>
-                          {currency(service.price)} {service.time && <Fragment>for {service.time}</Fragment>}{' '}
-                        </td>
+                        <th>Treatment</th>
+                        <th>Price</th>
                       </tr>
-                    );
-                  })}
-                </StyledTable>
-                <SmallText>{price.disclaimer}</SmallText>
-              </StyledInfo>
-            </AccordionPanel>
-          </AccordionItemPanel>
-        </AccordionItem>
+                    </thead>
+                    <tbody>
+                      {price.services.map((service) => {
+                        return (
+                          <tr key={service.treatment}>
+                            <td>
+                              {service.treatment} <br />
+                              {service.extraInfo}
+                            </td>
+                            <td>
+                              {currency(service.price)} {service.time && <Fragment>for {service.time}</Fragment>}{' '}
+                            </td>
+                          </tr>
+                        );
+                      })}
+                    </tbody>
+                  </StyledTable>
+                  <SmallText>{price.disclaimer}</SmallText>
+                </StyledInfo>
+              </AccordionPanel>
+            </AccordionItemPanel>
+          </AccordionItem>
+        </div>
       ))}
     </StyleAccordion>
   );

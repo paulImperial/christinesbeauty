@@ -8,6 +8,7 @@ import Map from '../components/map/Map';
 import Spotlight from '../components/Spotlight/Spotlight';
 import Cameo from '../components/Cameo';
 import Social from '../components/Social/Social';
+import Arrow from '../components/Accordion/utils/arrow';
 import { brands } from '../cms/brands';
 import { treatments } from '../cms/treatments';
 
@@ -25,6 +26,7 @@ const Home = () => {
       <Container full={true}>
         {/* <Cameo image={'/images/christineBW.jpg'} /> */}
         <Hero image={'/images/room.jpg'} />
+        <Arrow />
       </Container>
       <BodyText>
         I would like to offer you a warm welcome to Christine’s Beauty, my own independent salon, tucked away in a
