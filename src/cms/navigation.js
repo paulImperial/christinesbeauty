@@ -21,7 +21,7 @@ const navigation = [
   },
   {
     title: 'Special Offers',
-    link: '/#Special',
+    link: '/special',
   },
   {
     title: 'Contact us',

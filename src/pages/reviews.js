@@ -16,8 +16,10 @@ const Heading = styled.h1`
 const Reviews = () => {
   const { query } = useRouter();
 
+  const title = `Christine's Beauty | Reviews`;
+
   return (
-    <Layout title={'Reviews'}>
+    <Layout title={title}>
       <Container column={true}>
         <Heading>Our Reviews</Heading>
       </Container>

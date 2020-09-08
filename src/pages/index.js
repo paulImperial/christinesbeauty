@@ -21,8 +21,10 @@ const BodyText = styled.p`
 const Home = () => {
   //const { Treatments } = content;
 
+  const title = `Christine's Beauty | Home`;
+
   return (
-    <Layout title={'main page'}>
+    <Layout title={title}>
       <Container full={true}>
         {/* <Cameo image={'/images/christineBW.jpg'} /> */}
         <Hero image={'/images/room.jpg'} />
@@ -63,8 +65,6 @@ const Home = () => {
       <Container label="Social" id="Social">
         <Social></Social>
       </Container>
-      <Container label="Special Offers" id="Special"></Container>
-      <Container label="Reviews"></Container>
       <Container label="Finding Us" id="Find">
         <Map />
         <BodyText>

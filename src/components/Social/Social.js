@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import Container from '../Generic/Container';
 
-const Social = () => {
+const CuratorSocial = () => {
   return (
     <Fragment>
       <Container label={'Facebook'}>
@@ -22,4 +22,4 @@ const Social = () => {
   );
 };
 
-export default Social;
+export default CuratorSocial;

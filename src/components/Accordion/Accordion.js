@@ -1,6 +1,4 @@
-import React, { Fragment, useRef, useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
-import Link from 'next/link';
+import React, { Fragment, useRef, useEffect } from 'react';
 import styled from 'styled-components';
 import {
   Accordion,
@@ -10,13 +8,18 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 import AccordionPanel from '../Accordion/utils/AccordionPanel';
-import { StyledAccordionPanel, StyledImage, StyledTable, StyledBlurb } from '../Accordion/utils/AccordionPanel.styles';
+import { StyledImage, StyledTable, StyledBlurb } from '../Accordion/utils/AccordionPanel.styles';
 import currency from '../../helpers/currency';
 
 const StyleAccordion = styled(Accordion)`
   max-width: 1140px;
   display: flex;
   flex-direction: column;
+
+  .keepleft {
+    text-align: left;
+    justify-content: left;
+  }
 
   .accordion {
     border: 1px solid rgba(0, 0, 0, 0.1);
@@ -107,26 +110,26 @@ const StyledAccordion = ({ prices, ...props }) => {
   }, {});
 
   const handleClick = (id) => {
-    console.log(refs[id]);
     refs[id].current.scrollIntoView({
-      behavior: 'smooth',
+      // behavior: 'smooth',
       block: 'start',
     });
   };
 
   useEffect(() => {
-    console.log(refs[name]);
-    refs[name].current.scrollIntoView({
-      behavior: 'smooth',
-      block: 'start',
-    });
+    if (name) {
+      refs[name].current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+      });
+    }
   }, [name]);
 
   return (
-    <StyleAccordion allowMultipleExpanded={false} preExpanded={name} allowZeroExpanded={true}>
+    <StyleAccordion preExpanded={name}>
       {prices.map((price) => (
-        <div key={price.id} id={price.id} uuid={price.id} ref={refs[price.id]}>
-          <AccordionItem onClick={() => handleClick(price.id)}>
+        <div ref={refs[price.id]}>
+          <AccordionItem key={price.id} id={price.id} uuid={price.id} onClick={() => handleClick(price.id)}>
             <AccordionItemHeading>
               <AccordionItemButton>{price.title}</AccordionItemButton>
             </AccordionItemHeading>
@@ -146,7 +149,7 @@ const StyledAccordion = ({ prices, ...props }) => {
                       {price.services.map((service) => {
                         return (
                           <tr key={service.treatment}>
-                            <td>
+                            <td className="keepleft">
                               {service.treatment} <br />
                               {service.extraInfo}
                             </td>
@@ -167,6 +170,12 @@ const StyledAccordion = ({ prices, ...props }) => {
       ))}
     </StyleAccordion>
   );
+};
+
+StyledAccordion.defaultProps = {
+  preExpand: {
+    name: '',
+  },
 };
 
 export default StyledAccordion;

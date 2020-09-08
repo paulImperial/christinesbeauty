@@ -2,10 +2,9 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
-import StyledAccordion from '../components/Accordion/Accordion';
 import { useRouter } from 'next/router';
 import Map from '../components/map/Map';
-import prices from '../cms/prices';
+import specialOffers from '../cms/special-offers';
 
 const Heading = styled.h1`
   margin-top: 2rem;
@@ -15,17 +14,17 @@ const Heading = styled.h1`
   line-height: 2rem;
 `;
 
-const Prices = () => {
+const Social = () => {
   const { query } = useRouter();
 
-  const title = `Christine's Beauty | Treatment Menu`;
+  const title = `Christine's Beauty | Special Offers`;
 
   return (
     <Layout title={title}>
       <Container column={true}>
-        <Heading>Christine’s Beauty Treatment Menu</Heading>
-        <StyledAccordion prices={prices} preExpand={query} />
+        <Heading>Special Offers</Heading>
       </Container>
+      <Container></Container>
       <Container label="Finding Us">
         <Map />
       </Container>
@@ -33,4 +32,4 @@ const Prices = () => {
   );
 };
 
-export default Prices;
+export default Social;
