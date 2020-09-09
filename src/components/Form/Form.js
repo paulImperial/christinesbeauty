@@ -64,30 +64,6 @@ const StyledForm = styled.form`
 
 const handleSubmit = (e) => {
   e.preventDefault();
-  console.log('submitting');
-
-  const transporter = nodemailer.createTransport({
-    service: 'gmail',
-    auth: {
-      user: 'bluebicycleautomation@gmail.com',
-      pass: process.env.GMAIL_PASSWORD, // naturally, replace both with your real credentials or an application-specific password
-    },
-  });
-
-  const mailOptions = {
-    from: 'barry@baz.com',
-    to: 'paul.imperialroad@gmail.com',
-    subject: 'Test',
-    text: 'This is a test email',
-  };
-
-  transporter.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      console.log('Email sent: ' + info.response);
-    }
-  });
 };
 
 const Form = () => {
