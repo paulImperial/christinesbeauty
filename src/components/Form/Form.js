@@ -1,6 +1,5 @@
 import React from 'react';
 import styled from 'styled-components';
-import nodemailer from 'nodemailer';
 
 const StyledForm = styled.form`
   body {
