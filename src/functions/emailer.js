@@ -2,11 +2,10 @@ const nodemailer = require('nodemailer');
 
 exports.handler = function (event, context, callback) {
   const transport = nodemailer.createTransport({
-    host: 'smtp.mailtrap.io',
-    port: 2525,
+    srervice: 'gmail',
     auth: {
-      user: 'fb1426f9564a86',
-      pass: '87959e9f04ca19',
+      user: process.env.GMAIL_ACCOUNT,
+      pass: process.env.GMAIL_PASSWORD,
     },
   });
 
