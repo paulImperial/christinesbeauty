@@ -1,6 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import moment from 'moment';
+import SignUp from '../SignUp/SignUp';
 import { times } from '../../cms/openingTimes';
 
 const FooterStyle = styled.div`
@@ -53,6 +54,7 @@ const StyledLinkContainer = styled.ul`
   position: relative;
   list-style-type: none;
   display: flex;
+  flex: 4;
   align-items: center;
   justify-content: space-around;
   border-right: 1px solid ${(props) => props.theme.colours.baseWhite};
@@ -78,21 +80,42 @@ const StyledAnchor = styled.a`
   font-size: 1rem;
 `;
 
-const LinkContainer = styled(StyledLinkContainer)`
+// const LinkContainer = styled(StyledLinkContainer)`
+//   @media (max-width: 800px) {
+//     display: none;
+//   }
+// `;
+
+const SignUpContainer = styled(StyledLinkContainer)`
+  border-left: none;
+  width: 33%;
   @media (max-width: 800px) {
-    display: none;
+    width: 100%;
+    border-bottom: 1px solid ${(props) => props.theme.colours.baseWhite};
+    padding-bottom: 20px;
   }
 `;
 
 const SocialContainer = styled(StyledLinkContainer)`
   border-right: none;
-  flex-grow: 2;
+  width: 33%;
+  @media (max-width: 800px) {
+    width: 100%;
+    border-bottom: 1px solid ${(props) => props.theme.colours.baseWhite};
+    padding-bottom: 20px;
+  }
 `;
 
 const OpeningHoursContainer = styled(StyledLinkContainer)`
   flex-direction: column;
   padding-right: 40px;
   line-height: 2rem;
+  width: 33%;
+  @media (max-width: 800px) {
+    width: 100%;
+    border-bottom: 1px solid ${(props) => props.theme.colours.baseWhite};
+    padding-bottom: 20px;
+  }
 `;
 
 const Today = styled.li`
@@ -104,15 +127,9 @@ const today = moment().isoWeekday();
 const Footer = ({ navItems, social }) => {
   return (
     <FooterStyle>
-      <LinkContainer>
-        {navItems.map(({ title, link, logo = '' }) => {
-          return (
-            <StyledLink key={title}>
-              <StyledAnchor href={link}>{title}</StyledAnchor>
-            </StyledLink>
-          );
-        })}
-      </LinkContainer>
+      <SignUpContainer>
+        <SignUp></SignUp>
+      </SignUpContainer>
       <OpeningHoursContainer>
         <li>
           <strong>Opening Hours</strong>
