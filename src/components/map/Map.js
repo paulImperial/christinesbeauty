@@ -20,7 +20,7 @@ const center = {
 
 const googleKey = process.env.NEXT_PUBLIC_GOOGLE_API;
 
-const googleMapSource = `https://www.google.com/maps/embed/v1/view?center=51.48084,-2.50043&zoom=18&key=${googleKey}`;
+const googleMapSource = `https://www.google.com/maps/embed/v1/place?q=51.48065,-2.50070&zoom=15&key=${googleKey}`;
 
 const Map = () => {
   return (
