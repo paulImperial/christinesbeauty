@@ -1,17 +1,27 @@
 import React from 'react';
+import { GoogleMap, LoadScript } from '@react-google-maps/api';
 import { StyledMap, StyledContact, StyledImage, StyledContactText, StyledContactContainer } from './Map.styles';
 
-const mapStyle = {
+const containerStyle = {
+  width: '100%',
   height: '300px',
-  width: '1px!important',
-  minWidth: '100%!important',
 };
+
+const center = {
+  lat: 51.48084,
+  lng: -2.50043,
+};
+
+// const mapStyle = {
+//   height: '300px',
+//   width: '1px!important',
+//   minWidth: '100%!important',
+// };
 
 const googleKey = process.env.NEXT_PUBLIC_GOOGLE_API;
 
-const googleMapSource = `https://www.google.com/maps/embed/v1/view?zoom=15&center=51.4809132,-2.5003898&key=${googleKey}`;
+const googleMapSource = `https://www.google.com/maps/embed/v1/view?center=51.48084,-2.50043&zoom=18&key=${googleKey}`;
 
-51.4809132, -2.5003898;
 const Map = () => {
   return (
     <StyledMap>
@@ -25,13 +35,11 @@ const Map = () => {
           <StyledContactText>104, Broad Street, Staple Hill, Bristol, BS16 5NJ</StyledContactText>
         </StyledContactContainer>
       </StyledContact>
-      <iframe style={mapStyle} src={googleMapSource}></iframe>
+      <iframe style={containerStyle} src={googleMapSource}></iframe>
     </StyledMap>
   );
 };
 
-Map.propTypes = {};
-
 Map.defaultProps = {};
 
-export default Map;
+export default React.memo(Map);

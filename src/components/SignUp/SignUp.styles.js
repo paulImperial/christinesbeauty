@@ -32,6 +32,6 @@ export const Button = styled.button`
   &:hover {
     cursor: pointer;
     transform: scale(1.1);
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 9px 12px 10px;
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 1px;
   }
 `;
