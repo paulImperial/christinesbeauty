@@ -1,7 +1,14 @@
 module.exports = {
-    "extends": "google",
-        "rules": {
-            "switch-colon-spacing": 0,
-            "eol-last": 0,
-        }
+  parser: 'babel-eslint',
+  parserOptions: {
+    ecmaVersion: 6,
+  },
+  parserOptions: {
+    sourceType: 'module',
+  },
+  env: {
+    browser: true,
+    node: true,
+    es6: true,
+  },
 };

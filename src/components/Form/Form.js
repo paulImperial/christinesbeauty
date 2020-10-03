@@ -1,5 +1,4 @@
-import React from 'react';
-import styled from 'styled-components';
+import React, { useState } from 'react';
 
 const StyledForm = styled.form`
   body {
@@ -61,17 +60,46 @@ const StyledForm = styled.form`
   }
 `;
 
-const handleSubmit = (e) => {
-  e.preventDefault();
-};
-
 const Form = () => {
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setValues({ ...values, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log({ values });
+  };
+
+  const [values, setValues] = useState({ name: '', email: '', phone: '', advert: '', message: '' });
   return (
     <StyledForm name="christinesbeauty" onSubmit={handleSubmit}>
-      <input name="name" type="text" className="feedback-input" placeholder="Name" />
-      <input name="email" type="email" className="feedback-input" placeholder="Email" />
-      <input name="phone" type="telephone" className="feedback-input" placeholder="Your phone number" />
-      <select name="advert" type="text" className="feedback-input">
+      <input
+        name="name"
+        type="text"
+        className="feedback-input"
+        placeholder="Name"
+        onChange={handleInputChange}
+        value={values.name}
+      />
+
+      <input
+        name="email"
+        type="email"
+        className="feedback-input"
+        placeholder="Email"
+        onChange={handleInputChange}
+        value={values.email}
+      />
+      <input
+        name="phone"
+        type="telephone"
+        className="feedback-input"
+        placeholder="Your phone number"
+        onChange={handleInputChange}
+        value={values.phone}
+      />
+      <select name="advert" type="text" className="feedback-input" onChange={handleInputChange}>
         <option value="" disabled selected hidden>
           How did you hear about us?
         </option>
@@ -83,7 +111,13 @@ const Form = () => {
         <option value="recommendation">Recommendation</option>
         <option value="other">Other</option>
       </select>
-      <textarea name="text" className="feedback-input" placeholder="Message"></textarea>
+      <input
+        name="message"
+        className="feedback-input"
+        placeholder="Message"
+        onChange={handleInputChange}
+        value={values.message}
+      />
       <input type="submit" value="SUBMIT" />
     </StyledForm>
   );

@@ -1,6 +1,8 @@
 const nodemailer = require('nodemailer');
 
-exports.handler = function (event, context, callback) {
+exports.handler = function (values, event, context, callback) {
+  const message = `You have received an email from ${values.name}. The email address is ${values.email} and the referer is ${values.advert}. The message is ${values.text}.`;
+
   const transport = nodemailer.createTransport({
     host: 'smtp.gmail.com',
     port: 465,
@@ -12,10 +14,9 @@ exports.handler = function (event, context, callback) {
   });
 
   const mailOptions = {
-    from: 'paul.imperialroad@gmail.com',
     to: 'paul.imperialroad@gmail.com',
-    subject: 'Sending Email using Node.js',
-    text: 'That was easy!',
+    subject: `You have received an email from ${values.name}`,
+    text: message,
   };
 
   transport.sendMail(mailOptions, function (error, info) {
