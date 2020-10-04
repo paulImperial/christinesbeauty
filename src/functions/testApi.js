@@ -4,8 +4,8 @@ exports.handler = function (event, context, callback) {
     age: 35,
   };
 
-  return {
+  callback(null, {
     statusCode: 200,
-    body: 'this is a reply!',
-  };
+    body: JSON.stringify(data),
+  });
 };

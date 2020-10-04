@@ -51,7 +51,7 @@
       lang: 'en',
       debug: 0,
       hidePoweredBy: false,
-      forceHttps: false,
+      forceHttps: true,
       feed: {
         id: '8da633df-06eb-40e2-96c3-7359d5a417f8',
         apiEndpoint: 'https://api.curator.io/v1.1',
