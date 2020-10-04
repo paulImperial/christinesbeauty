@@ -20,8 +20,9 @@ export const Input = styled.input`
 export const Button = styled.button`
   background: ${(props) => `${props.theme.colours.pink}`};
   border: none;
+  font-size: 1rem;
   padding: 20px 30px;
-  width: 30%;
+  width: 35%;
   color: ${(props) => `${props.theme.colours.baseWhite}`};
   border-radius: 3px;
   @media (max-width: 800px) {
@@ -31,7 +32,7 @@ export const Button = styled.button`
   }
   &:hover {
     cursor: pointer;
-    transform: scale(1.1);
+    transform: scale(1.01);
     box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 2px 1px;
   }
 `;

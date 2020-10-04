@@ -26,7 +26,6 @@ const Home = () => {
   return (
     <Layout title={title}>
       <Container full={true}>
-        {/* <Cameo image={'/images/christineBW.jpg'} /> */}
         <Hero image={'/images/room.jpg'} />
         <Arrow />
       </Container>
