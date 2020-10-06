@@ -83,16 +83,16 @@ const Form = () => {
 
     console.log('parsing', parsing);
 
-    // fetch('https://christines-beauty.netlify.app/.netlify/functions/emailer', {
-    //   method: 'POST',
-    //   body: data,
-    // })
-    //   .then(() => {
-    //     console.log('email send');
-    //   })
-    //   .catch((error) => {
-    //     console.log(error);
-    //   });
+    fetch('https://christines-beauty.netlify.app/.netlify/functions/emailer', {
+      method: 'POST',
+      body: data,
+    })
+      .then(() => {
+        console.log('email send');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   return (
