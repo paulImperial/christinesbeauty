@@ -63,6 +63,8 @@ const StyledForm = styled.form`
 `;
 
 const Form = () => {
+  const [values, setValues] = useState({ name: '', email: '', phone: '', advert: '', message: '' });
+
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setValues({ ...values, [name]: value });
@@ -75,19 +77,24 @@ const Form = () => {
 
     const data = JSON.stringify({ name, email, phone, advert, message });
 
-    fetch('https://christines-beauty.netlify.app/.netlify/functions/emailer', {
-      method: 'POST',
-      body: data,
-    })
-      .then(() => {
-        console.log('email send');
-      })
-      .catch((error) => {
-        console.log(error);
-      });
+    console.log(data);
+
+    const parsing = JSON.parse(data);
+
+    console.log('parsing', parsing);
+
+    // fetch('https://christines-beauty.netlify.app/.netlify/functions/emailer', {
+    //   method: 'POST',
+    //   body: data,
+    // })
+    //   .then(() => {
+    //     console.log('email send');
+    //   })
+    //   .catch((error) => {
+    //     console.log(error);
+    //   });
   };
 
-  const [values, setValues] = useState({ name: '', email: '', phone: '', advert: '', message: '' });
   return (
     <StyledForm name="christinesbeauty" onSubmit={handleSubmit}>
       <input
