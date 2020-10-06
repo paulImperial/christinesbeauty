@@ -70,7 +70,7 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    fetch('', {
+    fetch('https://christines-beauty.netlify.app/.netlify/functions/emailer', {
       method: 'POST',
       body: values,
     })
