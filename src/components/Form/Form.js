@@ -1,3 +1,4 @@
+import { Data } from '@react-google-maps/api';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -69,7 +70,16 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log({ values });
+    fetch('', {
+      method: 'POST',
+      body: values,
+    })
+      .then(() => {
+        console.log('email send');
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
 
   const [values, setValues] = useState({ name: '', email: '', phone: '', advert: '', message: '' });

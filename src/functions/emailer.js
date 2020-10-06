@@ -1,7 +1,9 @@
 const nodemailer = require('nodemailer');
 
 exports.handler = function (values, event, context, callback) {
-  const message = `You have received an email from ${values.name}. The email address is ${values.email} and the referer is ${values.advert}. The message is ${values.text}.`;
+  const body = JSON.parse(event.body);
+
+  const message = `You have received an email from ${body.name}. The email address is ${body.email} and the referer is ${body.advert}. The message is ${body.text}.`;
 
   const transport = nodemailer.createTransport({
     host: 'smtp.gmail.com',
