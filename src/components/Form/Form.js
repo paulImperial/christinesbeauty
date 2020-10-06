@@ -70,9 +70,14 @@ const Form = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const { name, email, phone, advert, message } = values;
+
+    const data = JSON.stringify({ name, email, phone, advert, message });
+
     fetch('https://christines-beauty.netlify.app/.netlify/functions/emailer', {
       method: 'POST',
-      body: values,
+      body: data,
     })
       .then(() => {
         console.log('email send');

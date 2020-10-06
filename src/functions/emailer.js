@@ -17,7 +17,7 @@ exports.handler = function (values, event, context, callback) {
 
   const mailOptions = {
     to: 'paul.imperialroad@gmail.com',
-    subject: `You have received an email from ${values.name}`,
+    subject: `You have received an email from ${body.name}`,
     text: message,
   };
 
