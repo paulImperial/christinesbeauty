@@ -77,12 +77,6 @@ const Form = () => {
 
     const data = JSON.stringify({ name, email, phone, advert, message });
 
-    console.log(data);
-
-    const parsing = JSON.parse(data);
-
-    console.log('parsing', parsing);
-
     fetch('https://christines-beauty.netlify.app/.netlify/functions/emailer', {
       method: 'POST',
       body: data,
