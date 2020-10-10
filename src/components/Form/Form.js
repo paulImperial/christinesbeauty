@@ -1,7 +1,11 @@
-import React, { useState } from 'react';
+import React, { useState, Fragment } from 'react';
 import styled from 'styled-components';
+import Spinner from '../Generic/Spinner';
+
+const Message = styled.h3``;
 
 const StyledForm = styled.form`
+  position: relative;
   body {
     background: rgb(30, 30, 40);
   }
@@ -43,7 +47,7 @@ const StyledForm = styled.form`
 
   [type='submit'] {
     font-family: inherit;
-    width: 100%;
+    width: 50%;
     background: ${(props) => props.theme.colours.pink};
     border-radius: 5px;
     border: 0;
@@ -61,9 +65,15 @@ const StyledForm = styled.form`
   }
 `;
 
+const SSpinner = styled(Spinner)`
+  height: 25%;
+  width: 25%;
+`;
+
 const Form = () => {
   const [values, setValues] = useState({ name: '', email: '', phone: '', advert: '', message: '' });
   const [reply, setReply] = useState('');
+  const [sending, setSending] = useState(false);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -72,6 +82,8 @@ const Form = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    setSending(true);
 
     const { name, email, phone, advert, message } = values;
 
@@ -82,9 +94,16 @@ const Form = () => {
       body: data,
     });
 
-    if (response.status === 200) {
-      setReply('Email sent!');
-    } else {
+    try {
+      if (response.status === 200) {
+        setSending(false);
+        setReply('Email sent!');
+      } else {
+        setSending(false);
+        setReply('Error!');
+      }
+    } catch (error) {
+      setSending(false);
       setReply('Error!');
     }
   };
@@ -135,8 +154,9 @@ const Form = () => {
         onChange={handleInputChange}
         value={values.message}
       />
-      <input type="submit" value="SUBMIT" />
-      {reply !== '' && <div>{reply}</div>}
+      {!sending && <input type="submit" value="SUBMIT" />}
+      {sending && <SSpinner />}
+      {reply !== '' && <Message>{reply}</Message>}
     </StyledForm>
   );
 };
