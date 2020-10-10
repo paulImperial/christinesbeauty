@@ -1,4 +1,3 @@
-import { Data } from '@react-google-maps/api';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
@@ -64,6 +63,7 @@ const StyledForm = styled.form`
 
 const Form = () => {
   const [values, setValues] = useState({ name: '', email: '', phone: '', advert: '', message: '' });
+  const [reply, setReply] = useState('');
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -82,7 +82,11 @@ const Form = () => {
       body: data,
     });
 
-    return <div>response</div>;
+    if (response.status === 200) {
+      setReply('Email sent!');
+    } else {
+      setReply('Error!');
+    }
   };
 
   return (
@@ -132,6 +136,7 @@ const Form = () => {
         value={values.message}
       />
       <input type="submit" value="SUBMIT" />
+      {reply !== '' && <div>{reply}</div>}
     </StyledForm>
   );
 };
