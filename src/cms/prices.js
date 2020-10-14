@@ -9,11 +9,11 @@ const prices = [
     services: [
       {
         treatment: 'Half leg',
-        price: 12,
+        price: 15,
       },
       {
         treatment: 'Full leg',
-        price: 18,
+        price: 20,
       },
       {
         treatment: 'Under arm',
@@ -21,11 +21,11 @@ const prices = [
       },
       {
         treatment: 'Forearm',
-        price: 8,
+        price: 10,
       },
       {
         treatment: 'Full arm',
-        price: 12,
+        price: 15,
       },
       {
         treatment: 'Bikini line (standard)',
@@ -37,15 +37,11 @@ const prices = [
       },
       {
         treatment: 'Brazillian *',
-        price: 15,
-      },
-      {
-        treatment: 'G-string *',
-        price: 18,
+        price: 20,
       },
       {
         treatment: 'Hollywood *',
-        price: 20,
+        price: 25,
       },
       {
         treatment: 'Upper lip',
@@ -65,11 +61,11 @@ const prices = [
       },
       {
         treatment: 'Full body (excluding face and brows)',
-        price: 50,
+        price: 60,
       },
       {
         treatment: 'Back wax',
-        price: 15,
+        price: 20,
       },
       {
         treatment: 'Chest wax',
@@ -107,7 +103,7 @@ const prices = [
       },
       {
         treatment: 'Eyelash Tint and Eyebrow tint *',
-        price: 8,
+        price: 15,
       },
     ],
   },
@@ -121,7 +117,7 @@ const prices = [
     services: [
       {
         treatment: 'Back, Neck and Shoulder',
-        price: 20,
+        price: 25,
         time: '30 minutes',
       },
       {
@@ -131,16 +127,21 @@ const prices = [
       },
       {
         treatment: 'Full body Swedish massage',
-        price: 35,
-        time: '60 minutes',
-      },
-      {
-        treatment: 'Aromatherapy full body massage',
         price: 40,
         time: '60 minutes',
       },
       {
+        treatment: 'Aromatherapy full body massage',
+        price: 45,
+        time: '60 minutes',
+      },
+      {
         treatment: 'Reflexology (with foot massage)',
+        price: 40,
+        time: '60 minutes',
+      },
+      {
+        treatment: 'Sports massage',
         price: 40,
         time: '60 minutes',
       },
@@ -169,14 +170,14 @@ const prices = [
       {
         treatment: 'Gold Facial',
         extraInfo:
-          '(Cleanse, tone, exfoliate, facial massage (including essential oils tailored to you), moisturise, deep mask, neck massage, extraction and hot towels).',
+          '(Cleanse, tone, exfoliate, facial massage (including essential oils tailored to you), moisturise, deep mask, neck massage, extraction and hot towels, includes steamer).',
         price: 30,
         time: '60 minutes',
       },
       {
         treatment: 'Platinum Facial',
         extraInfo:
-          '(Cleanse, deep cleanse, tone, exfoliate, facial massage (including essential oils tailored to you), moisturise, deep specialised mask, massage on the neck (plus arms and hands or legs and feet), extraction, hot towels and deep moisturise).',
+          '(Cleanse, deep cleanse, tone, exfoliate, facial massage (including essential oils tailored to you), moisturise, deep specialised mask, massage on the neck (plus arms and hands or legs and feet), extraction, hot towels and deep moisturise, includes steamer).',
         price: 40,
         time: '75 minutes',
       },
@@ -193,12 +194,12 @@ const prices = [
       {
         treatment: 'Shellac Hands',
         extraInfo: '(File, cuticles, shellac paint and cuticle oil)',
-        price: 20,
+        price: 25,
       },
       {
         treatment: 'Shellac Toes',
         extraInfo: '(File, cuticles, shellac paint and cuticle oil)',
-        price: 20,
+        price: 25,
       },
       {
         treatment: 'To add Shellac to any treatment',
@@ -284,22 +285,6 @@ const prices = [
       {
         treatment: 'Shellac removal                                      ',
         price: 10,
-      },
-    ],
-  },
-  {
-    title: 'Make Up',
-    id: 'makeup',
-    image: '/images/makeup.jpg',
-    disclaimer: '(Provide your own lashes, if required)',
-    services: [
-      {
-        treatment: 'Special Occasion Makeup',
-        price: 20,
-      },
-      {
-        treatment: 'Wedding makeup',
-        price: 40,
       },
     ],
   },

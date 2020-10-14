@@ -2,7 +2,9 @@ import React, { useState, Fragment } from 'react';
 import styled from 'styled-components';
 import Spinner from '../Generic/Spinner';
 
-const Message = styled.h3``;
+const Message = styled.h3`
+  color: ${(props) => props.theme.colours.pink};
+`;
 
 const StyledForm = styled.form`
   position: relative;
@@ -97,7 +99,7 @@ const Form = () => {
     try {
       if (response.status === 200) {
         setSending(false);
-        setReply('Email sent!');
+        setReply('');
       } else {
         setSending(false);
         setReply('Error!');
@@ -154,7 +156,16 @@ const Form = () => {
         onChange={handleInputChange}
         value={values.message}
       />
-      {!sending && <input type="submit" value="SUBMIT" />}
+      {!sending && (
+        <input
+          className="g-recaptcha"
+          data-sitekey="reCAPTCHA_site_key"
+          data-callback="onSubmit"
+          data-action="submit"
+          type="submit"
+          value="SUBMIT"
+        />
+      )}
       {sending && <SSpinner />}
       {reply !== '' && <Message>{reply}</Message>}
     </StyledForm>

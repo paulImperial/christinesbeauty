@@ -41,10 +41,10 @@ export const treatments = [
     link: '/prices',
     query: 'massage',
   },
-  {
-    label: 'Make Up',
-    image: '/images/makeup.jpg',
-    link: '/prices',
-    query: 'makeup',
-  },
+  // {
+  //   label: 'Make Up',
+  //   image: '/images/makeup.jpg',
+  //   link: '/prices',
+  //   query: 'makeup',
+  // },
 ];

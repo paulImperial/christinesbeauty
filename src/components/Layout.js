@@ -25,11 +25,10 @@ const HeroBanner = styled.div`
 `;
 
 const Layout = ({ children, hero, title }) => {
+  const contact = !!title.includes('Contact');
   return (
     <Fragment>
       <Head>
-        <script></script>
-        <script></script>
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <title>{title}</title>
       </Head>
@@ -39,6 +38,12 @@ const Layout = ({ children, hero, title }) => {
       <HeroBanner>{hero}</HeroBanner>
       <Main>{children}</Main>
       <Footer navItems={navigation} social={social}></Footer>
+      {contact && <script src="https://www.google.com/recaptcha/api.js"></script>}
+      {contact && (
+        <script>
+          function onSubmit('6Lc6bNQZAAAAAPj5onNnT6D94gaV2YfZU-GwPLhr') {document.getElementById('demo-form').submit()};
+        </script>
+      )}
     </Fragment>
   );
 };

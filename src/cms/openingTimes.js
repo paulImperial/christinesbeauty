@@ -38,7 +38,7 @@ export const times = [
   {
     day: 'Sunday',
     open: '12pm',
-    close: '4pm',
+    close: '5pm',
     closed: false,
   },
 ];
