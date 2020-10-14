@@ -38,11 +38,6 @@ const Layout = ({ children, hero, title }) => {
       <HeroBanner>{hero}</HeroBanner>
       <Main>{children}</Main>
       <Footer navItems={navigation} social={social}></Footer>
-      {contact && <script src="https://www.google.com/recaptcha/api.js"></script>}
-      {contact && (
-        <script>
-          function onSubmit('6Lc6bNQZAAAAAPj5onNnT6D94gaV2YfZU-GwPLhr') {document.getElementById('demo-form').submit()};
-        </script>
       )}
     </Fragment>
   );
