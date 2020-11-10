@@ -25,7 +25,6 @@ const HeroBanner = styled.div`
 `;
 
 const Layout = ({ children, hero, title }) => {
-  const contact = !!title.includes('Contact');
   return (
     <Fragment>
       <Head>
@@ -38,7 +37,6 @@ const Layout = ({ children, hero, title }) => {
       <HeroBanner>{hero}</HeroBanner>
       <Main>{children}</Main>
       <Footer navItems={navigation} social={social}></Footer>
-      )}
     </Fragment>
   );
 };

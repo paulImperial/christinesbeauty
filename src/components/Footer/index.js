@@ -145,11 +145,11 @@ const Footer = ({ navItems, social }) => {
       <SocialContainer>
         {social.map(({ title, image, link }) => {
           return (
-            <StyledSocialLink key={title}>
-              <a href={link}>
+            <a href={link} target="_blank">
+              <StyledSocialLink key={title}>
                 <SocialLogo src={image} />
-              </a>
-            </StyledSocialLink>
+              </StyledSocialLink>
+            </a>
           );
         })}
       </SocialContainer>

@@ -4,9 +4,10 @@ export const BannerWrapper = styled.div`
   display: flex;
   justify-content: center;
   flex-direction: column;
-  border: 1px solid ${(props) => props.theme.colours.shadeLightestGrey};
+  /* border: 1px solid ${(props) => props.theme.colours.pink}; */
   padding: 1rem;
-  box-shadow: rgba(0, 0, 0, 0.2) 0px 3px 14px 5px;
+  box-shadow: ${(props) => props.theme.colours.pink} 0 0 38px 1px;
+  border-radius: 15px;
 `;
 
 export const BannerHeader = styled.h2`

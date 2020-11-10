@@ -6,6 +6,8 @@ import StyledAccordion from '../components/Accordion/Accordion';
 import { useRouter } from 'next/router';
 import Map from '../components/map/Map';
 import prices from '../cms/prices';
+import { brands } from '../cms/brands';
+import Spotlight from '../components/Spotlight/Spotlight';
 
 const Heading = styled.h1`
   margin-top: 2rem;
@@ -26,8 +28,8 @@ const Prices = () => {
         <Heading>Christine’s Beauty Treatment Menu</Heading>
         <StyledAccordion prices={prices} preExpand={query} />
       </Container>
-      <Container label="Finding Us">
-        <Map />
+      <Container label="Products We Use">
+        <Spotlight brands={brands}></Spotlight>
       </Container>
     </Layout>
   );

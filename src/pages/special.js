@@ -3,8 +3,6 @@ import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
 import { useRouter } from 'next/router';
-import Map from '../components/map/Map';
-import specialOffers from '../cms/special-offers';
 import Banner from '../components/Banner/Banner';
 
 const Heading = styled.h1`
@@ -13,6 +11,37 @@ const Heading = styled.h1`
   font-size: 2.5rem;
   font-weight: 100;
   line-height: 2rem;
+`;
+
+const StyledSocialLink = styled.li`
+  position: relative;
+  padding-bottom: 5px;
+  margin: 0 10px;
+
+  &:hover {
+    cursor: pointer;
+
+    &:after {
+      transition: all 0.2s ease-in-out;
+      width: 75px;
+      height: 75px;
+      content: '';
+      border: 2px solid ${(props) => props.theme.colours.pink};
+      background-color: ${(props) => props.theme.colours.mildPink};
+      border-radius: 100%;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      margin-left: -38px;
+      margin-top: -42px;
+      z-index: 0;
+    }
+  }
+`;
+
+const SocialLogo = styled.img`
+  width: 50px;
+  z-index: 1;
 `;
 
 const Social = () => {
@@ -30,9 +59,6 @@ const Social = () => {
             'You will be able to see special offers soon, in the meantime, please link to our Facebook or Instagram page for news of of our special offers.'
           }
         ></Banner>
-      </Container>
-      <Container label="Finding Us">
-        <Map />
       </Container>
     </Layout>
   );

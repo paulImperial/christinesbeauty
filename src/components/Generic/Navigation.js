@@ -32,12 +32,10 @@ const Navigation = styled.header`
         display: inline-block;
         margin-top: 5px;
         width: 15px;
-        float: left;
       }
       .letterhead {
         display: inline-block;
         line-height: 260%;
-        float: left;
       }
     }
   }
@@ -58,26 +56,6 @@ const Navigation = styled.header`
   }
   nav {
     width: 100%;
-
-    //   ul {
-    //     display: flex;
-    //     justify-content: space-between;
-    //   }
-    //   li {
-    //     margin: 0 15px;
-    //     justify-content: space-between;
-    //     font-size: 1em;
-    //   }
-    //   a {
-    //     font-size: 1em;
-    //     text-decoration: none;
-    //     .active {
-    //       color: tomato;
-    //     }
-    //   }
-    //   a.active {
-    //     color: #222;
-    //   }
   }
 
   @media only screen and (max-width: 400px) {

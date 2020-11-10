@@ -5,6 +5,8 @@ import Container from '../components/Generic/Container';
 import { useRouter } from 'next/router';
 import Map from '../components/map/Map';
 import Banner from '../components/Banner/Banner';
+import { brands } from '../cms/brands';
+import Spotlight from '../components/Spotlight/Spotlight';
 
 const Heading = styled.h1`
   margin-top: 2rem;
@@ -28,10 +30,8 @@ const Reviews = () => {
           text={
             'You will be able to see reviews soon, in the meantime, please link to our Facebook page for reviews of our services.'
           }
+          showSocial
         ></Banner>
-      </Container>
-      <Container label="Finding Us">
-        <Map />
       </Container>
     </Layout>
   );

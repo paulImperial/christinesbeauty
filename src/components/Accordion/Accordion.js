@@ -126,7 +126,7 @@ const StyledAccordion = ({ prices, ...props }) => {
   }, [name]);
 
   return (
-    <StyleAccordion preExpanded={name}>
+    <StyleAccordion preExpanded={name} allowZeroExpanded={true} allowMultipleExpanded={true}>
       {prices.map((price) => (
         <div ref={refs[price.id]}>
           <AccordionItem key={price.id} id={price.id} uuid={price.id} onClick={() => handleClick(price.id)}>

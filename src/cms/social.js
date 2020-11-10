@@ -2,7 +2,7 @@ const social = [
   {
     title: 'Facebook',
     image: '/images/icons/facebook.svg',
-    link: '#',
+    link: 'https://www.facebook.com/christinesbeauty2018',
   },
   {
     title: 'Instagram',

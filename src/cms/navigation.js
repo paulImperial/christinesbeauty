@@ -8,16 +8,12 @@ const navigation = [
     link: '/prices',
   },
   {
-    title: 'Find us',
-    link: '/#Find',
-  },
-  {
     title: 'Reviews',
     link: '/reviews',
   },
   {
     title: 'Social',
-    link: '/#Social',
+    link: '/social',
   },
   {
     title: 'Special Offers',

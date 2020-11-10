@@ -34,3 +34,9 @@ export const StyledContactContainer = styled.div`
   display: flex;
   justify-content: center;
 `;
+
+export const BodyText = styled.p`
+  margin: 10px 0;
+  padding: 5px;
+  font-size: 1.25rem;
+`;

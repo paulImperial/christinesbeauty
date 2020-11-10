@@ -142,7 +142,7 @@ const prices = [
       },
       {
         treatment: 'Sports massage',
-        price: 40,
+        price: 45,
         time: '60 minutes',
       },
     ],
@@ -179,6 +179,13 @@ const prices = [
         extraInfo:
           '(Cleanse, deep cleanse, tone, exfoliate, facial massage (including essential oils tailored to you), moisturise, deep specialised mask, massage on the neck (plus arms and hands or legs and feet), extraction, hot towels and deep moisturise, includes steamer).',
         price: 40,
+        time: '75 minutes',
+      },
+      {
+        treatment: 'Back Facial',
+        extraInfo:
+          '(Cleanse, exfoliate, brush, back mask, back and neck massage (including essential oils tailored to you), extraction (if needed) and hot towels (includes steamer and moisturise). Optional back was (usually £20) for only £10 as an add-on to this treatment',
+        price: 50,
         time: '75 minutes',
       },
     ],

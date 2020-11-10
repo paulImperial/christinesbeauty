@@ -61,17 +61,8 @@ const Home = () => {
       <Container label="Products We Use">
         <Spotlight brands={brands}></Spotlight>
       </Container>
-      <Container label="Social" id="Social">
-        <Social></Social>
-      </Container>
       <Container label="Finding Us" id="Find">
         <Map />
-        <BodyText>
-          The salon is easy to reach, with the bus stopping just a few steps away, and being just a couple of minutes’
-          drive from the Ring Road. Based in a converted outbuilding of my family home, with separate access, the
-          location provides both privacy and convenience, all at ground level, with free onsite parking usually
-          available.
-        </BodyText>
       </Container>
     </Layout>
   );
