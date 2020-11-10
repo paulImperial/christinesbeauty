@@ -4,9 +4,7 @@ exports.handler = function (event, context, callback) {
   console.log({ event }, { context });
   const body = JSON.parse(event.body);
 
-  const message = `You have received an email from ${body.name}.
-  The email address is ${body.email} and the referer is ${body.advert}. 
-  The message is ${body.message}.`;
+  const message = `You have received an email from ${body.name}.The email address is ${body.email} and the referer is ${body.advert}. The message is ${body.message}.`;
 
   const transport = nodemailer.createTransport({
     host: 'smtp.gmail.com',
