@@ -2,7 +2,7 @@ import React, { useState, Fragment } from 'react';
 import styled from 'styled-components';
 import Spinner from '../Generic/Spinner';
 
-const Message = styled.h3`
+const StyledH3 = styled.h3`
   color: ${(props) => props.theme.colours.pink};
 `;
 
@@ -74,7 +74,7 @@ const SSpinner = styled(Spinner)`
 
 const Form = () => {
   const [values, setValues] = useState({ name: '', email: '', phone: '', advert: '', message: '' });
-  const [reply, setReply] = useState('');
+  const [successfullSend, setSuccessfullSend] = useState(false);
   const [sending, setSending] = useState(false);
 
   const handleInputChange = (e) => {
@@ -91,84 +91,94 @@ const Form = () => {
 
     const data = JSON.stringify({ name, email, phone, advert, message });
 
-    const response = await fetch('https://christines-beauty.netlify.app/.netlify/functions/emailer', {
-      method: 'POST',
-      body: data,
-    });
-
     try {
+      const response = await fetch('https://christines-beauty.netlify.app/.netlify/functions/emailer', {
+        method: 'POST',
+        body: data,
+      });
+
       if (response.status === 200) {
         setSending(false);
-        setReply('');
+        setSuccessfullSend(true);
       } else {
         setSending(false);
-        setReply('Error!');
+        setSuccessfullSend(false);
       }
     } catch (error) {
       setSending(false);
-      setReply('Error!');
+      setSuccessfullSend(false);
     }
   };
 
   return (
-    <StyledForm name="christinesbeauty" onSubmit={handleSubmit}>
-      <input
-        name="name"
-        type="text"
-        className="feedback-input"
-        placeholder="Name"
-        onChange={handleInputChange}
-        value={values.name}
-      />
+    <>
+      {!successfullSend && (
+        <StyledForm name="christinesbeauty" onSubmit={handleSubmit}>
+          <input
+            name="name"
+            type="text"
+            className="feedback-input"
+            placeholder="Name"
+            onChange={handleInputChange}
+            value={values.name}
+          />
 
-      <input
-        name="email"
-        type="email"
-        className="feedback-input"
-        placeholder="Email"
-        onChange={handleInputChange}
-        value={values.email}
-      />
-      <input
-        name="phone"
-        type="telephone"
-        className="feedback-input"
-        placeholder="Your phone number"
-        onChange={handleInputChange}
-        value={values.phone}
-      />
-      <select name="advert" type="text" className="feedback-input" onChange={handleInputChange}>
-        <option value="" disabled selected hidden>
-          How did you hear about us?
-        </option>
-        <option value="google">Google</option>
-        <option value="facebook">Facebook</option>
-        <option value="instagram">Instagram</option>
-        <option value="sign">Sign</option>
-        <option value="flyer/advert">Flyer/Advert</option>
-        <option value="recommendation">Recommendation</option>
-        <option value="other">Other</option>
-      </select>
-      <input
-        name="message"
-        className="feedback-input"
-        placeholder="Message"
-        onChange={handleInputChange}
-        value={values.message}
-      />
-      {!sending && (
-        <input
-          className="g-recaptcha"
-          data-sitekey="reCAPTCHA_site_key"
-          data-callback="onSubmit"
-          data-action="submit"
-          type="submit"
-          value="SUBMIT"
-        />
+          <input
+            name="email"
+            type="email"
+            className="feedback-input"
+            placeholder="Email"
+            onChange={handleInputChange}
+            value={values.email}
+          />
+          <input
+            name="phone"
+            type="telephone"
+            className="feedback-input"
+            placeholder="Your phone number"
+            onChange={handleInputChange}
+            value={values.phone}
+          />
+          <select name="advert" type="text" className="feedback-input" onChange={handleInputChange}>
+            <option value="" disabled selected hidden>
+              How did you hear about us?
+            </option>
+            <option value="google">Google</option>
+            <option value="facebook">Facebook</option>
+            <option value="instagram">Instagram</option>
+            <option value="sign">Sign</option>
+            <option value="flyer/advert">Flyer/Advert</option>
+            <option value="recommendation">Recommendation</option>
+            <option value="other">Other</option>
+          </select>
+          <textarea
+            name="message"
+            className="feedback-input"
+            placeholder="Message"
+            onChange={handleInputChange}
+            value={values.message}
+            rows="10"
+          />
+          {!sending && (
+            <input
+              className="g-recaptcha"
+              data-sitekey="reCAPTCHA_site_key"
+              data-callback="onSubmit"
+              data-action="submit"
+              type="submit"
+              value="SUBMIT"
+            />
+          )}
+        </StyledForm>
       )}
       {sending && <SSpinner />}
-      {reply !== '' && <Message>{reply}</Message>}
-    </StyledForm>
+      {successfullSend && (
+        <>
+          <StyledH3>Thank you for your message.</StyledH3>
+          <p>We will be in touch with you shortly.</p>
+        </>
+      )}
+    </>
   );
 };
 
