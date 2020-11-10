@@ -12,6 +12,10 @@ const Heading = styled.h1`
   font-weight: 100;
 `;
 
+const StyledP = styled.p`
+  font-size: 1.25rem;
+`;
+
 const Contact = () => {
   const title = `Christine's Beauty | Contact Page`;
 
@@ -26,7 +30,7 @@ const Contact = () => {
     <Layout title={title}>
       <Container column={true}>
         <Heading>Contact Us</Heading>
-        <p>
+        <StyledP>
           Please do get in touch to find out more about our services or to request an appointment.
           <br />
           <br />
@@ -35,7 +39,7 @@ const Contact = () => {
             Free online enquiry form
           </a>{' '}
           and we will soon be in touch with you.
-        </p>
+        </StyledP>
         {isOpen && <Form></Form>}
       </Container>
       <Container label="Finding Us" id="Find">
