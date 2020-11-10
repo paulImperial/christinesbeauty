@@ -28,6 +28,7 @@ const Layout = ({ children, hero, title }) => {
   return (
     <Fragment>
       <Head>
+        <meta name="google-site-verification" content="SgYvArgqUJZC0MYpJ1LqvV_tVGss7rkYz8Gg_Gk6gHs" />
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <title>{title}</title>
       </Head>
