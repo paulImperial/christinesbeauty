@@ -7,10 +7,10 @@ import navigation from '../cms/navigation';
 import social from '../cms/social';
 import Nav from './Generic/Navigation';
 
-if (typeof window !== 'undefined') {
-  require('../cms/curator-facebook');
-  require('../cms/curator.instagram');
-}
+// if (typeof window !== 'undefined') {
+//   require('../cms/curator-facebook');
+//   require('../cms/curator.instagram');
+// }
 
 const Main = styled.div`
   margin: 0 auto;
@@ -29,6 +29,7 @@ const Layout = ({ children, hero, title }) => {
     <Fragment>
       <Head>
         <meta name="google-site-verification" content="SgYvArgqUJZC0MYpJ1LqvV_tVGss7rkYz8Gg_Gk6gHs" />
+        <link rel="stylesheet" type="text/css" href="//cdn.curator.io/3.1/css/curator.css" />
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <title>{title}</title>
       </Head>
@@ -38,6 +39,7 @@ const Layout = ({ children, hero, title }) => {
       <HeroBanner>{hero}</HeroBanner>
       <Main>{children}</Main>
       <Footer navItems={navigation} social={social}></Footer>
+      <script type="text/javascript" src="//cdn.curator.io/3.1/js/curator.js"></script>
     </Fragment>
   );
 };
