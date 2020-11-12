@@ -92,7 +92,7 @@ const Form = () => {
     const data = JSON.stringify({ name, email, phone, advert, message });
 
     try {
-      const response = await fetch('https://christinesbeauty.co.uk/.netlify/functions/emailer', {
+      const response = await fetch('https://www.christinesbeauty.co.uk/.netlify/functions/emailer', {
         method: 'POST',
         body: data,
       });
