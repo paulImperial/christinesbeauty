@@ -106,6 +106,7 @@ const Form = () => {
         setSuccessfullSend(false);
       }
     } catch (error) {
+      console.log(error);
       setSending(false);
       setSuccessfullSend(false);
     }
