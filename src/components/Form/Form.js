@@ -95,7 +95,6 @@ const Form = () => {
       const response = await fetch('https://christinesbeauty.co.uk/.netlify/functions/emailer', {
         method: 'POST',
         body: data,
-        mode: 'no-cors',
       });
 
       if (response.status === 200) {
