@@ -1,5 +1,6 @@
 const prices = [
   {
+    key: 1,
     title: 'Waxing',
     id: 'hairRemoval',
     image: '/images/hair-removal1.jpg',
@@ -74,6 +75,7 @@ const prices = [
     ],
   },
   {
+    key: 2,
     title: 'Eye Treatments',
     id: 'eyeTreatments',
     image: '/images/eye-treatments.webp',
@@ -108,6 +110,7 @@ const prices = [
     ],
   },
   {
+    key: 3,
     title: 'Massage',
     id: 'massage',
     image: '/images/massage1.jpg',
@@ -148,6 +151,7 @@ const prices = [
     ],
   },
   {
+    key: 4,
     title: 'Facials',
     id: 'facials',
     image: '/images/facials1.jpg',
@@ -191,6 +195,7 @@ const prices = [
     ],
   },
   {
+    key: 5,
     title: 'Shellac',
     id: 'shellac',
     image: '/images/shellac1.jpg',
@@ -219,6 +224,7 @@ const prices = [
     ],
   },
   {
+    key: 6,
     title: 'Manicures',
     id: 'hands',
     image: '/images/hands1.jpg',
@@ -253,6 +259,7 @@ const prices = [
     ],
   },
   {
+    key: 7,
     title: 'Pedicures',
     id: 'feet',
     image: '/images/foot_picture1.jpg',

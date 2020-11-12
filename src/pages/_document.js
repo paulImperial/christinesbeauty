@@ -1,4 +1,4 @@
-import Document, { Head, Main, NextScript } from 'next/document';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet } from 'styled-components';
 
 class MainDocument extends Document {
@@ -11,7 +11,7 @@ class MainDocument extends Document {
       ctx.renderPage = () =>
         originalRenderPage({
           // eslint-disable-next-line react/jsx-props-no-spreading
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+          enhanceApp: (App) => (props) => sheet.collectStyles(<App {...props} />),
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -32,15 +32,13 @@ class MainDocument extends Document {
 
   render() {
     return (
-      <html lang="en-GB">
-        <Head>
-          <meta name="viewport" content="width=device-width, initial-scale=1" />
-        </Head>
+      <Html lang="en-GB">
+        <Head></Head>
         <body>
           <Main />
           <NextScript />
         </body>
-      </html>
+      </Html>
     );
   }
 }

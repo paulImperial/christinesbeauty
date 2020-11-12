@@ -28,7 +28,6 @@ const Layout = ({ children, hero, title }) => {
   return (
     <Fragment>
       <Head>
-        <meta name="google-site-verification" content="SgYvArgqUJZC0MYpJ1LqvV_tVGss7rkYz8Gg_Gk6gHs" />
         <link rel="stylesheet" type="text/css" href="//cdn.curator.io/3.1/css/curator.css" />
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <title>{title}</title>

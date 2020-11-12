@@ -9,7 +9,7 @@ const CuratorSocial = () => {
       carousel: {
         autoPlay: true, // carousel will auto rotate
         autoLoad: true, // carusel will auto load new when it reaches the end of the current page of posts
-        minWidth: 350, // the minimum width of the post, used when calculating responsive post width
+        minWidth: 300, // the minimum width of the post, used when calculating responsive post width
         infinite: true, // if the last post is reached should it rotate back to the start
       },
     });
