@@ -1,12 +1,12 @@
 const nodemailer = require('nodemailer');
 
 exports.handler = function (event, context, callback) {
-  if (event.httpMethod === 'OPTIONS') {
+  if (event.httpMethod !== 'POST') {
     // To enable CORS
     const headers = {
       'Access-Control-Allow-Origin': '*',
       'Access-Control-Allow-Headers': 'Content-Type',
-      'Access-Control-Allow-Methods': 'POST',
+      'Access-Control-Allow-Methods': 'GET, POST, PUT, DELETE',
     };
     return {
       statusCode: 200, // <-- Must be 200 otherwise pre-flight call fails
