@@ -25,7 +25,17 @@ exports.handler = function (event, context, callback) {
 
   transport.sendMail(mailOptions, function (error, info) {
     if (error) {
-      console.log(error);
+      return {
+        statusCode: 500,
+        headers: {
+          'Access-Control-Allow-Origin': '*',
+          'Access-Control-Allow-Headers': 'Content-Type',
+          'Access-Control-Allow-Methods': 'GET, POST',
+        },
+        body: JSON.stringify({
+          status: error,
+        }),
+      };
     } else {
       return {
         statusCode: 200,
@@ -35,7 +45,7 @@ exports.handler = function (event, context, callback) {
           'Access-Control-Allow-Methods': 'GET, POST',
         },
         body: JSON.stringify({
-          status: info,
+          status: 'all good',
         }),
       };
     }

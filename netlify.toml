@@ -1,5 +1,7 @@
+[build]
+  functions = "src/functions"
+
 [[headers]]
   for = "/*"
     [headers.values]
-    Cross-Origin-Resource-Policy = "cross-origin"
     Access-Control-Allow-Origin = "*"
