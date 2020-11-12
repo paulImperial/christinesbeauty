@@ -23,20 +23,22 @@ exports.handler = function (event, context, callback) {
     text: message,
   };
 
-  transport.sendMail(mailOptions, function (error, info) {
-    if (error) {
-      console.log(error);
-    } else {
-      return {
-        statusCode: 200,
-        headers: {
-          'Access-Control-Allow-Origin': '*',
-          'Access-Control-Allow-Headers': 'Origin, X-Requested-With, Content-Type, Accept',
-        },
-        body: JSON.stringify({
-          status: info,
-        }),
-      };
+  transport.sendMail(
+    {
+      mailOptions,
+    },
+    function (error, info) {
+      if (error) {
+        callback(error);
+      } else {
+        callback(null, {
+          statusCode: 200,
+          body: JSON.stringify({
+            result: 'success',
+            info,
+          }),
+        });
+      }
     }
-  });
+  );
 };
