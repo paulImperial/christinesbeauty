@@ -75,6 +75,7 @@ const SSpinner = styled(Spinner)`
 const Form = () => {
   const [values, setValues] = useState({ name: '', email: '', phone: '', advert: '', message: '' });
   const [successfullSend, setSuccessfullSend] = useState(false);
+  const [failedSend, setFailedSend] = useState(false);
   const [sending, setSending] = useState(false);
 
   const handleInputChange = (e) => {
@@ -103,11 +104,13 @@ const Form = () => {
       } else {
         setSending(false);
         setSuccessfullSend(false);
+        setFailedSend(true);
       }
     } catch (error) {
       console.log(error);
       setSending(false);
       setSuccessfullSend(false);
+      setFailedSend(true);
     }
   };
 
@@ -173,6 +176,13 @@ const Form = () => {
         </StyledForm>
       )}
       {sending && <SSpinner />}
+      {failedSend && (
+        <>
+          <StyledH3>There has been an issue sending your message.</StyledH3>
+          <p>Please try again later or call on 07895 132474.</p>
+          <p>We apologise for any inconvenince.</p>
+        </>
+      )}
       {successfullSend && (
         <>
           <StyledH3>Thank you for your message.</StyledH3>

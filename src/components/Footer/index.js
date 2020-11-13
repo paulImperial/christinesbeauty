@@ -145,8 +145,8 @@ const Footer = ({ navItems, social }) => {
       <SocialContainer>
         {social.map(({ title, image, link }) => {
           return (
-            <a href={link} target="_blank">
-              <StyledSocialLink key={title}>
+            <a href={link} target="_blank" key={title}>
+              <StyledSocialLink>
                 <SocialLogo src={image} />
               </StyledSocialLink>
             </a>
