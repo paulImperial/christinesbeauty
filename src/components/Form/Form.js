@@ -116,7 +116,7 @@ const Form = () => {
 
   return (
     <>
-      {!successfullSend && (
+      {!successfullSend && !failedSend && (
         <StyledForm name="christinesbeauty" onSubmit={handleSubmit}>
           <input
             name="name"
