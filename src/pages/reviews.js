@@ -28,9 +28,9 @@ const Reviews = () => {
         <Banner
           header={'Coming soon ...'}
           text={
-            'You will be able to see reviews soon, in the meantime, please link to our Facebook page for reviews of our services.'
+            'You will be able to see reviews soon, in the meantime, please link to our Facebook or Google page for reviews of our services.'
           }
-          showSocial
+          showReview
         ></Banner>
       </Container>
     </Layout>

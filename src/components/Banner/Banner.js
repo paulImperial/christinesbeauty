@@ -59,20 +59,34 @@ const SocialContainer = styled(StyledLinkContainer)`
   } */
 `;
 
-const Banner = ({ header, images, link, showSocial, text }) => {
+const Banner = ({ header, images, link, showSpecial, text, showReview }) => {
   return (
     <BannerWrapper>
       <BannerHeader>{header}</BannerHeader>
       <BannerText>{text}</BannerText>
       <SocialContainer>
-        {social &&
-          social.map(({ title, image, link }) => {
+        {showSpecial &&
+          social.map(({ title, image, link, social }) => {
             return (
-              <a href={link} target="_blank">
-                <StyledSocialLink key={title}>
-                  <SocialLogo src={image} />
-                </StyledSocialLink>
-              </a>
+              social && (
+                <a href={link} target="_blank">
+                  <StyledSocialLink key={title}>
+                    <SocialLogo src={image} />
+                  </StyledSocialLink>
+                </a>
+              )
+            );
+          })}
+        {showReview &&
+          social.map(({ title, image, link, review }) => {
+            return (
+              review && (
+                <a href={link} target="_blank">
+                  <StyledSocialLink key={title}>
+                    <SocialLogo src={image} />
+                  </StyledSocialLink>
+                </a>
+              )
             );
           })}
       </SocialContainer>

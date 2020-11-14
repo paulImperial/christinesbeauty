@@ -58,6 +58,7 @@ const Social = () => {
           text={
             'You will be able to see special offers soon, in the meantime, please link to our Facebook or Instagram page for news of of our special offers.'
           }
+          showSpecial
         ></Banner>
       </Container>
     </Layout>

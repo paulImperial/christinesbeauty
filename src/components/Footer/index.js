@@ -143,13 +143,15 @@ const Footer = ({ navItems, social }) => {
         })}
       </OpeningHoursContainer>
       <SocialContainer>
-        {social.map(({ title, image, link }) => {
+        {social.map(({ title, image, link, social }) => {
           return (
-            <a href={link} target="_blank" key={title}>
-              <StyledSocialLink>
-                <SocialLogo src={image} />
-              </StyledSocialLink>
-            </a>
+            social && (
+              <a href={link} target="_blank" key={title}>
+                <StyledSocialLink>
+                  <SocialLogo src={image} />
+                </StyledSocialLink>
+              </a>
+            )
           );
         })}
       </SocialContainer>

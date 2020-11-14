@@ -11,6 +11,7 @@ import Social from '../components/Social/Social';
 import Arrow from '../components/Accordion/utils/arrow';
 import { brands } from '../cms/brands';
 import { treatments } from '../cms/treatments';
+import Cookie from '../components/Cookie';
 
 const BodyText = styled.p`
   margin: 10px 0;
@@ -64,6 +65,9 @@ const Home = () => {
       <Container label="Finding Us" id="Find">
         <Map />
       </Container>
+      {/* <Cookie
+        cookieText={'This site uses cookies. By continuing to browse, you are agreeing to our use of cookies.'}
+      ></Cookie> */}
     </Layout>
   );
 };
