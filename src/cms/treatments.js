@@ -25,7 +25,7 @@ export const treatments = [
   },
   {
     label: 'Eye Treatments',
-    image: '/images/eye-treatments.webp',
+    image: '/images/eye-treatments.jpg',
     link: '/prices',
     query: 'eyeTreatments',
   },

@@ -25,7 +25,7 @@ const HeaderTitle = styled.h1`
 const Logo = styled.img`
   width: 130px;
   @media (max-width: 440px) {
-	  width: 75px;
+    width: 75px;
   }
 `;
 
@@ -38,7 +38,7 @@ const Header = ({ children }) => {
     <HeaderStyle>
       <HeaderContainer>
         <a href="/">
-          <Logo src="/images/darklogo.webp" alt="logo" />
+          <Logo src="/images/darklogo.jpg" alt="logo" />
         </a>
         {children}
       </HeaderContainer>

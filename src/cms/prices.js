@@ -78,7 +78,7 @@ const prices = [
     key: 2,
     title: 'Eye Treatments',
     id: 'eyeTreatments',
-    image: '/images/eye-treatments.webp',
+    image: '/images/eye-treatments.jpg',
     blurb:
       'One of our signature treatments, Christine’s Beauty clients return again and again due to Christine’s skill in achieving a symmetrical and flattering look, to suit your face and following your instructions precisely, in this crucial area.',
     disclaimer: '*Requires a patch test 24 hours before treatment',
