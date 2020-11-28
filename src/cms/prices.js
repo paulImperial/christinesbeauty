@@ -38,7 +38,7 @@ const prices = [
       },
       {
         treatment: 'Brazillian *',
-        price: 20,
+        price: 25,
       },
       {
         treatment: 'Hollywood *',
@@ -245,7 +245,7 @@ const prices = [
       {
         treatment: 'Shellac Hands',
         extraInfo: '(File, cuticles, shellac paint and cuticle oil).',
-        price: 20,
+        price: 25,
       },
       {
         treatment: 'Kids Manicure',
@@ -285,7 +285,7 @@ const prices = [
       {
         treatment: 'Shellac Toes',
         extraInfo: '(File, cuticles, shellac paint and cuticle oil)',
-        price: 20,
+        price: 25,
       },
       {
         treatment: 'Callus peel treatment ',
