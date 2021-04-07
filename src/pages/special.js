@@ -53,13 +53,7 @@ const Social = () => {
     <Layout title={title}>
       <Container column={true}>
         <Heading>Special Offers</Heading>
-        <Banner
-          header={'Coming soon ...'}
-          text={
-            'You will be able to see special offers soon, in the meantime, please link to our Facebook or Instagram page for news of of our special offers.'
-          }
-          showSpecial
-        ></Banner>
+        <Banner offerImage={'/images/april-offer.jpg'} showSpecial></Banner>
       </Container>
     </Layout>
   );

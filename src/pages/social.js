@@ -6,11 +6,11 @@ import Social from '../components/Social/Social';
 import Router from 'next/router';
 
 const socialPage = () => {
-  const title = `Christine's Beauty | Social Hub`;
+  const title = `Christine's Beauty | Gallery`;
 
   return (
     <Layout title={title}>
-      <Container label="Social Hub">
+      <Container label="Have a look at examples of our work and posts on social media">
         <Social></Social>
       </Container>
     </Layout>

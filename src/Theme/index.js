@@ -1,11 +1,12 @@
 import React from 'react';
 import { rgba } from 'polished';
 import media from './media';
-import { createGlobalStyle } from "styled-components";
+import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Devonshire&display=swap');
 
 
 html, body {
@@ -31,45 +32,50 @@ html, body {
 	transition: all 0.5s ease;
 	line-height: 1.8rem;
   }
+
+  .herotext {
+	font-family: 'Devonshire' !important;
+  }
+
 `;
 
-const boxShadow = color => `box-shadow: 0 10px 15px 4px ${rgba(color, 0.5)};`;
+const boxShadow = (color) => `box-shadow: 0 10px 15px 4px ${rgba(color, 0.5)};`;
 
 const theme = {
-	...media,
-	boxShadow,
-	primaryDark: '#0D0C1D',
-	primaryLight: '#EFFFFA',
-	primaryHover: '#343078',
-	mobile: '576px',
+  ...media,
+  boxShadow,
+  primaryDark: '#0D0C1D',
+  primaryLight: '#EFFFFA',
+  primaryHover: '#343078',
+  mobile: '576px',
   colours: {
-	baseWhite: '#ffffff',
-	baseBlack: '#000000',
-	baseDarkGrey: '#575755',
-	baseMediumGrey: '#ddd',
-	baseLightGrey: '#f7f7f7',
-	baseLinkBlue: '#0076dc',
-	baseLinkBlueAlt: '#0066dc',
-	basePanelBg: '#fcf5f8',
-	baseBackground: '#efefee',
-	baseBackgroundBlue: '#f5f8fb',
-	baseOutline: '#e1e1e1',
-	borderBlue: '#a8b6d1',
-	shadeLightestGrey: '#ededed',
-	shadeLighterGrey: '#e6e6e6',
-	shadeLightGrey: '#cccccc',
-	shadeGrey: '#b3b3b3',
-	shadeDarkGrey: '#999999',
-	shadeDarkerGrey: 'gray',
-	shadeDarkestGrey: '#0d0d0d',
-	pink: rgba(216, 91, 145, 1),
-	mildPink: rgba(216, 91, 145, 0.2),
+    baseWhite: '#ffffff',
+    baseBlack: '#000000',
+    baseDarkGrey: '#575755',
+    baseMediumGrey: '#ddd',
+    baseLightGrey: '#f7f7f7',
+    baseLinkBlue: '#0076dc',
+    baseLinkBlueAlt: '#0066dc',
+    basePanelBg: '#fcf5f8',
+    baseBackground: '#efefee',
+    baseBackgroundBlue: '#f5f8fb',
+    baseOutline: '#e1e1e1',
+    borderBlue: '#a8b6d1',
+    shadeLightestGrey: '#ededed',
+    shadeLighterGrey: '#e6e6e6',
+    shadeLightGrey: '#cccccc',
+    shadeGrey: '#b3b3b3',
+    shadeDarkGrey: '#999999',
+    shadeDarkerGrey: 'gray',
+    shadeDarkestGrey: '#0d0d0d',
+    pink: rgba(216, 91, 145, 1),
+    mildPink: rgba(216, 91, 145, 0.2),
   },
   fontSizes: {
     small: '1em',
     medium: '2em',
     large: '3em',
-	},
+  },
 };
 
 export default theme;

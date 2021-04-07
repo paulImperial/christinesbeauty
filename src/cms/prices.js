@@ -162,13 +162,13 @@ const prices = [
       {
         treatment: 'Bronze Facial',
         extraInfo: '(Cleanse, tone, exfoliate, facial massage, moisturise)',
-        price: 15,
+        price: 20,
         time: '30 minutes',
       },
       {
         treatment: 'Silver Facial',
         extraInfo: '(Cleanse, tone, exfoliate, facial massage, moisturise, mask)',
-        price: 20,
+        price: 25,
         time: '45 minutes',
       },
       {

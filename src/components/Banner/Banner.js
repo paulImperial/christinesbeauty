@@ -51,32 +51,15 @@ const StyledLinkContainer = styled.ul`
 
 const SocialContainer = styled(StyledLinkContainer)`
   border-right: none;
-
-  /* @media (max-width: 800px) {
-    width: 100%;
-    border-bottom: 1px solid ${(props) => props.theme.colours.baseWhite};
-    padding-bottom: 20px;
-  } */
 `;
 
-const Banner = ({ header, images, link, showSpecial, text, showReview }) => {
+const Banner = ({ header = '', images, link, offerImage = '', showSpecial, text, showReview }) => {
   return (
     <BannerWrapper>
       <BannerHeader>{header}</BannerHeader>
       <BannerText>{text}</BannerText>
       <SocialContainer>
-        {showSpecial &&
-          social.map(({ title, image, link, social }) => {
-            return (
-              social && (
-                <a href={link} target="_blank">
-                  <StyledSocialLink key={title}>
-                    <SocialLogo src={image} />
-                  </StyledSocialLink>
-                </a>
-              )
-            );
-          })}
+        <BannerImage src={offerImage}></BannerImage>
         {showReview &&
           social.map(({ title, image, link, review }) => {
             return (

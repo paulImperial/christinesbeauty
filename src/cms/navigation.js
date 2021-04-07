@@ -12,7 +12,7 @@ const navigation = [
     link: '/reviews',
   },
   {
-    title: 'Social',
+    title: 'Gallery',
     link: '/social',
   },
   {

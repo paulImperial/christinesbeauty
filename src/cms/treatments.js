@@ -1,7 +1,7 @@
 export const treatments = [
   {
     label: 'Waxing',
-    image: '/images/hair-removal1.jpg',
+    image: '/images/wax.jpg',
     link: '/prices',
     query: 'hairRemoval',
   },
@@ -19,7 +19,7 @@ export const treatments = [
   },
   {
     label: 'Pedicures',
-    image: '/images/foot_picture1.jpg',
+    image: '/images/toes.jpg',
     link: '/prices',
     query: 'feet',
   },

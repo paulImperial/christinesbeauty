@@ -19,4 +19,7 @@ export const BannerText = styled.p``;
 
 export const BannerLink = styled.a``;
 
-export const BannerImage = styled.img``;
+export const BannerImage = styled.img`
+  display: inline-block;
+  max-width: 100%;
+`;

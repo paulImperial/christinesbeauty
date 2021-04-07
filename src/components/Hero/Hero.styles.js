@@ -38,10 +38,12 @@ export const HeroWording = styled.div`
 `;
 
 export const TitleText = styled.h1`
+  font-family: 'Devonshire' !important;
   position: relative;
-  color: ${(props) => props.theme.colours.baseBlack};
-  z-index: 2;
   color: ${(props) => props.theme.colours.pink};
-  line-height: 4rem;
-  text-shadow: 1px 2px #000;
+  z-index: 2;
+  line-height: 7rem;
+  text-shadow: 4px 3px 7px #000;
+  font-size: 7rem;
+  font-weight: 100;
 `;

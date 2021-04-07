@@ -18,6 +18,7 @@ const Heading = styled.h2`
   font-size: 2.25rem;
   font-weight: 100;
   padding-top: 1rem;
+  line-height: 2.5rem;
 `;
 
 const Container = ({ children, label, column, background, id, full = false }) => {
