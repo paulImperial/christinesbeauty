@@ -39,6 +39,7 @@ const Layout = ({ children, hero, title }) => {
       <Main>{children}</Main>
       <Footer navItems={navigation} social={social}></Footer>
       <script type="text/javascript" src="//cdn.curator.io/3.1/js/curator.js"></script>
+      <script type="text/javascript" src="https://apps.elfsight.com/p/platform.js"></script>
     </Fragment>
   );
 };

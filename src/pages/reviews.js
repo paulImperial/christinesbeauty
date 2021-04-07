@@ -24,14 +24,8 @@ const Reviews = () => {
   return (
     <Layout title={title}>
       <Container column={true}>
-        <Heading>Our Reviews</Heading>
-        <Banner
-          header={'Coming soon ...'}
-          text={
-            'You will be able to see reviews soon, in the meantime, please link to our Facebook or Google page for reviews of our services.'
-          }
-          showReview
-        ></Banner>
+        <Heading></Heading>
+        <div className="elfsight-app-6f7f58e5-e39f-488d-a35a-b5e64b4307a7"></div>
       </Container>
     </Layout>
   );

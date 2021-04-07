@@ -53,25 +53,14 @@ const SocialContainer = styled(StyledLinkContainer)`
   border-right: none;
 `;
 
-const Banner = ({ header = '', images, link, offerImage = '', showSpecial, text, showReview }) => {
+const Banner = ({ header = '', images, link, offerImage = '', showSpecial, text, showReview, children }) => {
   return (
     <BannerWrapper>
       <BannerHeader>{header}</BannerHeader>
       <BannerText>{text}</BannerText>
       <SocialContainer>
         <BannerImage src={offerImage}></BannerImage>
-        {showReview &&
-          social.map(({ title, image, link, review }) => {
-            return (
-              review && (
-                <a href={link} target="_blank">
-                  <StyledSocialLink key={title}>
-                    <SocialLogo src={image} />
-                  </StyledSocialLink>
-                </a>
-              )
-            );
-          })}
+        {showReview && <div className="elfsight-app-6f7f58e5-e39f-488d-a35a-b5e64b4307a7"></div>}
       </SocialContainer>
     </BannerWrapper>
   );
