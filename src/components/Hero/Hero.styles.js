@@ -46,4 +46,8 @@ export const TitleText = styled.h1`
   text-shadow: 4px 3px 7px #000;
   font-size: 7rem;
   font-weight: 100;
+  @media (max-width: 800px) {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
 `;
