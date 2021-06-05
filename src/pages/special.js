@@ -53,7 +53,7 @@ const Social = () => {
     <Layout title={title}>
       <Container column={true}>
         <Heading>Special Offers</Heading>
-        <Banner offerImage={'/images/april-offer.jpg'} showSpecial></Banner>
+        <Banner offerImage={'/images/june-offer.jpg'} showSpecial></Banner>
       </Container>
     </Layout>
   );
