@@ -4,7 +4,7 @@ const prices = [
     title: 'Waxing',
     id: 'hairRemoval',
     image: '/images/hair-removal1.jpg',
-    disclaimer: '*All include underneath.',
+    disclaimer: '*All include underneath',
     blurb:
       'Here at Christine’s Beauty we use hot and warm wax, suited for the part of the body being treated.  We try to minimise discomfort and ensure your skin is well looked after.  We take great care to provide a thorough treatment leaving you silky smooth.',
     services: [
@@ -13,8 +13,12 @@ const prices = [
         price: 15,
       },
       {
-        treatment: 'Full leg',
+        treatment: '3/4 leg',
         price: 20,
+      },
+      {
+        treatment: 'Full leg',
+        price: 25,
       },
       {
         treatment: 'Under arm',
@@ -34,35 +38,47 @@ const prices = [
       },
       {
         treatment: 'High bikini line',
+        dagger: true,
         price: 10,
       },
       {
         treatment: 'Brazillian *',
-        price: 25,
+        dagger: true,
+        price: 28,
       },
       {
         treatment: 'Hollywood *',
-        price: 25,
+        dagger: true,
+        price: 28,
+      },
+      {
+        treatment: 'Bum wax',
+        dagger: true,
+        price: 10,
       },
       {
         treatment: 'Upper lip',
+        dagger: true,
         price: 5,
       },
       {
         treatment: 'Chin',
+        dagger: true,
         price: 5,
       },
       {
         treatment: 'Sides',
+        dagger: true,
         price: 5,
       },
       {
         treatment: 'Full face (excluding eyebrows)',
-        price: 12,
+        dagger: true,
+        price: 15,
       },
       {
         treatment: 'Full body (excluding face and brows)',
-        price: 60,
+        price: 80,
       },
       {
         treatment: 'Back wax',
@@ -89,7 +105,7 @@ const prices = [
       },
       {
         treatment: 'Eyebrow shape',
-        price: 8,
+        price: 10,
       },
       {
         treatment: 'Eyebrow tidyup',
@@ -275,12 +291,12 @@ const prices = [
       {
         treatment: 'Classic Pedicure',
         extraInfo: '(Soak, file, cuticles, foot massage, exfoliate and paint)',
-        price: 25,
+        price: 30,
       },
       {
         treatment: 'Luxury Pedicure',
         extraInfo: '(Hard skin removal, soak, file, cuticles, foot and leg massage, exfoliate, foot mask and paint)',
-        price: 30,
+        price: 35,
       },
       {
         treatment: 'Shellac Toes',
