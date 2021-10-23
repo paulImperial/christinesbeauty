@@ -10,13 +10,15 @@ export const HeroImage = styled.div`
   max-width: 100%;
   width: 100vw;
   height: 83vh;
-  /* background: url('${(props) => props.image}') no-repeat 100% 60%;
-  background-size: cover; */
-  background-color: #000;
+  background: url('${(props) => props.image}') no-repeat 100% 60%;
+  background-size: cover;
   opacity: 0.65;
   @media (max-width: 800px) {
-    height: 85vh;
+    height: 87vh;
+    width: 100vw;
     background-size: auto;
+    background-color: #ffc9e2;
+    background-image: none;
   }
 `;
 
