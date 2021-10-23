@@ -15,8 +15,14 @@ export const brands = [
     image: '/images/kaeso.png',
   },
   {
-	  name: 'tiger balm',
-	  link: 'https://www.tigerbalm.com/uk/',
-	  image: '/images/tiger-balm.png',
-  }
+    name: 'tiger balm',
+    link: 'https://www.tigerbalm.com/uk/',
+    image: '/images/tiger-balm.png',
+  },
+  {
+    name: 'CND',
+    link: 'https://lovecnd.com/',
+    image: '/images/cnd.png',
+    dark: true,
+  },
 ];

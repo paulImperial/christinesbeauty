@@ -34,4 +34,5 @@ export const SpotlightImage = styled.div`
   background-size: contain;
   border-radius: ${rem('6px')};
   padding: 10px;
+  background-color: ${(props) => (props.dark ? '#000' : '#fff')};
 `;

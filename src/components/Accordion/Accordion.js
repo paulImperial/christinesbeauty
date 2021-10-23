@@ -153,7 +153,8 @@ const StyledAccordion = ({ prices, ...props }) => {
                         return (
                           <tr key={service.treatment}>
                             <td className="keepleft">
-                              {service.treatment} <br />
+                              {service.treatment}
+                              {service.dagger && <sup>&nbsp;&dagger;</sup>} <br />
                               {service.extraInfo}
                             </td>
                             <td>
@@ -164,7 +165,9 @@ const StyledAccordion = ({ prices, ...props }) => {
                       })}
                     </tbody>
                   </StyledTable>
-                  <SmallText>{price.disclaimer}</SmallText>
+                  <SmallText>
+                    {price.disclaimer} <sup>&dagger;</sup>Using hot wax
+                  </SmallText>
                 </StyledInfo>
               </AccordionPanel>
             </AccordionItemPanel>
