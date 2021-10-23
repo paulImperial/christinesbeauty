@@ -23,38 +23,28 @@ export const HeroImage = styled.div`
 `;
 
 export const HeroWording = styled.div`
+  text-align: center;
+  font-family: 'Montserrat';
   position: absolute;
   z-index: 2;
-  font-size: 2.5rem;
+  font-size: 4rem;
   align-self: center;
   justify-self: center;
   display: flex;
   justify-items: center;
   align-items: center;
-  width: max-content;
-  padding: 1rem;
   border-radius: 3rem;
   @media (max-width: 800px) {
-    font-size: 2.2rem;
+    font-size: 2rem;
     width: min-content;
   }
 `;
 
 export const TitleText = styled.h1`
-  font-family: 'Devonshire' !important;
+  font-family: 'Montserrat' !important;
   position: relative;
   color: ${(props) => props.theme.colours.pink};
   z-index: 2;
-  line-height: 7rem;
-  text-shadow: 4px 3px 7px #000;
-  font-size: 7rem;
   font-weight: 100;
-  @media (max-width: 415px) {
-    font-size: 6rem;
-    line-height: 6rem;
-  }
-  @media (max-width: 321px) {
-    font-size: 5rem;
-    line-height: 5rem;
-  }
+  line-height: 7rem;
 `;
