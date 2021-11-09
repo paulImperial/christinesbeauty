@@ -74,7 +74,7 @@ const prices = [
       {
         treatment: 'Full face (excluding eyebrows)',
         dagger: true,
-        price: 15,
+        price: 20,
       },
       {
         treatment: 'Full body (excluding face and brows)',
