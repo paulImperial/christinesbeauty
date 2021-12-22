@@ -37,14 +37,14 @@ const CuratorSocial = () => {
     <Fragment>
       <Container label={'Facebook'}>
         <div id="curator-feed-facebook-layout">
-          <a href="https://curator.io" target="_blank" className="crt-logo crt-tag">
+          <a href="https://curator.io" target="_blank" rel="noreferrer" className="crt-logo crt-tag">
             Powered by Curator.io
           </a>
         </div>
       </Container>
       <Container label={'Instagram'}>
         <div id="curator-feed-instagram-layout">
-          <a href="https://curator.io" target="_blank" className="crt-logo crt-tag">
+          <a href="https://curator.io" target="_blank" rel="noreferrer" className="crt-logo crt-tag">
             Powered by Curator.io
           </a>
         </div>

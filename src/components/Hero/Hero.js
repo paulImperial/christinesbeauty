@@ -6,7 +6,7 @@ const Hero = ({ label, image, ...props }) => {
   return (
     <HeroContent {...props}>
       <HeroWording>
-        <TitleText>Welcome&nbsp;to Christine's Beauty</TitleText>
+        <TitleText>Welcome&nbsp;to Christine&apos;s Beauty</TitleText>
       </HeroWording>
 			<HeroImage image={image}></HeroImage>
     </HeroContent>

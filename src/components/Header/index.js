@@ -1,5 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
+import Link from 'next/link'
 
 const HeaderStyle = styled.div`
   margin: 0;
@@ -37,9 +38,9 @@ const Header = ({ children }) => {
   return (
     <HeaderStyle>
       <HeaderContainer>
-        <a href="/">
+        <Link href="/" passHref>
           <Logo src="/images/darklogo.jpg" alt="logo" />
-        </a>
+        </Link>
         {children}
       </HeaderContainer>
     </HeaderStyle>

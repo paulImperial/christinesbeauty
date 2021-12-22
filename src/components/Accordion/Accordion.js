@@ -112,9 +112,10 @@ const StyledAccordion = ({ prices, ...props }) => {
   const handleClick = (id) => {
     if (id === name) {
       console.log('the same');
+      return null;
     }
     refs[id].current.scrollIntoView({
-      // behavior: 'smooth',
+      behavior: 'smooth',
       block: 'start',
     });
   };
@@ -126,10 +127,10 @@ const StyledAccordion = ({ prices, ...props }) => {
         block: 'start',
       });
     }
-  }, [name]);
+  }, [name, refs]);
 
   return (
-    <StyleAccordion preExpanded={name} allowZeroExpanded={true} allowMultipleExpanded={false}>
+    <StyleAccordion preExpanded={name} allowZeroExpanded={true} allowMultipleExpanded={true}>
       {prices.map((price) => (
         <div ref={refs[price.id]} key={price.id} uuid={price.id}>
           <AccordionItem key={price.id} id={price.id} uuid={price.id} onClick={() => handleClick(price.id)}>

@@ -253,7 +253,7 @@ const Nav = ({ navItems }) => {
           {navItems.map(({ title, link, logo = '' }) => {
             return (
               <StyledLink key={title}>
-                <Link href={link}>
+                <Link href={link} passHref>
                   <StyledAnchor>{title}</StyledAnchor>
                 </Link>
               </StyledLink>

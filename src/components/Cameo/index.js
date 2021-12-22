@@ -51,7 +51,7 @@ width: 200px;
 const Cameo = ({ image }) => {
   return (
 		<CameoContainer>
-			<Image image={image} />
+			<Image image={image} alt={'Christine'} />
 		</CameoContainer>
 
   );
