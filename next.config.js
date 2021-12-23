@@ -1,28 +1,39 @@
 // const withPlugins = require('next-compose-plugins');
 // const optimizedImages = require('next-optimized-images');
-require('dotenv').config();
+// require('dotenv').config();
 // const ImageminWebpWebpackPlugin = require('imagemin-webp-webpack-plugin');
 
 // module.exports = {
 //   plugins: [new ImageminWebpWebpackPlugin()],
 // };
 
+// module.exports = {
+//   env: {
+//     GOOGLE_API: 'AIzaSyAB3MMqT3qque02waQxy0VjA7d5iqxIxN0',
+//   },
+// };
+
+// module.exports = {
+// 	poweredByHeader: false,
+// };
+
+// module.exports = {
+//   compress: false,
+// }
+
 module.exports = {
   env: {
     GOOGLE_API: 'AIzaSyAB3MMqT3qque02waQxy0VjA7d5iqxIxN0',
   },
-};
-
-module.exports = {
-	poweredByHeader: false,
-};
-
-module.exports = {
-  compress: false,
-}
-
-module.exports = {
+  poweredByHeader: false,
   swcMinify: true,
+  compress: false,
+
+  async exportPathMap(defaultPathMap) {
+    return {
+      ...defaultPathMap,
+    };
+  },
 }
 
 // module.exports = {
