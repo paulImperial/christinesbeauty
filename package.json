@@ -8,8 +8,6 @@
     "build": "next build",
     "start": "next start",
     "export": "npm run build && next export",
-    "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook",
     "lint": "next lint"
   },
   "repository": {
