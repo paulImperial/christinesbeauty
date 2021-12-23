@@ -1,5 +1,5 @@
 [build]
-  functions = "src/functions",
+  functions = "src/functions"
   publish = ".next"
 
 [[headers]]
@@ -8,5 +8,5 @@
     Access-Control-Allow-Origin = "*"
 
 [[plugins]]
-  package = "netlify-plugin-cache-nextjs",
+  package = "netlify-plugin-cache-nextjs"
   package = "@netlify/plugin-nextjs"
