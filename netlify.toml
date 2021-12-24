@@ -1,6 +1,7 @@
 [build]
   functions = "src/functions"
-  publish = ".next"
+  command = "next build && next export"
+  publish = "out"
 
 [[headers]]
   for = "/*"
@@ -8,4 +9,4 @@
     Access-Control-Allow-Origin = "*"
 
 [[plugins]]
-  package = "netlify-plugin-cache-nextjs"
+  package = "@netlify/plugin-nextjs"
