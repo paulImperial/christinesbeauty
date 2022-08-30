@@ -16,10 +16,6 @@ const navigation = [
     link: '/social',
   },
   {
-    title: 'Special Offers',
-    link: '/special',
-  },
-  {
     title: 'Contact us',
     link: '/contact',
   },
