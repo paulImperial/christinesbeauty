@@ -13,43 +13,43 @@ const prices = [
         price: 15,
       },
       {
-        treatment: '3/4 leg',
-        price: 20,
-      },
-      {
         treatment: 'Full leg',
         price: 25,
       },
       {
-        treatment: 'Under arm',
+        treatment: 'Under arm (strip wax)',
         price: 10,
+      },
+      {
+        treatment: 'Under arm (hot wax)',
+        price: 12,
       },
       {
         treatment: 'Forearm',
-        price: 10,
-      },
-      {
-        treatment: 'Full arm',
         price: 15,
       },
       {
-        treatment: 'Bikini line (standard)',
-        price: 8,
+        treatment: 'Full arm',
+        price: 20,
       },
       {
-        treatment: 'High bikini line',
-        dagger: true,
+        treatment: 'Bikini line (standard)',
         price: 10,
+      },
+      {
+        treatment: 'High bikini line (hot wax)',
+        dagger: true,
+        price: 15,
       },
       {
         treatment: 'Brazillian *',
         dagger: true,
-        price: 28,
+        price: 30,
       },
       {
         treatment: 'Hollywood *',
         dagger: true,
-        price: 28,
+        price: 30,
       },
       {
         treatment: 'Bum wax',
@@ -72,13 +72,13 @@ const prices = [
         price: 5,
       },
       {
-        treatment: 'Full face (excluding eyebrows)',
+        treatment: 'Full face excluding eyebrows (hot wax)',
         dagger: true,
         price: 20,
       },
       {
         treatment: 'Full body (excluding face and brows)',
-        price: 80,
+        price: 85,
       },
       {
         treatment: 'Back wax',
@@ -108,12 +108,8 @@ const prices = [
         price: 10,
       },
       {
-        treatment: 'Eyebrow tidyup',
-        price: 5,
-      },
-      {
         treatment: 'Eyebrow shape and tint',
-        price: 15,
+        price: 20,
       },
       {
         treatment: 'Eyelash tint *',
@@ -159,11 +155,6 @@ const prices = [
         price: 40,
         time: '60 minutes',
       },
-      {
-        treatment: 'Sports massage',
-        price: 45,
-        time: '60 minutes',
-      },
     ],
   },
   {
@@ -176,30 +167,31 @@ const prices = [
     disclaimer: '',
     services: [
       {
-        treatment: 'Bronze Facial',
-        extraInfo: '(Cleanse, tone, exfoliate, facial massage, moisturise)',
-        price: 20,
-        time: '30 minutes',
-      },
-      {
         treatment: 'Silver Facial',
-        extraInfo: '(Cleanse, tone, exfoliate, facial massage, moisturise, mask)',
-        price: 25,
+        extraInfo: '(Cleanse, deep cleanse, exfoliate, steam, facial massage, mask, shoulder and neck massage, moisturise). This facial does not include extractions.',
+        price: 30,
         time: '45 minutes',
       },
       {
         treatment: 'Gold Facial',
         extraInfo:
-          '(Cleanse, tone, exfoliate, facial massage (including essential oils tailored to you), moisturise, deep mask, neck massage, extraction and hot towels, includes steamer).',
-        price: 30,
+          '(Cleanse, deep cleanse, exfoliate, steamer, extractions, facial massage, mask, neck and shoulder massage, serums (anti-ageing, vitamin c or radient boost), eye cream and moisturise.',
+        price: 40,
         time: '60 minutes',
       },
       {
-        treatment: 'Platinum Facial',
+        treatment: 'Platinum Dermalogical Facial',
         extraInfo:
-          '(Cleanse, deep cleanse, tone, exfoliate, facial massage (including essential oils tailored to you), moisturise, deep specialised mask, massage on the neck (plus arms and hands or legs and feet), extraction, hot towels and deep moisturise, includes steamer).',
-        price: 40,
-        time: '75 minutes',
+          'Coming soon...',
+        price: 50,
+        time: '60 minutes',
+      },
+      {
+        treatment: 'Tooth Gems',
+        extraInfo:
+          'Using real Swarvoski crystals (1 for £10 or 2 for £15)',
+        price: '',
+        time: '',
       },
       {
         treatment: 'Back Facial',
@@ -230,12 +222,16 @@ const prices = [
         price: 25,
       },
       {
-        treatment: 'To add Shellac to any treatment',
+        treatment: 'To add Shellac to any NAIL treatment',
         price: 10,
       },
       {
-        treatment: 'Shellac removal                                      ',
+        treatment: 'Shellac removal',
         price: 10,
+      },
+      {
+        treatment: 'Shellac take off, new set',
+        price: 30,
       },
     ],
   },
@@ -250,7 +246,7 @@ const prices = [
     services: [
       {
         treatment: 'Express Manicure',
-        extraInfo: '(File, cuticles, hand massage and paint).',
+        extraInfo: '(File, cuticles and paint).',
         price: 15,
       },
       {
@@ -302,11 +298,6 @@ const prices = [
         treatment: 'Shellac Toes',
         extraInfo: '(File, cuticles, shellac paint and cuticle oil)',
         price: 25,
-      },
-      {
-        treatment: 'Callus peel treatment ',
-        extraInfo: '(Optional add on)',
-        price: 5,
       },
       {
         treatment: 'To add Shellac to any treatment',

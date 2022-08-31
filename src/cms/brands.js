@@ -25,4 +25,11 @@ export const brands = [
     image: '/images/cnd.png',
     dark: true,
   },
+  {
+    name: 'The Manicure Company',
+    link: 'https://www.themanicurecompany.com/en-gb',
+    image: '/images/manicure-company.avif',
+  },
 ];
+
+
