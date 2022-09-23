@@ -18,7 +18,7 @@ export const SpotlightBox = styled.div`
   background: url('${(props) => props.externalLink}') no-repeat center center;
   background-size: 15%;
   background-position: right top;
-  border: 1px solid transparent;
+  border: 1px solid #ccc;
   &:hover {
     box-shadow: rgba(0, 0, 0, 0.1) 0px 3px 12px 1px;
   }

@@ -11,7 +11,6 @@ const Card = ({ treatments, ...props }) => {
     <CardContainer>
       {treatments.map((treatment) => (
         <CardSection {...props} key={treatment.label}>
-          <CardLabel>{treatment.label}</CardLabel>
           <CardContent>
             <a onClick={() => router.push({ pathname: treatment.link, query: { name: treatment.query } })}>
               <CardImage image={treatment.image}></CardImage>

@@ -37,13 +37,14 @@ export const CardContent = styled.div`
 `;
 
 export const CardSection = styled.div`
+	border: 1px solid #ccc;
 	position: relative;
 	margin-top: 3.75rem;
 	border-radius: ${rem('6px')};
 	margin: 20px;
 	transition: border-color .3s, box-shadow .5s, transform .3s;
 
-	max-width: 28%;
+	max-width: 20%;
 	min-height: 300px;
 		&:hover,
 		&:focus,
@@ -71,6 +72,6 @@ export const CardImage = styled.div`
 	width: 600px;
 	height: 400px;
 	background: url('${props => props.image}') no-repeat center center;
-	background-size: cover;
+	background-size: contain;
 	border-radius: ${rem('6px')};
 `;

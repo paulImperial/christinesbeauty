@@ -1,4 +1,4 @@
-export const brands = [
+const brands = [
   {
     name: 'shellac',
     link: 'https://cnd.com/products/cnd-shellac',
@@ -32,4 +32,4 @@ export const brands = [
   },
 ];
 
-
+export default brands;

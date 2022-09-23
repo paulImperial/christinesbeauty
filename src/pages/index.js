@@ -9,7 +9,7 @@ import Spotlight from '../components/Spotlight/Spotlight';
 import Cameo from '../components/Cameo';
 import Social from '../components/Social/Social';
 import Arrow from '../components/Accordion/utils/arrow';
-import { brands } from '../cms/brands';
+import brands from '../cms/brands';
 import { treatments } from '../cms/treatments';
 import Cookie from '../components/Cookie';
 

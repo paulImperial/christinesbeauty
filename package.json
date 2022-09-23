@@ -59,6 +59,7 @@
     "@opuscapita/react-responsive-navbar": "^3.4.0",
     "@react-google-maps/api": "^1.13.0",
     "@storybook/addon-knobs": "^5.3.21",
+    "canvas-confetti": "^1.5.1",
     "cookie-cutter": "^0.2.0",
     "del": "^2.2.2",
     "dotenv": "^8.2.0",
