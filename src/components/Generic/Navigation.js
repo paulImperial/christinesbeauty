@@ -4,7 +4,6 @@ import Link from 'next/link';
 
 const Navigation = styled.header`
   width: 100%;
-  border-bottom: 10px solid #222;
   z-index: 1;
   display: flex;
   justify-content: space-between;
@@ -40,7 +39,7 @@ const Navigation = styled.header`
     }
   }
   a {
-    opacity: 0.55;
+    opacity: 0.75;
     transition: all 0.6s;
     color: ${(props) => props.theme.colours.baseBlack};
     font-weight: 500;
