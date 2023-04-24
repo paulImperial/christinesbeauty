@@ -144,9 +144,7 @@ const Form = () => {
             value={values.phone}
           />
           <select name="advert" type="text" className="feedback-input" onChange={handleInputChange}>
-            <option value="" disabled selected hidden>
-              How did you hear about us?
-            </option>
+          <option selected disabled label = "How did you hear about us?" />
             <option value="google">Google</option>
             <option value="facebook">Facebook</option>
             <option value="instagram">Instagram</option>
