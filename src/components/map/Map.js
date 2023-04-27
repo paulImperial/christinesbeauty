@@ -28,10 +28,6 @@ const Map = () => {
     <StyledMap>
       <StyledContact>
         <StyledContactContainer>
-          <StyledImage src="/images/icons/phone.svg" />
-          <StyledContactText>07895 132474</StyledContactText>
-        </StyledContactContainer>
-        <StyledContactContainer>
           <StyledImage src="/images/icons/location2.svg" />
           <StyledContactText>104, Broad Street, Staple Hill, Bristol, BS16 5NJ</StyledContactText>
         </StyledContactContainer>

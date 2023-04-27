@@ -80,7 +80,7 @@
     "next-compose-plugins": "^2.2.1",
     "next-images": "^1.6.2",
     "next-optimized-images": "^2.6.2",
-    "nodemailer": "^6.4.16",
+    "nodemailer": "^6.9.1",
     "nodemon": "^1.19.4",
     "polished": "^3.6.7",
     "ramda": "^0.26.1",

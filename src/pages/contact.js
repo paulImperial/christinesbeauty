@@ -16,6 +16,32 @@ const StyledP = styled.p`
   font-size: 1.25rem;
 `;
 
+export const StyledContact = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin: 1.5rem 0 0.5rem 0;
+  width: 100%;
+`;
+
+const StyledImage = styled.img`
+  display: inline-block;
+  margin-bottom: 1.25rem;
+  margin-right: 1rem;
+`;
+
+const StyledContactText = styled.div`
+  display: inline-block;
+  font-weight: 300;
+  font-size: 1.4rem;
+  color: ${(props) => props.theme.colours.pink};
+`;
+
+const StyledContactContainer = styled.div`
+  display: flex;
+
+`;
+
 const Contact = () => {
   const title = `Christine's Beauty | Contact Page`;
 
@@ -32,15 +58,15 @@ const Contact = () => {
         <Heading>Contact Us</Heading>
         <StyledP>
           Please do get in touch to find out more about our services or to request an appointment.
-          <br />
-          <br />
-          Call us on 07895 132474 or complete a{' '}
-          <a href="" onClick={handleClick}>
-            Free online enquiry form
-          </a>{' '}
-          and we will soon be in touch with you.
         </StyledP>
-        {isOpen && <Form></Form>}
+        <StyledContactContainer>
+          <StyledImage src="/images/icons/phone.svg" />
+          <StyledContactText>07895 132474</StyledContactText>
+        </StyledContactContainer>
+        <StyledContactContainer>
+          <StyledImage src="/images/icons/email.svg" />
+          <StyledContactText><a href="mailto: christine.patch@outlook.com">christine.patch@outlook.com</a></StyledContactText>
+        </StyledContactContainer>
       </Container>
       <Container label="Finding Us" id="Find">
         <Map />
