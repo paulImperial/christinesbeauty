@@ -56,7 +56,7 @@ export const CardSection = styled.div`
 			};
 			cursor: pointer;
 			transform: scale(1.01);
-			box-shadow: rgba(0, 0, 0, 0.2) 0px 9px 12px 10px;
+			box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px 1px;
 			transition: all 250ms ease 0s;
 		}
 	
@@ -72,6 +72,6 @@ export const CardImage = styled.div`
 	width: 600px;
 	height: 400px;
 	background: url('${props => props.image}') no-repeat center center;
-	background-size: contain;
+	background-size: cover;
 	border-radius: ${rem('6px')};
 `;
