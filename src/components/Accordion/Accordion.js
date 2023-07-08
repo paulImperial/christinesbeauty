@@ -166,7 +166,8 @@ const StyledAccordion = ({ prices, ...props }) => {
                     </tbody>
                   </StyledTable>
                   <SmallText>
-                    {price.disclaimer} <sup>&dagger;</sup>Using hot wax
+                    {price.disclaimer} &nbsp;
+                    {(price.key === 1) && <><sup>&dagger;</sup>Using hot wax</>}
                   </SmallText>
                 </StyledInfo>
               </AccordionPanel>
