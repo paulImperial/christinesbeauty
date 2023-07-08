@@ -37,10 +37,9 @@ export const CardContent = styled.div`
 `;
 
 export const CardSection = styled.div`
-	border: 1px solid #ccc;
 	position: relative;
 	margin-top: 3.75rem;
-	border-radius: ${rem('6px')};
+	border-radius: ${rem('8px')};
 	margin: 20px;
 	transition: border-color .3s, box-shadow .5s, transform .3s;
 
@@ -56,7 +55,7 @@ export const CardSection = styled.div`
 			};
 			cursor: pointer;
 			transform: scale(1.01);
-			box-shadow: rgba(0, 0, 0, 0.5) 0px 1px 3px 1px;
+
 			transition: all 250ms ease 0s;
 		}
 	
