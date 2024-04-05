@@ -29,20 +29,12 @@ const CuratorSocial = () => {
   };
 
   useEffect(() => {
-    hydrateFacebookFeed();
     hydrateInstagramFeed();
   });
 
   return (
     <Fragment>
-      <Container label={'Facebook'}>
-        <div id="curator-feed-facebook-layout">
-          <a href="https://curator.io" target="_blank" className="crt-logo crt-tag">
-            Powered by Curator.io
-          </a>
-        </div>
-      </Container>
-      <Container label={'Instagram'}>
+      <Container>
         <div id="curator-feed-instagram-layout">
           <a href="https://curator.io" target="_blank" className="crt-logo crt-tag">
             Powered by Curator.io

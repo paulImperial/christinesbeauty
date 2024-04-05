@@ -1,50 +1,51 @@
 export const treatments = [
   {
-    label: 'Waxing',
+    label: 'Body Waxing',
     image: '/images/treatments/waxing.png',
     link: '/prices',
-    query: 'hairRemoval',
+    query: 'bodyHairRemoval',
+    alt: 'Body Waxing'
   },
   {
-    label: 'Shellac',
+    label: 'Face Waxing',
     image: '/images/treatments/shellac.png',
     link: '/prices',
-    query: 'shellac',
-  },
-  {
-    label: 'Manicures',
-    image: '/images/treatments/manicures.png',
-    link: '/prices',
-    query: 'hands',
-  },
-  {
-    label: 'Pedicures',
-    image: '/images/treatments/pedicures.png',
-    link: '/prices',
-    query: 'feet',
+    query: 'faceHairRemoval',
+    alt: 'Face Waxing'
   },
   {
     label: 'Eye Treatments',
-    image: '/images/treatments/eyetreatment.png',
+    image: '/images/treatments/manicures.png',
     link: '/prices',
     query: 'eyeTreatments',
-  },
-  {
-    label: 'Facials',
-    image: '/images/treatments/facials.png',
-    link: '/prices',
-    query: 'facials',
+    alt: 'Eye Treatments'
   },
   {
     label: 'Massage',
-    image: '/images/treatments/massage.png',
+    image: '/images/treatments/pedicures.png',
     link: '/prices',
     query: 'massage',
+    alt: 'pedicure treatment'
   },
-  // {
-  //   label: 'Make Up',
-  //   image: '/images/makeup.jpg',
-  //   link: '/prices',
-  //   query: 'makeup',
-  // },
+  {
+    label: 'Facials',
+    image: '/images/treatments/eyetreatment.png',
+    link: '/prices',
+    query: 'facials',
+    alt: 'Facials'
+  },
+  {
+    label: 'Manicures and Pedicures',
+    image: '/images/treatments/facials.png',
+    link: '/prices',
+    query: 'shellac',
+    alt: 'Manicures and Pedicures'
+  },
+  {
+    label: 'Gel Nails',
+    image: '/images/treatments/massage.png',
+    link: '/prices',
+    query: 'hands',
+    alt: 'Gel Nails'
+  },
 ];

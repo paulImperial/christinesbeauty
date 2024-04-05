@@ -6,12 +6,8 @@ import Card from '../components/Card/Card';
 import Hero from '../components/Hero/Hero';
 import Map from '../components/map/Map';
 import Spotlight from '../components/Spotlight/Spotlight';
-import Cameo from '../components/Cameo';
-import Social from '../components/Social/Social';
-import Arrow from '../components/Accordion/utils/arrow';
 import brands from '../cms/brands';
 import { treatments } from '../cms/treatments';
-import Cookie from '../components/Cookie';
 
 const BodyText = styled.p`
   margin: 10px 0;
@@ -20,7 +16,6 @@ const BodyText = styled.p`
 `;
 
 const Home = () => {
-  //const { Treatments } = content;
 
   const title = `Christine's Beauty | Home`;
 
@@ -28,7 +23,6 @@ const Home = () => {
     <Layout title={title}>
       <Container full={true}>
         <Hero image={'/images/room.jpg'} />
-        <Arrow />
       </Container>
       <BodyText>
         I would like to offer you a warm welcome to Christine’s Beauty, my own independent salon, tucked away in a
@@ -45,10 +39,10 @@ const Home = () => {
         Here at Christine’s Beauty my aim is to provide high quality treatments at affordable prices in a calm and
         caring environment where you feel relaxed.
       </BodyText>
-      <Container label="Treatments" id="Treatments">
+      {/* <Container label="Treatments" id="Treatments">
         <Card treatments={treatments}></Card>
-      </Container>
-      <BodyText>I offer these treatments to both men and women in a private and relaxing environment.</BodyText>
+      </Container> */}
+      <BodyText>I offer these treatments in a private and relaxing environment.</BodyText>
       <BodyText>
         My main aim from the moment you enter Christine’s Beauty is for you to feel welcomed and comfortable. Throughout
         the treatment I aim for you to feel transported away from your everyday life with an opportunity to take a real
@@ -65,9 +59,6 @@ const Home = () => {
       <Container label="Finding Us" id="Find">
         <Map />
       </Container>
-      {/* <Cookie
-        cookieText={'This site uses cookies. By continuing to browse, you are agreeing to our use of cookies.'}
-      ></Cookie> */}
     </Layout>
   );
 };

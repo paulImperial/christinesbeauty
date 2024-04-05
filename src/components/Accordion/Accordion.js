@@ -8,7 +8,7 @@ import {
   AccordionItemPanel,
 } from 'react-accessible-accordion';
 import AccordionPanel from '../Accordion/utils/AccordionPanel';
-import { StyledImage, StyledTable, StyledBlurb } from '../Accordion/utils/AccordionPanel.styles';
+import { StyledTable, StyledBlurb } from '../Accordion/utils/AccordionPanel.styles';
 import currency from '../../helpers/currency';
 
 const StyleAccordion = styled(Accordion)`
@@ -19,6 +19,11 @@ const StyleAccordion = styled(Accordion)`
   .keepleft {
     text-align: left;
     justify-content: left;
+  }
+
+  .keepcentre {
+    text-align: center;
+    justify-content: center;
   }
 
   .accordion {
@@ -138,7 +143,6 @@ const StyledAccordion = ({ prices, ...props }) => {
             </AccordionItemHeading>
             <AccordionItemPanel>
               <AccordionPanel>
-                <StyledImage image={price.image} />
                 <StyledInfo id={price.id}>
                   {price.blurb && <StyledBlurb>{price.blurb}</StyledBlurb>}
                   <StyledTable>
@@ -157,7 +161,7 @@ const StyledAccordion = ({ prices, ...props }) => {
                               {service.dagger && <sup>&nbsp;&dagger;</sup>} <br />
                               {service.extraInfo}
                             </td>
-                            <td>
+                            <td className='keepcentre'>
                               {currency(service.price)} {service.time && <Fragment>for {service.time}</Fragment>}{' '}
                             </td>
                           </tr>

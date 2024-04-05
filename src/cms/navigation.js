@@ -1,7 +1,7 @@
 const navigation = [
   {
     title: 'Treatments',
-    link: '/#Treatments',
+    link: '/prices',
   },
   {
     title: 'Menu & Price list',
@@ -12,7 +12,7 @@ const navigation = [
     link: '/reviews',
   },
   {
-    title: 'Gallery',
+    title: 'Social',
     link: '/social',
   },
   {

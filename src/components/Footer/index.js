@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import moment from 'moment';
 import SignUp from '../SignUp/SignUp';
 import { times } from '../../cms/openingTimes';
+import Legal from '../Legal/Legal';
 
 const FooterStyle = styled.div`
   display: flex;
@@ -128,7 +129,7 @@ const Footer = ({ navItems, social }) => {
   return (
     <FooterStyle>
       <SignUpContainer>
-        <SignUp></SignUp>
+        <Legal />
       </SignUpContainer>
       <OpeningHoursContainer>
         <li>
