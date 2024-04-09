@@ -102,7 +102,7 @@ const StyledInfo = styled.div`
 
 const SmallText = styled.p`
   text-align: left;
-  font-size: 0.75rem;
+  font-size: 0.90rem;
   font-weight: 300;
 `;
 
@@ -162,7 +162,7 @@ const StyledAccordion = ({ prices, ...props }) => {
                               {service.extraInfo}
                             </td>
                             <td className='keepcentre'>
-                              {currency(service.price)} {service.time && <Fragment>for {service.time}</Fragment>}{' '}
+                             {service.from && <Fragment>from</Fragment>} {currency(service.price)} {service.time && <Fragment>for {service.time}</Fragment>}{' '}
                             </td>
                           </tr>
                         );
@@ -171,7 +171,7 @@ const StyledAccordion = ({ prices, ...props }) => {
                   </StyledTable>
                   <SmallText>
                     {price.disclaimer} &nbsp;
-                    {(price.key === 1) && <><sup>&dagger;</sup>Using hot wax</>}
+                    {(price.key === 1) && <><sup>+</sup>Using hot wax</>}
                   </SmallText>
                 </StyledInfo>
               </AccordionPanel>

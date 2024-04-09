@@ -19,6 +19,7 @@ const prices = [
       {
         treatment: 'Bum +',
         price: 10,
+        from: true,
       },
       {
         treatment: 'High bikini line +',
@@ -63,6 +64,7 @@ const prices = [
       {
         treatment: 'Full body',
         price: 85,
+        from: true,
       },
     ],
   },
