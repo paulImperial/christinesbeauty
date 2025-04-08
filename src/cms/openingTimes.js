@@ -7,7 +7,7 @@ export const times = [
   },
   {
     day: 'Tuesday',
-    open: '12 noon',
+    open: '12pm',
     close: '8pm',
     closed: false,
   },
