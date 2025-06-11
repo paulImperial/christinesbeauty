@@ -1,10 +1,6 @@
 const navigation = [
   {
-    title: 'Treatments',
-    link: '/prices',
-  },
-  {
-    title: 'Menu & Price list',
+    title: 'Treatments & Price list',
     link: '/prices',
   },
   {

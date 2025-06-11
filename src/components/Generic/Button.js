@@ -6,13 +6,14 @@ const StyledButton = styled.button`
   justify-content: center;
   flex-wrap: no-wrap;
   position: relative;
-  background-color: ${(props) => props.background};
-  border: 1px solid #000;
+  background-color: ${(props) => props.theme.colours.pink};
   padding: 10px;
   margin: 0 1rem;
+  border-radius: 45px;
+  border: none;
 
   &:hover {
-    box-shadow: 0 0 10px 1px ${(props) => props.theme.colours.shadeDarkGrey};
+    box-shadow: 0 0 10px 1px ${(props) => props.theme.colours.pink};
     background-color: ${(props) => props.theme.colours.pink};
     cursor: pointer;
   }
@@ -22,11 +23,12 @@ const StyledParagraph = styled.p`
   text-align: center;
   font-size: 1.25rem;
   font-weight: 300;
-  padding: 5px;
-  margin: 5px;
+  padding: 2px 10px;
+  margin: 2px;
+  color: ${(props) => props.theme.colours.white};
 `;
 
-const Button = ({ buttonText, primary, handleClick }) => {
+const Button = ({ buttonText, handleClick }) => {
   return (
     <StyledButton
       onClick={() => {

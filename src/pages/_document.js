@@ -37,6 +37,8 @@ class MainDocument extends Document {
         <body>
           <Main />
           <NextScript />
+          <script type="text/javascript" src="//cdn.curator.io/3.1/js/curator.js"></script>
+          <script type="text/javascript" src="https://apps.elfsight.com/p/platform.js"></script>
         </body>
       </Html>
     );

@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
 
@@ -249,10 +249,10 @@ const Nav = ({ navItems }) => {
       <nav className="nav">
         <i className="fa fa-bars" aria-hidden="true" onClick={(e) => handleToggle(e)} />
         <StyledLinkContainer className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}>
-          {navItems.map(({ title, link, logo = '' }) => {
+          {navItems.map(({ title, link }) => {
             return (
               <StyledLink key={title}>
-                <Link href={link}>
+                <Link href={link} passHref legacyBehavior>
                   <StyledAnchor>{title}</StyledAnchor>
                 </Link>
               </StyledLink>

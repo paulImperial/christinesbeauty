@@ -2,12 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
-import Card from '../components/Card/Card';
 import Hero from '../components/Hero/Hero';
 import Map from '../components/map/Map';
 import Spotlight from '../components/Spotlight/Spotlight';
 import brands from '../cms/brands';
-import { treatments } from '../cms/treatments';
+import Button from '../components/Generic/Button';
 
 const BodyText = styled.p`
   margin: 10px 0;
@@ -16,7 +15,6 @@ const BodyText = styled.p`
 `;
 
 const Home = () => {
-
   const title = `Christine's Beauty | Home`;
 
   return (
