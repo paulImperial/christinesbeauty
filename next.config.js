@@ -22,6 +22,13 @@ module.exports = {
   },
 };
 
+module.exports = {
+  compiler: {
+    styledComponents: true,
+  },
+}
+
+
 module.exports = withPlugins([
   [
     optimizedImages,

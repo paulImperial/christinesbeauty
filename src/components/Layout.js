@@ -23,7 +23,6 @@ const Layout = ({ children, hero, title }) => {
   return (
     <Fragment>
       <Head>
-        <link rel="stylesheet" type="text/css" href="//cdn.curator.io/3.1/css/curator.css" />
         <link rel="shortcut icon" href="/images/favicon.ico" />
         <title>{title}</title>
       </Head>

@@ -4,9 +4,9 @@ import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
 import Hero from '../components/Hero/Hero';
 import Map from '../components/map/Map';
-import Spotlight from '../components/Spotlight/Spotlight';
-import brands from '../cms/brands';
-import Button from '../components/Generic/Button';
+import SpotlightBrandsComponent from '../components/Spotlight/SpotLightBrands';
+import PinkButton from '../components/TreatWellCTA';
+
 
 const BodyText = styled.p`
   margin: 10px 0;
@@ -14,13 +14,32 @@ const BodyText = styled.p`
   font-size: 1.25rem;
 `;
 
+  const CTAContainer = styled.div`
+    margin: -120px auto 32px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  `;
+
 const Home = () => {
   const title = `Christine's Beauty | Home`;
 
   return (
-    <Layout title={title}>
+    <Layout>
+      <title>{title}</title>
       <Container full={true}>
         <Hero image={'/images/room.jpg'} />
+        <CTAContainer>
+          <PinkButton to="https://widget.treatwell.co.uk/place/396704/menu/" target="_blank" rel="noopener noreferrer">
+            Book Now
+          </PinkButton>
+        </CTAContainer>
       </Container>
       <BodyText>
         I would like to offer you a warm welcome to Christine’s Beauty, my own independent salon, tucked away in a
@@ -37,9 +56,6 @@ const Home = () => {
         Here at Christine’s Beauty my aim is to provide high quality treatments at affordable prices in a calm and
         caring environment where you feel relaxed.
       </BodyText>
-      {/* <Container label="Treatments" id="Treatments">
-        <Card treatments={treatments}></Card>
-      </Container> */}
       <BodyText>I offer these treatments in a private and relaxing environment.</BodyText>
       <BodyText>
         My main aim from the moment you enter Christine’s Beauty is for you to feel welcomed and comfortable. Throughout
@@ -52,7 +68,7 @@ const Home = () => {
         pampered and spoiled here at Christine’s Beauty. I look forward to seeing you.
       </BodyText>
       <Container label="Products We Use">
-        <Spotlight brands={brands}></Spotlight>
+        <SpotlightBrandsComponent />
       </Container>
       <Container label="Finding Us" id="Find">
         <Map />

@@ -33,7 +33,9 @@ class MainDocument extends Document {
   render() {
     return (
       <Html lang="en-GB">
-        <Head></Head>
+        <Head>
+          <link rel="stylesheet" type="text/css" href="//cdn.curator.io/3.1/css/curator.css" />
+        </Head>
         <body>
           <Main />
           <NextScript />

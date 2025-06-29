@@ -2,7 +2,6 @@ import React, { useState } from 'react';
 import styled from 'styled-components';
 import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
-import Form from '../components/Form/Form';
 import Map from '../components/map/Map';
 
 const Heading = styled.h1`
@@ -60,13 +59,20 @@ const Contact = () => {
           Please do get in touch to find out more about our services or to request an appointment.
         </StyledP>
         <StyledContactContainer>
-          <StyledImage src="/images/icons/phone.svg" />
-          <StyledContactText>07895 132474</StyledContactText>
+          <StyledImage src="/images/icons/sms.svg" alt="Phone" />
+          <a href="sms:07895132474" style={{ textDecoration: 'none' }}>
+            <StyledContactText>07895 132474</StyledContactText>
+          </a>
         </StyledContactContainer>
-        <StyledContactContainer>
-          <StyledImage src="/images/icons/email.svg" />
-          <StyledContactText><a href="mailto: christine.patch@outlook.com">christine.patch@outlook.com</a></StyledContactText>
-        </StyledContactContainer>
+        <StyledP>
+          Or contact us through our social media channels:
+          <a href="https://www.instagram.com/christinesbeautyx/" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '0.5rem', marginRight: '0.5rem', verticalAlign: 'middle' }}>
+            <img src="/images/icons/instagram.svg" alt="Instagram" style={{ width: '28px', height: '28px', verticalAlign: 'middle' }} />
+          </a>
+          <a href="https://www.facebook.com/christinesbeauty2018" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '0.5rem', verticalAlign: 'middle' }}>
+            <img src="/images/icons/facebook.svg" alt="Facebook" style={{ width: '28px', height: '28px', verticalAlign: 'middle' }} />
+          </a>
+        </StyledP>
       </Container>
       <Container label="Finding Us" id="Find">
         <Map />

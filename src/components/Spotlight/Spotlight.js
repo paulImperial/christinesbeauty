@@ -17,14 +17,4 @@ const Spotlight = ({ brands }) => {
   );
 };
 
-// Spotlight.propTypes = {
-// 	brands: PropTypes.arrayOf(PropTypes.object(
-
-// 	)),
-// };
-
-// Spotlight.defaultProps = {
-// 	brands: null,
-// };
-
 export default Spotlight;
