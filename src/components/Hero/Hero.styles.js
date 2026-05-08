@@ -28,15 +28,12 @@ export const HeroWording = styled.div`
   position: absolute;
   z-index: 2;
   font-size: 4rem;
-  align-self: center;
-  justify-self: center;
-  display: flex;
-  justify-items: center;
-  align-items: center;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   border-radius: 3rem;
   @media (max-width: 800px) {
     font-size: 2rem;
-    width: min-content;
   }
 `;
 
