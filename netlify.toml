@@ -1,6 +1,9 @@
 [build]
   functions = "src/functions"
 
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
 [[headers]]
   for = "/*"
     [headers.values]
