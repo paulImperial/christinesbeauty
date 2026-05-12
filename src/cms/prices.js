@@ -4,104 +4,22 @@ const prices = [
     title: 'Body Waxing',
     id: 'bodyHairRemoval',
     image: '/images/hair-removal1.jpg',
-    disclaimer: '+ Uses hot wax',
+    disclaimer: '*All include underneath',
     blurb:
-      'This does not include intimate waxing.',
-    services: [
-      {
-        treatment: 'Half leg',
-        price: 18,
-      },
-      {
-        treatment: 'Full leg',
-        price: 28,
-      },
-      {
-        treatment: 'Under arm',
-        price: 10,
-      },
-      {
-        treatment: 'Under arm +',
-        price: 13,
-      },
-      {
-        treatment: 'Half arm',
-        price: 15,
-      },
-      {
-        treatment: 'Full arm',
-        price: 22,
-      },
-      {
-        treatment: 'Back',
-        price: 25,
-      },
-      {
-        treatment: 'Chest',
-        price: 20,
-      },
-      {
-        treatment: 'Full body',
-        price: 85,
-        from: true,
-      },
-      { 
-        treatment: 'Tummy', 
-        price: 7 
-      },
-    ],
-  },
-  {
-    key: 2,
-    title: 'Face Waxing',
-    id: 'faceHairRemoval',
-    image: '/images/eye-treatments.jpg',
-    disclaimer: '+ Uses hot wax',
-    services: [
-      {
-        treatment: 'Upper lip +',
-        price: 7,
-      },
-      {
-        treatment: 'Chin +',
-        price: 7,
-      },
-      {
-        treatment: 'Sides +',
-        price: 7,
-      },
-      {
-        treatment: 'Neck +',
-        price: 7,
-      },
-      {
-        treatment: 'Full face +',
-        price: 25,
-      },
-    ],
-  },
-  {
-    key: 8,
-    title: 'Intimate Waxing',
-    id: 'intimateWaxing',
-    image: '',
-    disclaimer: '* Includes Bum  + Uses hot wax',
+      'Here at Christine’s Beauty we use hot and warm wax, suited for the part of the body being treated. We try to minimise discomfort and ensure your skin is well looked after. We take great care to provide a thorough treatment leaving you silky smooth. Female intimate waxing is one of our specialisms.',
     services: [
       {
         treatment: 'Hollywood * +',
-        price: 40,
+        price: 35,
       },
       {
         treatment: 'Brazillian * +',
-        price: 40,
+        price: 35,
       },
       {
-        treatment: 'Bum wax +',
+        treatment: 'Bum +',
         price: 10,
-      },
-      {
-        treatment: 'Bum Wax with cheeks +',
-        price: 20,
+        from: true,
       },
       {
         treatment: 'High bikini line +',
@@ -111,8 +29,69 @@ const prices = [
         treatment: 'Standard bikini line',
         price: 12,
       },
+      {
+        treatment: 'Half leg',
+        price: 17,
+      },
+      {
+        treatment: 'Full leg',
+        price: 25,
+      },
+      {
+        treatment: 'Under arm',
+        price: 10,
+      },
+      {
+        treatment: 'Under arm +',
+        price: 15,
+      },
+      {
+        treatment: 'Forearm',
+        price: 15,
+      },
+      {
+        treatment: 'Full arm',
+        price: 20,
+      },
+      {
+        treatment: 'Back',
+        price: 20,
+      },
+      {
+        treatment: 'Chest',
+        price: 15,
+      },
+      {
+        treatment: 'Full body',
+        price: 85,
+        from: true,
+      },
     ],
   },
+  {
+    key: 2,
+    title: 'Face Waxing',
+    id: 'faceHairRemoval',
+    image: '/images/eye-treatments.jpg',
+    services: [
+        {
+          treatment: 'Upper lip',
+          price: 7,
+        },
+        {
+          treatment: 'Chin',
+          price: 7,
+        },
+        {
+          treatment: 'Sides',
+          price: 7,
+        },
+        {
+          treatment: 'Full face excluding eyebrows',
+          price: 20,
+        },
+      ],
+    },
   {
     key: 3,
     title: 'Eye Treatments',
@@ -124,7 +103,7 @@ const prices = [
     services: [
       {
         treatment: 'Eyebrow shape',
-        price: 14,
+        price: 12,
       },
       {
         treatment: 'Eyebrow tint *',
@@ -132,23 +111,19 @@ const prices = [
       },
       {
         treatment: 'Eyebrow shape and tint *',
-        price: 22,
+        price: 20,
       },
       {
         treatment: 'Eyelash tint *',
         price: 10,
       },
       {
-        treatment: 'Eyebrow Trio: Eyebrow shape and tint & eyebrow tint *',
-        price: 30,
+        treatment: 'Eyelash tint and eyebrow tint *',
+        price: 15,
       },
       {
-        treatment: 'Lash lift & tint *',
-        price: 45,
-      },      
-      {
-        treatment: 'Brow lamination & tint *',
-        price: 40,
+        treatment: 'Eyebrow shape and tint, and eyebrow tint *',
+        price: 25,
       },
     ],
   },
@@ -158,33 +133,28 @@ const prices = [
     id: 'massage',
     image: '/images/massage1.jpg',
     blurb:
-      'Swedish massage is a firmer treatment which targets problem areas as well as releasing tension to relax the whole body. Aromatherapy is a more relaxing experience with essential oils that are tailored to you.',
+      'Whether you are looking for targeted treatment on a problem area, or releasing tension and relaxing the whole body, our Swedish massage is a firmer treatment. For a more relaxing experience with essential oils we offer aromatherapy massage tailored to you.',
     disclaimer: '',
     services: [
       {
-        treatment: 'Swedish back & neck massage',
-        price: 37,
+        treatment: 'Swedish back massage',
+        price: 35,
         time: '30 minutes',
       },
       {
-        treatment: 'Aromatherapy back & neck massage',
-        price: 39,
+        treatment: 'Aromatherapy back massage',
+        price: 35,
         time: '30 minutes',
       },
       {
-        treatment: 'Swedish full body',
-        price: 57,
+        treatment: 'Swedish full body massage',
+        price: 50,
         time: '60 minutes',
       },
       {
-        treatment: 'Aromatherapy full body',
-        price: 59,
+        treatment: 'Aromatherapy full body massage',
+        price: 50,
         time: '60 minutes',
-      },
-      {
-        treatment: 'Foot and leg massage',
-        price: 30,
-        time: '30 minutes',
       },
     ],
   },
@@ -195,39 +165,25 @@ const prices = [
     image: '/images/facials1.jpg',
     blurb:
       'Our facial treatments are tailored to your personal skin type, whether that is dry, mature, oily, sensitive or combination. We use suitable, high quality products chosen especially for you, leaving you feeling refreshed, with an amazing glow.',
-    disclaimer: '* includes a steamer',
+    disclaimer: '',
     services: [
       {
         treatment: 'Bronze Facial : Relaxing Facial',
-        extraInfo: 'A soothing ,relaxing facial without extractions. Perfect for a healthy glow and refreshed complexion with minimal fuss.',
+        extraInfo: 'Gently purifies the skin without causing irritation for skin that feels softer, more supple and looks smoother. This facial does not include extractions. Product range: Kaeso Beauty.',
         price: 35,
         time: '35 minutes',
       },
       {
-        treatment: 'Silver Facial * : Revitalising Facial',
+        treatment: 'Silver Facial : Revitalising Facial',
         extraInfo:
-          'Designed to detoxify and refine the complexion, this deep-cleansing facial iuncludes extractions to clear congestion and restore a smooth healthy glow.',
+          'Leaves skin feeling soft and revitalised with a youthful appearance. Includes extractions if required, and a serum appropriate to you (anti-aging, vitamin C or radiant boost). Product ranges: Kaeso Beauty and Strictly Professional.',
         price: 45,
         time: '45 minutes',
       },
       {
-        treatment: 'Gold Facial * : Anti-aging Facial',
+        treatment: 'Gold Facial : Anti-aging Facial',
         extraInfo:
-          'A rejuvenating facial powered by retinol to smooth fine lines, boost collagen and restore a youthful, radiant glow.',
-        price: 50,
-        time: '50 minutes',
-      },
-      {
-        treatment: 'Seasonal Facial *',
-        extraInfo:
-          'Indulge in our signature seasonal facial, a luxurious treatment inspired by the time of year. Rejuvenating formulas and soothing rituals leave your skin glowing and renewed.',
-        price: 50,
-        time: '50 minutes',
-      },
-            {
-        treatment: 'Back Facial *',
-        extraInfo:
-          'Refresh and renew your skin with our purifying back facial - designed to cleanse, exfoliate and hydrate your back for silky smooth,radiant results.',
+          'Restore your natural glow with a classic facial, designed to cleanse, exfoliate and purify your complexion. Product ranges: HOF Retinol (an original Retinol, Vitamin A based anti-aging skincare line committed to developing healthy, anti-aging products that improve skin texture and reduce the look of fine lines and wrinkles), Kaeso Beauty and Strictly Professional.',
         price: 50,
         time: '50 minutes',
       },
@@ -249,13 +205,13 @@ const prices = [
       },
       {
         treatment: 'Luxury Manicure',
-        extraInfo: '(Soak, file, cuticles, exfoliation, hand and arm massage, mask & paint)',
-        price: 45,
+        extraInfo: '(Soak, file, cuticles, exfoliation, hand and arm massage, hand mask, paint)',
+        price: 30,
       },
       {
-        treatment: 'Kids’ Manicure (under 12)',
+        treatment: 'Kids’ Manicure',
         extraInfo: '(File and paint)',
-        price: 10,
+        price: 7,
       },
       {
         treatment: 'Express Pedicure',
@@ -263,9 +219,14 @@ const prices = [
         price: 20,
       },
       {
+        treatment: 'Classic Pedicure',
+        extraInfo: '(Soak, file, cuticles, foot massage, exfoliate and paint)',
+        price: 30,
+      },
+      {
         treatment: 'Luxury Pedicure',
-        extraInfo: '(Soak, hard skin removal, file, cuticles, exfoliation, foot & leg massage, mask &paint)',
-        price: 42,
+        extraInfo: '(Hard skin removal, soak, file, cuticles, foot and leg massage, exfoliate, foot mask and paint)',
+        price: 35,
       },
     ],
   },
@@ -280,23 +241,18 @@ const prices = [
     services: [
       {
         treatment: 'Gel Hands',
-        extraInfo: '(File, cuticles, gel polishg and cuticle oil)',
-        price: 32,
+        extraInfo: '(File, cuticles, shellac paint and cuticle oil)',
+        price: 30,
       },
       {
         treatment: 'Gel Toes',
-        extraInfo: 'File, cuticles, gel polish and cuticle oil)',
-        price: 32,
+        extraInfo: 'cuticles, shellac paint and cuticle oil)',
+        price: 30,
       },
       {
         treatment: 'Gel Removal and new set',
-        extraInfo: '(Acetate soap off and new set)',
-        price: 37,
-      },
-      {
-        treatment: 'Gel Removal',
-        extraInfo: '(Acetate soap off, file, cuticles and cuticle oil)',
-        price: 20,
+        extraInfo: '(hands or toes)',
+        price: 35,
       },
     ],
   },

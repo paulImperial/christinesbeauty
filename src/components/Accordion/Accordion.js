@@ -109,8 +109,6 @@ const SmallText = styled.p`
 const StyledAccordion = ({ prices, ...props }) => {
   const { name } = props.preExpand;
 
-  const priceDisclaimer = 'Prices and details correct as at January 2026. Treatment details, availability and prices are subject to change without notice.';
-
   const refs = prices.reduce((acc, price) => {
     acc[price.id] = useRef();
     return acc;
@@ -137,9 +135,6 @@ const StyledAccordion = ({ prices, ...props }) => {
 
   return (
     <StyleAccordion preExpanded={name} allowZeroExpanded={true} allowMultipleExpanded={false}>
-      <SmallText>
-        {priceDisclaimer}
-      </SmallText>
       {prices.map((price) => (
         <div ref={refs[price.id]} key={price.id} uuid={price.id}>
           <AccordionItem key={price.id} id={price.id} uuid={price.id} onClick={() => handleClick(price.id)}>
@@ -175,7 +170,8 @@ const StyledAccordion = ({ prices, ...props }) => {
                     </tbody>
                   </StyledTable>
                   <SmallText>
-                    {price.disclaimer}
+                    {price.disclaimer} &nbsp;
+                    {(price.key === 1) && <><sup>+</sup>Using hot wax</>}
                   </SmallText>
                 </StyledInfo>
               </AccordionPanel>

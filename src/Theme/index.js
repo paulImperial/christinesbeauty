@@ -4,44 +4,40 @@ import media from './media';
 import { createGlobalStyle } from 'styled-components';
 
 export const GlobalStyle = createGlobalStyle`
-*, *::after, *::before {
-  box-sizing: border-box;
-}
+@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css");
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+
 
 html, body {
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-}
+    margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+  }
+  *, *::after, *::before {
+    box-sizing: border-box;
+  }
 
-body {
-  font-family: 'Roboto' !important;
-  text-align: left;
-  cursor: default;
-  font-weight: 300;
-  margin: 0;
-  padding: 0;
-  overflow-x: hidden;
-  font-size: 18px;
-  height: 100vh;
-  text-rendering: optimizeLegibility;
-  transition: all 0.5s ease;
-  line-height: 1.8rem;
-}
+  body {
+    font-family: 'Roboto' !important;
+    text-align: left;
+	cursor: default;
+	font-weight: 300;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+	font-size: 18px;
+	height: 100vh;
+	text-rendering: optimizeLegibility;
+	transition: all 0.5s ease;
+	line-height: 1.8rem;
+  }
 
-.herotext {
-  font-family: 'Devonshire' !important;
-}
+  .herotext {
+	font-family: 'Devonshire' !important;
+  }
+
 `;
-
-export const HelmetLinks = () => (
-  <>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css" />
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Devonshire&display=swap" rel="stylesheet" />
-  </>
-);
 
 const boxShadow = (color) => `box-shadow: 0 10px 15px 4px ${rgba(color, 0.5)};`;
 
@@ -72,7 +68,7 @@ const theme = {
     shadeDarkGrey: '#999999',
     shadeDarkerGrey: 'gray',
     shadeDarkestGrey: '#0d0d0d',
-    pink:'#c8007c',
+    pink: rgba(216, 91, 145, 1),
     mildPink: rgba(216, 91, 145, 0.2),
   },
   fontSizes: {

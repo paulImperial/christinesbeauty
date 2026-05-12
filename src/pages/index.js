@@ -15,25 +15,16 @@ const BodyText = styled.p`
 `;
 
   const CTAContainer = styled.div`
-    // margin: -80px auto 32px auto;
-    // display: flex;
-    // flex-direction: column;
-    // align-items: center;
-    // position: relative;
-    // z-index: 2;
-    // width: 100%;
-    
-    // @media (max-width: 640px) {
-    //   margin: -60px auto 24px auto;
-    // }
-    
-    // @media (min-width: 641px) and (max-width: 1024px) {
-    //   margin: -70px auto 28px auto;
-    // }
-    
-    // @media (min-width: 1025px) {
-    //   margin: -100px auto 40px auto;
-    // }
+    margin: -120px auto 32px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+
+    @media (max-width: 1023px) {
+      display: none;
+    }
   `;
 
 const Home = () => {
@@ -44,11 +35,11 @@ const Home = () => {
       <title>{title}</title>
       <Container full={true}>
         <Hero image={'/images/room.jpg'} />
-        {/* <CTAContainer>
+        <CTAContainer>
           <PinkButton to="https://widget.treatwell.co.uk/place/396704/menu/" target="_blank" rel="noopener noreferrer">
             Book Now
           </PinkButton>
-        </CTAContainer> */}
+        </CTAContainer>
       </Container>
       <BodyText>
         I would like to offer you a warm welcome to Christine’s Beauty, my own independent salon, tucked away in a

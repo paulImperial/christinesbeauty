@@ -23,18 +23,9 @@ const HeaderTitle = styled.h1`
 `;
 
 const Logo = styled.img`
- width: 80px;
-  height: 80px;
-  border-radius: 50%;
-  object-fit: cover;
-  background: ${(props) => props.theme.colours.baseWhite};
-  padding: 4px;
-  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.08);
-
-
+  width: 130px;
   @media (max-width: 440px) {
-    width: 60px;
-    height: 60px;
+    width: 75px;
   }
 `;
 
@@ -47,7 +38,7 @@ const Header = ({ children }) => {
     <HeaderStyle>
       <HeaderContainer>
         <a href="/">
-          <Logo src="/images/cbnew.jpg" alt="logo" />
+          <Logo src="/images/darklogo.jpg" alt="logo" />
         </a>
         {children}
       </HeaderContainer>
