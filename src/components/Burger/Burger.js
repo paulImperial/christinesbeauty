@@ -5,9 +5,10 @@ import { StyledBurger } from './Burger.styled';
 const Burger = ({ open, setOpen, ...props }) => {
   
   const isExpanded = open ? true : false;
+  const toggleOpen = () => setOpen(!open);
   
   return (
-    <StyledBurger aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={() => setOpen(!open)} {...props}>
+    <StyledBurger aria-label="Toggle menu" aria-expanded={isExpanded} open={open} onClick={toggleOpen} {...props}>
       <span />
       <span />
       <span />

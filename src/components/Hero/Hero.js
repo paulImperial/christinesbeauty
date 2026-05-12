@@ -1,14 +1,17 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { HeroContent, HeroImage, HeroWording, TitleText } from './Hero.styles';
+import { HeroContent, HeroImage, HeroWording, HeroCTA, TitleText } from './Hero.styles';
+import PinkButtonWithClick from '../TreatWellCTA';
 
 const Hero = ({ label, image, ...props }) => {
   return (
-    <HeroContent {...props}>
+    <HeroContent image={image} {...props}>
       <HeroWording>
         <TitleText>Welcome&nbsp;to Christine's Beauty</TitleText>
       </HeroWording>
-			<HeroImage image={image}></HeroImage>
+      <HeroCTA>
+        <PinkButtonWithClick />
+      </HeroCTA>
     </HeroContent>
   );
 };

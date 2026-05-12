@@ -1,14 +1,18 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 import Link from 'next/link';
+import Burger from '../Burger';
+import Menu from '../Menu';
+import social from '../../cms/social';
 
 const Navigation = styled.header`
   width: 100%;
   z-index: 1;
+  position: relative;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0;
+  padding: 0 4rem 0 0;
   background-color: ${(props) => props.theme.colours.baseWhite};
 
   .logo a {
@@ -48,14 +52,6 @@ const Navigation = styled.header`
   a:hover {
     opacity: 1;
   }
-  .fa-bars {
-    display: none;
-    color: ${(props) => props.theme.colours.baseBlack};
-    font-size: 2rem;
-  }
-  nav {
-    width: 100%;
-  }
 
   @media only screen and (max-width: 400px) {
     padding: 0px;
@@ -66,7 +62,9 @@ const Navigation = styled.header`
   @media only screen and (max-width: 930px) {
     height: auto;
     min-height: 50px;
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     position: relative;
     .logo {
       width: 100%;
@@ -76,49 +74,6 @@ const Navigation = styled.header`
       margin-left: -5px;
       a {
         padding: 20px 0px;
-      }
-    }
-    .fa-bars {
-      display: inline-block;
-      position: absolute;
-      top: 10px;
-      right: 10px;
-      cursor: pointer;
-    }
-    ul.collapsed {
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      flex-wrap: wrap;
-
-      overflow: hidden;
-      max-height: 0;
-      -moz-transition-duration: 0.4s;
-      -webkit-transition-duration: 0.4s;
-      -o-transition-duration: 0.4s;
-      transition-duration: 0.4s;
-      -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-      -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-      -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-      transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-
-      &.is-expanded {
-        overflow: hidden;
-        max-height: 500px; /* approximate max height */
-        -moz-transition-duration: 0.4s;
-        -webkit-transition-duration: 0.4s;
-        -o-transition-duration: 0.4s;
-        transition-duration: 0.4s;
-        -moz-transition-timing-function: ease-in;
-        -webkit-transition-timing-function: ease-in;
-        -o-transition-timing-function: ease-in;
-        transition-timing-function: ease-in;
-      }
-      li {
-        padding: 15px 10px;
-        margin: 0px 0px;
-        width: 100%;
       }
     }
   }
@@ -152,115 +107,65 @@ const StyledAnchor = styled.a`
   font-size: 1.25rem;
 `;
 
-const Burger = styled.div`
-  #nav-icon4 {
-    width: 60px;
-    height: 45px;
-    position: relative;
-    margin: 50px auto;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.5s ease-in-out;
-    -moz-transition: 0.5s ease-in-out;
-    -o-transition: 0.5s ease-in-out;
-    transition: 0.5s ease-in-out;
-    cursor: pointer;
-  }
+const SocialLinks = styled.div`
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  display: flex;
+  gap: 0.75rem;
+  align-items: center;
 
-  #nav-icon4 span {
-    display: block;
-    position: absolute;
-    height: 9px;
-    width: 100%;
-    background: #d3531a;
-    border-radius: 9px;
-    opacity: 1;
-    left: 0;
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-    -webkit-transition: 0.25s ease-in-out;
-    -moz-transition: 0.25s ease-in-out;
-    -o-transition: 0.25s ease-in-out;
-    transition: 0.25s ease-in-out;
+  @media only screen and (max-width: 930px) {
+    display: none;
   }
+`;
 
-  #nav-icon4 span:nth-child(1) {
-    top: 0px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
-  }
+const SocialIcon = styled.img`
+  width: 28px;
+  height: 28px;
+  display: block;
+`;
 
-  #nav-icon4 span:nth-child(2) {
-    top: 18px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
-  }
-
-  #nav-icon4 span:nth-child(3) {
-    top: 36px;
-    -webkit-transform-origin: left center;
-    -moz-transform-origin: left center;
-    -o-transform-origin: left center;
-    transform-origin: left center;
-  }
-
-  #nav-icon4.open span:nth-child(3) {
-    -webkit-transform: rotate(-45deg);
-    -moz-transform: rotate(-45deg);
-    -o-transform: rotate(-45deg);
-    transform: rotate(-45deg);
-    top: 39px;
-    left: 8px;
-  }
-
-  #nav-icon4.open span:nth-child(1) {
-    -webkit-transform: rotate(45deg);
-    -moz-transform: rotate(45deg);
-    -o-transform: rotate(45deg);
-    transform: rotate(45deg);
-    top: -3px;
-    left: 8px;
-  }
-
-  #nav-icon4.open span:nth-child(2) {
-    width: 0%;
-    opacity: 0;
-  }
+const Overlay = styled.div`
+  display: ${(props) => props.open ? 'block' : 'none'};
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 8;
+  opacity: ${(props) => props.open ? '1' : '0'};
+  transition: opacity 0.3s ease-in-out;
 `;
 
 const Nav = ({ navItems }) => {
   const [isExpanded, setIsExpanded] = useState(false);
 
-  const handleToggle = (e) => {
-    e.preventDefault();
-    setIsExpanded(!isExpanded);
-  };
-
   return (
-    <Navigation>
-      <nav className="nav">
-        <i className="fa fa-bars" aria-hidden="true" onClick={(e) => handleToggle(e)} />
-        <StyledLinkContainer className={`collapsed ${isExpanded ? 'is-expanded' : ''}`}>
-          {navItems.map(({ title, link }) => {
-            return (
-              <StyledLink key={title}>
-                <Link href={link} passHref legacyBehavior>
-                  <StyledAnchor>{title}</StyledAnchor>
-                </Link>
-              </StyledLink>
-            );
-          })}
-        </StyledLinkContainer>
-      </nav>
-    </Navigation>
+    <>
+      <Navigation>
+        <Burger open={isExpanded} setOpen={setIsExpanded} />
+        <SocialLinks>
+          {social
+            .filter((item) => item.title === 'Facebook' || item.title === 'Instagram')
+            .map((item) => (
+              <a
+                key={item.title}
+                href={item.link}
+                target="_blank"
+                rel="noopener noreferrer"
+                title={item.title}
+              >
+                <SocialIcon src={item.image} alt={item.title} />
+              </a>
+            ))}
+        </SocialLinks>
+      </Navigation>
+      <Overlay open={isExpanded} onClick={() => setIsExpanded(false)} />
+      <Menu open={isExpanded} navItems={navItems} onLinkClick={() => setIsExpanded(false)} />
+    </>
   );
 };
 
