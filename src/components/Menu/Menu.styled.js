@@ -60,3 +60,30 @@ export const StyledMenuLink = styled.li`
     padding-top: 10px;
   }
 `;
+
+export const BookNowButton = styled.a`
+  display: inline-block;
+  background-color: ${(props) => props.theme.colours.pink};
+  color: #fff;
+  border: 2px solid #ffb6c1;
+  padding: 1rem 2rem;
+  border-radius: 32px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: background 0.3s, border-color 0.3s, color 0.3s;
+  text-align: center;
+  margin: 20px;
+  width: calc(100% - 40px);
+
+  &:hover {
+    background-color: #ffb6c1;
+    border-color: ${(props) => props.theme.colours.pink};
+    color: ${(props) => props.theme.colours.pink};
+  }
+
+  &:active {
+    transform: scale(0.98);
+  }
+`;

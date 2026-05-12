@@ -72,7 +72,7 @@ const theme = {
     shadeDarkGrey: '#999999',
     shadeDarkerGrey: 'gray',
     shadeDarkestGrey: '#0d0d0d',
-    pink: rgba(216, 91, 145, 1),
+    pink:'#c8007c',
     mildPink: rgba(216, 91, 145, 0.2),
   },
   fontSizes: {

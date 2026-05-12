@@ -1,7 +1,7 @@
 import React from 'react';
 import { array, bool, func } from 'prop-types';
 import Link from 'next/link';
-import { StyledMenu, StyledMenuLink } from './Menu.styled';
+import { StyledMenu, StyledMenuLink, BookNowButton } from './Menu.styled';
 
 const Menu = ({ open, navItems, onLinkClick }) => {
   return (
@@ -17,6 +17,14 @@ const Menu = ({ open, navItems, onLinkClick }) => {
           </StyledMenuLink>
         ))}
       </nav>
+      <BookNowButton 
+        href="https://widget.treatwell.co.uk/place/396704/menu/" 
+        target="_blank" 
+        rel="noopener noreferrer"
+        onClick={() => onLinkClick && onLinkClick()}
+      >
+        Book Now
+      </BookNowButton>
     </StyledMenu>
   );
 };

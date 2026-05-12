@@ -28,6 +28,12 @@ module.exports = {
   },
 }
 
+module.exports = {
+  experimental: {
+    forceSwcTransforms: true,
+  },
+}
+
 module.exports = withPlugins([
   [
     optimizedImages,
