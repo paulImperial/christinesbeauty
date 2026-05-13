@@ -31,7 +31,7 @@ const SpotlightBrands = () => {
         {data.map((brand) => (
           <a href={brand.link} target="_blank" rel="noreferrer noopener" key={brand.link}>
             <SpotlightBox externalLink={'/images/external-link.png'}>
-              <SpotlightImage image={urlFor(brand.image).url()} $dark={brand.dark}>
+              <SpotlightImage image={urlFor(brand.image).url()} $dark={brand.dark} alt={brand}>
            
               </SpotlightImage>
             </SpotlightBox>

@@ -43,7 +43,7 @@ const Home = () => {
     <Layout>
       <title>{title}</title>
       <Container full={true}>
-        <Hero image={'/images/room.jpg'} />
+        <Hero image={'/images/room.jpg'} alt="Christine's Beauty Salon" />
         {/* <CTAContainer>
           <PinkButton to="https://widget.treatwell.co.uk/place/396704/menu/" target="_blank" rel="noopener noreferrer">
             Book Now

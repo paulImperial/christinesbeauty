@@ -5,7 +5,7 @@ import PinkButtonWithClick from '../TreatWellCTA';
 
 const Hero = ({ label, image, ...props }) => {
   return (
-    <HeroContent image={image} {...props}>
+    <HeroContent alt={'Hero Image'} image={image} {...props}>
       <HeroWording>
         <TitleText>Welcome&nbsp;to Christine's Beauty</TitleText>
       </HeroWording>
