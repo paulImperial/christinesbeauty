@@ -13,6 +13,9 @@ const Heading = styled.h1`
 
 const StyledP = styled.p`
   font-size: 1.25rem;
+    word-wrap: break-word;
+  overflow-wrap: break-word;
+  min-width: 0;
 `;
 
 export const StyledContact = styled.div`
@@ -38,7 +41,12 @@ const StyledContactText = styled.div`
 
 const StyledContactContainer = styled.div`
   display: flex;
+`;
 
+const ContactContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: centre;
 `;
 
 const Contact = () => {
@@ -58,12 +66,20 @@ const Contact = () => {
         <StyledP>
           Please do get in touch to find out more about our services or to request an appointment.
         </StyledP>
-        <StyledContactContainer>
-          <StyledImage src="/images/icons/sms.svg" alt="Phone" />
-          <a href="sms:07895132474" style={{ textDecoration: 'none' }}>
-            <StyledContactText>07895 132474</StyledContactText>
-          </a>
-        </StyledContactContainer>
+        <ContactContainer>
+          <StyledContactContainer>
+            <StyledImage src="/images/icons/phone.svg" alt="Phone" />
+            <a href="tel:07895132474" style={{ textDecoration: 'none' }}>
+              <StyledContactText>07895 132474</StyledContactText>
+            </a>
+            </StyledContactContainer>
+          <StyledContactContainer>
+            <StyledImage src="/images/icons/email.svg" alt="Email" />
+            <a href="mailto:christinesbeautybristol@gmail.com" style={{ textDecoration: 'none' }}>
+              <StyledContactText>christinesbeautybristol</StyledContactText>
+            </a>
+          </StyledContactContainer>
+        </ContactContainer>
         <StyledP>
           Or contact us through our social media channels:
           <a href="https://www.instagram.com/christinesbeautyx/" target="_blank" rel="noopener noreferrer" style={{ marginLeft: '0.5rem', marginRight: '0.5rem', verticalAlign: 'middle' }}>
