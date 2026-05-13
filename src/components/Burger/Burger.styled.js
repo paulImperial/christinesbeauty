@@ -58,7 +58,7 @@ export const StyledBurger = styled.button`
   @media (min-width: 931px) {
     left: 50%;
     right: auto;
-    transform: translate(-50%, -50%);
+    transform: translate(-150%, -50%);
     width: 2.75rem;
     height: 2.75rem;
 
