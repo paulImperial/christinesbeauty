@@ -7,7 +7,7 @@ import navigation from '../cms/navigation';
 import social from '../cms/social';
 import Nav from './Generic/Navigation';
 
-const Main = styled.div`
+const Main = styled.main`
   margin: 0 auto;
   max-width: 1140px;
   width: 90%;
@@ -30,7 +30,7 @@ const Layout = ({ children, hero, title }) => {
         <Nav navItems={navigation} />
       </Header>
       <HeroBanner>{hero}</HeroBanner>
-      <Main>{children}</Main>
+      <Main role="main">{children}</Main>
       <FooterComponent social={social} />
     </Fragment>
   );

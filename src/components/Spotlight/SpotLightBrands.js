@@ -29,7 +29,7 @@ const SpotlightBrands = () => {
   return (
       <SpotlightContainer>
         {data.map((brand) => (
-          <a href={brand.link} target="_blank" rel="noreferrer noopener" key={brand.link}>
+          <a href={brand.link} target="_blank" rel="noreferrer noopener" key={brand.link} title={brand.name}>
             <SpotlightBox externalLink={'/images/external-link.png'}>
               <SpotlightImage image={urlFor(brand.image).url()} $dark={brand.dark} alt={brand}>
            

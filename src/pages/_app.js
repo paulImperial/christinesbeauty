@@ -14,6 +14,7 @@ function Main({ Component, pageProps }) {
         <Head>
           <meta name="viewport" content="width=device-width, initial-scale=1" />
           <meta name="google-site-verification" content="SgYvArgqUJZC0MYpJ1LqvV_tVGss7rkYz8Gg_Gk6gHs" />
+          <title>Christine's Beauty</title>
         </Head>
         <Component {...pageProps} />
       </ThemeProvider>
