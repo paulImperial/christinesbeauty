@@ -31,7 +31,7 @@ class MainDocument extends Document {
 
   render() {
     return (
-      <Html lang="en-GB">
+      <Html lang="en-GB" title='christines beauty'>
         <Head>
           <link rel="stylesheet" type="text/css" href="//cdn.curator.io/3.1/css/curator.css" />
         </Head>
