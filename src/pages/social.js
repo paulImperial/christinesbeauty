@@ -1,7 +1,6 @@
 import React from 'react';
 import Layout from '../components/Layout';
 import Container from '../components/Generic/Container';
-import Social from '../components/Social/Social';
 
 const socialPage = () => {
   const title = `Christine's Beauty | Gallery`;

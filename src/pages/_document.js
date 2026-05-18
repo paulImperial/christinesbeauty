@@ -34,12 +34,10 @@ class MainDocument extends Document {
       <Html lang="en-GB">
         <Head>
            <meta charSet="utf-8" />
-          <link rel="stylesheet" type="text/css" href="//cdn.curator.io/3.1/css/curator.css" />
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script type="text/javascript" src="//cdn.curator.io/3.1/js/curator.js"></script>
           <script src="https://elfsightcdn.com/platform.js" async></script>
         </body>
       </Html>
