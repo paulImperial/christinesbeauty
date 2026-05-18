@@ -40,7 +40,7 @@ class MainDocument extends Document {
           <Main />
           <NextScript />
           <script type="text/javascript" src="//cdn.curator.io/3.1/js/curator.js"></script>
-          <script type="text/javascript" src="https://apps.elfsight.com/p/platform.js"></script>
+          <script src="https://elfsightcdn.com/platform.js" async></script>
         </body>
       </Html>
     );
