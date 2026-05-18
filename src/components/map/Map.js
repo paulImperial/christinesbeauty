@@ -28,11 +28,11 @@ const Map = () => {
     <StyledMap>
       <StyledContact>
         <StyledContactContainer>
-          <StyledImage src="/images/icons/location2.svg" />
+          <StyledImage src="/images/icons/location2.svg" alt='locator' />
           <StyledContactText>104, Broad Street, Staple Hill, Bristol, BS16 5NJ</StyledContactText>
         </StyledContactContainer>
       </StyledContact>
-      <iframe style={containerStyle} src={googleMapSource}></iframe>
+      <iframe style={containerStyle} src={googleMapSource} title='christines beauty location'></iframe>
       <BodyText>
         The salon is easy to reach, with the bus stopping just a few steps away, and being just a couple of minutes’
         drive from the Ring Road. Based in a converted outbuilding of my family home, with separate access, the location

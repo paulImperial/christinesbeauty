@@ -7,6 +7,7 @@ const Menu = ({ open, navItems, onLinkClick }) => {
   return (
     <StyledMenu open={open}>
       <nav>
+        <ul>
         {navItems.map(({ title, link }) => (
           <StyledMenuLink key={title}>
             <Link href={link} passHref legacyBehavior>
@@ -16,6 +17,7 @@ const Menu = ({ open, navItems, onLinkClick }) => {
             </Link>
           </StyledMenuLink>
         ))}
+        </ul>
       </nav>
       <BookNowButton 
         href="https://widget.treatwell.co.uk/place/396704/menu/" 

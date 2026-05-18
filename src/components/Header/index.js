@@ -47,7 +47,7 @@ const Header = ({ children }) => {
     <HeaderStyle>
       <HeaderContainer>
         <a href="/">
-          <Logo src="/images/cbnew.jpg" alt="logo" />
+          <Logo src="/images/new_logo.jpg" alt="logo" />
         </a>
         {children}
       </HeaderContainer>

@@ -2,7 +2,7 @@ import styled from 'styled-components';
 
 const PinkButton = styled.a`
     display: inline-block;
-    background-color: #ff69b4;
+    background-color: #c8007c;
     color: #fff;
     border: 2px solid #ffb6c1;
     padding: 0.75em 1.5em;
@@ -13,9 +13,9 @@ const PinkButton = styled.a`
     transition: background 0.2s, border-color 0.2s;
 
     &:hover {
-        background-color: #ffb6c1;
+        background-color: #c8007c;
         border-color: #ff69b4;
-        color: #ff69b4;
+        color: #fff;
     }
 `;
 

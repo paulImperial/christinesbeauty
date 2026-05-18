@@ -5,6 +5,7 @@ const social = [
     offers: true,
     title: 'Facebook',
     image: '/images/icons/facebook.svg',
+    alt: 'Facebook',
     link: 'https://www.facebook.com/christinesbeauty2018',
   },
   {
@@ -13,6 +14,7 @@ const social = [
     review: false,
     title: 'Instagram',
     image: '/images/icons/instagram.svg',
+    alt: 'Instagram',
     link: 'https://www.instagram.com/christinesbeautyx/',
   },
   {

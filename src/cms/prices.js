@@ -1,5 +1,24 @@
 const prices = [
   {
+    key: 9,
+    title: 'Semi permanent make up',
+    id: 'makeup',
+    blurb: '',
+    disclaimer: '',
+    services: [
+      {
+        treatment: 'Ombré brows',
+        extraInfo: 'Coming soon ...',
+        price: 'TBC'
+      },
+      {
+        treatment: 'Lip blush',
+        extraInfo: 'Coming soon ...',
+        price: 'TBC',
+      },
+    ],
+  },
+  {
     key: 1,
     title: 'Body Waxing',
     id: 'bodyHairRemoval',
@@ -45,9 +64,9 @@ const prices = [
         price: 85,
         from: true,
       },
-      { 
-        treatment: 'Tummy', 
-        price: 7 
+      {
+        treatment: 'Tummy',
+        price: 7
       },
     ],
   },
@@ -145,7 +164,7 @@ const prices = [
       {
         treatment: 'Lash lift & tint *',
         price: 45,
-      },      
+      },
       {
         treatment: 'Brow lamination & tint *',
         price: 40,
@@ -224,7 +243,7 @@ const prices = [
         price: 50,
         time: '50 minutes',
       },
-            {
+      {
         treatment: 'Back Facial *',
         extraInfo:
           'Refresh and renew your skin with our purifying back facial - designed to cleanse, exfoliate and hydrate your back for silky smooth,radiant results.',
@@ -250,7 +269,7 @@ const prices = [
       {
         treatment: 'Luxury Manicure',
         extraInfo: '(Soak, file, cuticles, exfoliation, hand and arm massage, mask & paint)',
-        price: 45,
+        price: 32,
       },
       {
         treatment: 'Kids’ Manicure (under 12)',
@@ -265,7 +284,7 @@ const prices = [
       {
         treatment: 'Luxury Pedicure',
         extraInfo: '(Soak, hard skin removal, file, cuticles, exfoliation, foot & leg massage, mask &paint)',
-        price: 42,
+        price: 45,
       },
     ],
   },

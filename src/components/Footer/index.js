@@ -130,31 +130,31 @@ const queryClient = new QueryClient();
 
 const Footer = ({ social }) => {
 
-    const { isLoading, error, data } = useQuery('openingTimes', async () => {
-      return client.fetch(
-        groq`*[_type == "openingTimes"]{
+  const { isLoading, error, data } = useQuery('openingTimes', async () => {
+    return client.fetch(
+      groq`*[_type == "openingTimes"]{
           _id,
           day,
           open,
           close,
           closed,
         }`
-      );
-    });
-  
-    if (isLoading) {
-      return null;
-    }
-  
-    if (error) {
-      return <div>Error: {error.message}</div>;
-    }
-  
-    const daysOfWeek = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
-  
-    // Sort posts according to daysOfWeek order
-    const orderedPosts = data ? [...data].sort((a, b) => daysOfWeek.indexOf(a.day) - daysOfWeek.indexOf(b.day)) : [];
-  
+    );
+  });
+
+  if (isLoading) {
+    return null;
+  }
+
+  if (error) {
+    return <div>Error: {error.message}</div>;
+  }
+
+  const daysOfWeek = ['monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday', 'sunday'];
+
+  // Sort posts according to daysOfWeek order
+  const orderedPosts = data ? [...data].sort((a, b) => daysOfWeek.indexOf(a.day) - daysOfWeek.indexOf(b.day)) : [];
+
   return (
     <FooterStyle>
       <SignUpContainer>
@@ -184,14 +184,14 @@ const Footer = ({ social }) => {
         )}
       </OpeningHoursContainer>
       <SocialContainer>
-        {social.map(({ title, image, link, social }) => {
+        {social.map(({ title, image, link, social, alt }) => {
           return (
             social && (
-              <a href={link} target="_blank" key={title}>
-                <StyledSocialLink>
-                  <SocialLogo src={image} />
-                </StyledSocialLink>
-              </a>
+              <StyledSocialLink>
+                <a href={link} target="_blank" key={title}>
+                  <SocialLogo src={image} alt={alt} />
+                </a>
+              </StyledSocialLink>
             )
           );
         })}
@@ -201,7 +201,7 @@ const Footer = ({ social }) => {
 };
 
 // Wrap the page with QueryClientProvider at the top level
-function FooterComponent( { social }) {
+function FooterComponent({ social }) {
   return (
     <QueryClientProvider client={queryClient}>
       <Footer social={social} />

@@ -1,0 +1,59 @@
+
+<svg xmlns="http://www.w3.org/2000/svg" width="800" height="800" viewBox="0 0 800 800" fill="none">
+  <rect width="800" height="800" fill="#E9E9E9"/>
+
+  <!-- Decorative icons -->
+  <g stroke="#c8007c" stroke-width="10" stroke-linecap="round">
+    <path d="M92 390H128"/>
+    <path d="M110 372V408"/>
+
+    <path d="M675 170H710"/>
+    <path d="M692 152V188"/>
+
+    <path d="M700 430L746 410"/>
+    <path d="M710 470H760"/>
+    <path d="M700 510L746 530"/>
+  </g>
+
+  <circle cx="150" cy="520" r="12" stroke="#c8007c" stroke-width="8"/>
+  <circle cx="655" cy="255" r="12" stroke="#c8007c" stroke-width="8"/>
+
+  <!-- Megaphone -->
+  <g fill="#c8007c">
+    <rect x="98" y="276" width="38" height="44" rx="10"/>
+    <path d="M132 288L230 228C240 223 252 220 264 220H315L230 288H182L150 320L132 312Z"/>
+    <rect x="154" y="310" width="30" height="78" rx="8"/>
+  </g>
+
+  <!-- COMING top banner -->
+  <g transform="rotate(-3 410 255)">
+    <rect x="222" y="195" width="388" height="92" rx="24" fill="#c8007c"/>
+
+    <text x="418"
+          y="257"
+          text-anchor="middle"
+          fill="white"
+          font-family="Arial, Helvetica, sans-serif"
+          font-size="70"
+          font-weight="800">
+      COMING
+    </text>
+  </g>
+
+  <!-- Speech bubble -->
+  <path d="M182 325C182 294 206 270 237 270H618C649 270 673 294 673 325V505C673 536 649 560 618 560H470L394 638V560H237C206 560 182 536 182 505V325Z"
+        fill="#E9E9E9"
+        stroke="#c8007c"
+        stroke-width="10"/>
+
+  <!-- SOON text -->
+  <text x="428"
+        y="486"
+        text-anchor="middle"
+        fill="#c8007c"
+        font-family="Arial Black, Arial, sans-serif"
+        font-size="128"
+        font-weight="900">
+    SOON
+  </text>
+</svg>

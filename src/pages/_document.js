@@ -33,6 +33,7 @@ class MainDocument extends Document {
     return (
       <Html lang="en-GB">
         <Head>
+           <meta charSet="utf-8" />
           <link rel="stylesheet" type="text/css" href="//cdn.curator.io/3.1/css/curator.css" />
         </Head>
         <body>
